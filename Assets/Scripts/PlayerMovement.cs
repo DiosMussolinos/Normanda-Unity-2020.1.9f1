@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(horizontal * WalkSpeed, vertical * WalkSpeed);
 
-
         //__Animations__\\
         //__MOVEMENT X__\\
         if (horizontal != 0)
