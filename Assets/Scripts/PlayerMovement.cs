@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", -1);
         }
 
-        
+
         //__MOVEMENT Y__\\
         /*if (vertical != 0)
         {
@@ -52,5 +52,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", -1);
         }
         */
+
+        //OLHA MEU CU LINDO
     }
 }
