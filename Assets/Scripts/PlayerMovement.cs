@@ -36,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
+
+        else if (vertical != 0)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.y));
+        }
         else
         {
             animator.SetFloat("Speed", -1);
