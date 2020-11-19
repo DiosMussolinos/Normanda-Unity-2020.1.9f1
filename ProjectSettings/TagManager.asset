@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fixed UI
+    uniqueID: 3014105457
+    locked: 0
+  - name: Updated UI
+    uniqueID: 2414180777
+    locked: 0
+  - name: UI Images
+    uniqueID: 4097264091
+    locked: 0

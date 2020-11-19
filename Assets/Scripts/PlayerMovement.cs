@@ -16,9 +16,18 @@ public class PlayerMovement : MonoBehaviour
     public int level = 1;
     public int exp = 0;
 
+    //Basic Attack Information\\
+    public int basicAttackDMG = 0;
+    public float basicAttackCD = 0f;
+
+    //Strong Attack Information\\
+    public int strongAttackDMG = 0;
+    public float strongAttackCD = 0f;
 
 
-    //Awake is called before the first frame
+
+
+    //Awake is called before the Start
     void Awake()
     {
         //Calling stuff
@@ -43,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
-        //float block = Input.GetAxis("Fire1");
+        float block = Input.GetAxis("Fire3");
 
         rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
 
@@ -76,20 +85,38 @@ public class PlayerMovement : MonoBehaviour
         if (basicAttack != 0)
         {
             animator.SetBool("BasicAttack", true);
+            rb.velocity = new Vector2(0, 0);
         }
         else
         {
             animator.SetBool("BasicAttack", false);
         }
 
+        //__STRONG ATTACK__\\
         if (strongAttack != 0)
         {
             animator.SetBool("StrongAttack", true);
+            rb.velocity = new Vector2(0, 0);
         }
         else
         {
             animator.SetBool("StrongAttack", false);
         }
 
+        //__BLOCK && SPEED 0,0__\\
+        if (block != 0)
+        {
+            animator.SetBool("Block", true);
+            rb.velocity = new Vector2(0,0);
+        }
+        else 
+        {
+            animator.SetBool("Block", false);
+        }
+
+
+        //__DEATH__\\
+        animator.SetInteger("Health", lifePoints);
+    
     }
 }
