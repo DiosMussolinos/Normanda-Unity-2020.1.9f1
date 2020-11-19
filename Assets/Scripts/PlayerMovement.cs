@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
-        float block = Input.GetAxis("Fire1");
+        //float block = Input.GetAxis("Fire1");
 
         rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
 
