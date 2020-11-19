@@ -4,33 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //__Private__\\
+    ////////////__Private__\\\\\\\\\\\\
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRender;
-   
-    //__Public__\\
+
+    ////////////__Public__\\\\\\\\\\\\
     public float walkSpeed = 6f;
-    //Player Information\\
+    //__Player Information\\\\\\\\\\\\
     public int lifePoints = 100;
     public int level = 1;
     public int exp = 0;
 
-    //Basic Attack Information\\
+    //Basic Attack Information__\\
     public int basicAttackDMG = 0;
     public float basicAttackCD = 0f;
 
-    //Strong Attack Information\\
+    //Strong Attack Information__\\
     public int strongAttackDMG = 0;
     public float strongAttackCD = 0f;
-
-
 
 
     //Awake is called before the Start
     void Awake()
     {
-        //__Calling stuff__\\
+        ////////////__Calling stuff__\\\\\\\\\\\\
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
@@ -46,18 +44,18 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //__movimento X & Y__\\
+        ////////////__movimento X & Y__\\\\\\\\\\\\
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        //__Attacks && Defenses__\\
+        ////////////__Attacks && Defenses__\\\\\\\\\\\\
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
 
         rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
 
-        //__FlipX__\\
+        ////////////__FlipX__\\\\\\\\\\\\
         if ((horizontal > 0) && (spriteRender.flipX))
         {
             spriteRender.flipX = false;
@@ -67,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             spriteRender.flipX = true;
         }
 
-        //__Animations__\\
+        ////////////__ANIMATIONS__\\\\\\\\\\\\
         //__MOVEMENT X & Y__\\
         if (horizontal != 0)
         {
