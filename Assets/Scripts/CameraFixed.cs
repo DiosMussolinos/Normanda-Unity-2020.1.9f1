@@ -18,7 +18,7 @@ public class CameraFixed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x + offsetX, player.position.y + offsetY, transform.position.z);
+        transform.position = new Vector3(player.position.x + offsetX, player.position.y + 1 + offsetY, transform.position.z);
     }
 }
 
