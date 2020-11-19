@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFixed.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\AttackBasicDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

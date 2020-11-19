@@ -18,7 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     //Basic Attack Information__\\
     public int basicAttackDMG = 0;
-    public float basicAttackCD = 0f;
+    public float basicAttackCD = 0.5f;
+    public float basicAttackTimer = 0f;
+    public GameObject BasicAttackPrefab;
 
     //Strong Attack Information__\\
     public int strongAttackDMG = 0;
@@ -39,6 +41,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
 
+    }
+
+    void Update()
+    {
+        if (basicAttackTimer >= 0) 
+        {
+            basicAttackTimer -= Time.deltaTime;
+        }
     }
 
     // Update is called once per frame
@@ -81,10 +91,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //__BASIC ATTACK__\\
-        if (basicAttack != 0)
+        if ((basicAttack != 0) && (basicAttackTimer <= 0))
         {
+            //Animação
             animator.SetBool("BasicAttack", true);
+            //Velocidade = 0
             rb.velocity = new Vector2(0, 0);
+
+            //Create Object
+            GameObject BasicAttack = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            basicAttackTimer = basicAttackCD;
         }
         else
         {
