@@ -7,11 +7,13 @@ public class AttackBasicDestroy : MonoBehaviour
 
     public float basicAttackLife;
     //private float lifeTimer = 0f;
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-           Destroy(gameObject, basicAttackLife);
-      
+        Destroy(gameObject, basicAttackLife);
     }
+    // Update is called once per frame
+    /*void Update()
+    {
+      
+    }*/
 }

@@ -10,21 +10,23 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRender;
 
     ////////////__Public__\\\\\\\\\\\\
-    public float walkSpeed = 6f;
+    public float walkSpeed;
     //__Player Information\\\\\\\\\\\\
-    public int lifePoints = 100;
-    public int level = 1;
-    public int exp = 0;
+    public int lifePoints;
+    public int level;
+    public int exp;
 
     //Basic Attack Information__\\
-    public int basicAttackDMG = 0;
-    public float basicAttackCD = 0.5f;
+    public int basicAttackDMG;
+    public float basicAttackCD;
     public float basicAttackTimer = 0f;
     public GameObject BasicAttackPrefab;
 
     //Strong Attack Information__\\
-    public int strongAttackDMG = 0;
-    public float strongAttackCD = 0f;
+    public int strongAttackDMG;
+    public float strongAttackCD;
+    public float strongAttackTimer = 0f;
+    public GameObject StrongAttackPrefab;
 
 
     //Awake is called before the Start
@@ -49,6 +51,12 @@ public class PlayerMovement : MonoBehaviour
         {
             basicAttackTimer -= Time.deltaTime;
         }
+
+        if (strongAttackTimer >= 0)
+        {
+            strongAttackTimer -= Time.deltaTime;
+        }
+
     }
 
     // Update is called once per frame
@@ -59,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         ////////////__Attacks && Defenses__\\\\\\\\\\\\
+        ///Melhorar codigo, tirar GetAxis
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
@@ -108,10 +117,17 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //__STRONG ATTACK__\\
-        if (strongAttack != 0)
+        if ((strongAttack != 0) && (strongAttackTimer <= 0))
         {
+            //Animação
             animator.SetBool("StrongAttack", true);
+            //Velocidade = 0
             rb.velocity = new Vector2(0,0);
+
+            //Create Object
+            GameObject StrongAttack = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            strongAttackTimer = strongAttackCD;
+
         }
         else
         {
