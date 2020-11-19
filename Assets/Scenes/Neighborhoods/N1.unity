@@ -318,6 +318,14 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1814205611, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
+      propertyPath: basicAttackCD
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814205611, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
+      propertyPath: strongAttackCD
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3268317184448462553, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
       propertyPath: m_Name
       value: Player

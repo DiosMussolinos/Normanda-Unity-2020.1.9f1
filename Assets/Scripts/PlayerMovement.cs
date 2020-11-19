@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     //Awake is called before the Start
     void Awake()
     {
-        //Calling stuff
+        //__Calling stuff__\\
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
 
-
     }
 
     // Update is called once per frame
@@ -50,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
         //__movimento X & Y__\\
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
+        //__Attacks && Defenses__\\
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
@@ -96,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         if (strongAttack != 0)
         {
             animator.SetBool("StrongAttack", true);
-            rb.velocity = new Vector2(0, 0);
+            rb.velocity = new Vector2(0,0);
         }
         else
         {
