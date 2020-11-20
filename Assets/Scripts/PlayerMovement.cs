@@ -69,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
             shieldDefenseTimer -= Time.deltaTime;
         }
 
+        //animator.SetFloat("BasicAttackTimer", basicAttackTimer);
+        //animator.SetFloat("StrongAttackTimer", strongAttackTimer);
+        //animator.SetFloat("ShieldTimer", shieldDefenseTimer);
     }
 
     // Update is called once per frame
@@ -146,11 +149,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("StrongAttack", false);
         }
 
-        //__BLOCK && SPEED 0,0__\\
+        //__BLOCK__\\
         if ((block != 0) && (shieldDefenseTimer <= 0))
         {
             //Animação
-            animator.SetBool("Block", true);
+            animator.SetBool("Shield", true);
             //Velocidade = 0
             rb.velocity = new Vector2(0,0);
 
@@ -160,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            animator.SetBool("Block", false);
+            animator.SetBool("Shield", false);
         }
 
 
