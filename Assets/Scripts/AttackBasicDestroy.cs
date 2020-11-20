@@ -11,9 +11,4 @@ public class AttackBasicDestroy : MonoBehaviour
     {
         Destroy(gameObject, basicAttackLife);
     }
-    // Update is called once per frame
-    /*void Update()
-    {
-      
-    }*/
 }

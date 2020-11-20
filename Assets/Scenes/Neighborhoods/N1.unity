@@ -204,6 +204,14 @@ PrefabInstance:
       propertyPath: strongAttackCD
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1814205611, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
+      propertyPath: ShieldPrefab
+      value: 
+      objectReference: {fileID: 1199930616516501619, guid: 12739ebc3af5fa441825bfc29e9ef83a, type: 3}
+    - target: {fileID: 1814205611, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
+      propertyPath: shieldCD
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3268317184448462553, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
       propertyPath: m_Name
       value: Player

@@ -12,10 +12,4 @@ public class AttackStrongDestroy : MonoBehaviour
     {
         Destroy(gameObject, strongAttackLife);
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        
-    }*/
 }

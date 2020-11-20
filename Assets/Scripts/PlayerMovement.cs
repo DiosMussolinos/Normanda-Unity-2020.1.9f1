@@ -16,17 +16,23 @@ public class PlayerMovement : MonoBehaviour
     public int level;
     public int exp;
 
-    //Basic Attack Information__\\
+    //Basic Attack Information\\
     public int basicAttackDMG;
     public float basicAttackCD;
     public float basicAttackTimer = 0f;
     public GameObject BasicAttackPrefab;
 
-    //Strong Attack Information__\\
+    //Strong Attack Information\\
     public int strongAttackDMG;
     public float strongAttackCD;
     public float strongAttackTimer = 0f;
     public GameObject StrongAttackPrefab;
+
+    //Shield Defense Information\\
+    public int percentageDefense;
+    public float shieldCD;
+    public float shieldDefenseTimer = 0f;
+    public GameObject ShieldPrefab;
 
 
     //Awake is called before the Start
@@ -47,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         if (basicAttackTimer >= 0) 
         {
             basicAttackTimer -= Time.deltaTime;
@@ -55,6 +62,11 @@ public class PlayerMovement : MonoBehaviour
         if (strongAttackTimer >= 0)
         {
             strongAttackTimer -= Time.deltaTime;
+        }
+
+        if (shieldDefenseTimer >= 0)
+        {
+            shieldDefenseTimer -= Time.deltaTime;
         }
 
     }
@@ -135,10 +147,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //__BLOCK && SPEED 0,0__\\
-        if (block != 0)
+        if ((block != 0) && (shieldDefenseTimer <= 0))
         {
+            //Animação
             animator.SetBool("Block", true);
+            //Velocidade = 0
             rb.velocity = new Vector2(0,0);
+
+            //Create Object
+            GameObject SheildDefense = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            shieldDefenseTimer = shieldCD;
         }
         else 
         {
