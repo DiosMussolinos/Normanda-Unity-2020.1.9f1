@@ -173,10 +173,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //__Colision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
             lifePoints = lifePoints - 10;
-            //animator.SetBool("Attacked", true);
+            animator.SetTrigger("Hitted");
         }
+        else 
+        {
+            animator.SetTrigger("NotHitted");
+        }
+
     }
 }

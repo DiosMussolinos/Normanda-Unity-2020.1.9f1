@@ -40,8 +40,10 @@ public class Archer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Distance from Enemy and Player
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
+        //Stay in the same position
         if (distance > stoppingDistance)
         {
             transform.position = this.transform.position;
@@ -51,7 +53,7 @@ public class Archer : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-
+        //Timet && distance = SHOOT NIGGA
         if ((timeBtwShots <= 0) && (distance < visionDistance))
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
@@ -62,6 +64,7 @@ public class Archer : MonoBehaviour
             timeBtwShots -= Time.deltaTime;
         }
 
+        //Reset of the timer
         if (archerLife <= 0) 
         {
             Destroy(gameObject);
@@ -70,11 +73,13 @@ public class Archer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
             archerLife = archerLife - 10;
         }
 
+        //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
             archerLife = archerLife - 20;
