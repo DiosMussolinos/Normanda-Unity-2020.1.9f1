@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Archer
+  - Soldier
+  - Shot
+  - BasicAttack
+  - StrongAttack
+  - Shield
+  - SoldierAttack
   layers:
   - Default
   - TransparentFX

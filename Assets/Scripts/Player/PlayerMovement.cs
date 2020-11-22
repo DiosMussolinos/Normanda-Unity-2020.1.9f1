@@ -166,9 +166,17 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Shield", false);
         }
 
-
         //__DEATH__\\
         animator.SetInteger("Health", lifePoints);
-    
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Shot"))
+        {
+            lifePoints = lifePoints - 10;
+            //animator.SetBool("Attacked", true);
+        }
     }
 }
