@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     public float shieldDefenseTimer = 0f;
     public GameObject ShieldPrefab;
 
+    //Public Hit Information\\
+    public float hitCd;
+    public float hitTimer = 0.3f; 
 
     //Awake is called before the Start
     void Awake()
@@ -69,9 +72,12 @@ public class PlayerMovement : MonoBehaviour
             shieldDefenseTimer -= Time.deltaTime;
         }
 
-        //animator.SetFloat("BasicAttackTimer", basicAttackTimer);
-        //animator.SetFloat("StrongAttackTimer", strongAttackTimer);
-        //animator.SetFloat("ShieldTimer", shieldDefenseTimer);
+        //if(hitTimer >= 0)
+        //{
+        //    hitTimer -= Time.deltaTime;
+        //    animator.SetBool("Hit", false);
+        //}
+
     }
 
     // Update is called once per frame
@@ -87,16 +93,23 @@ public class PlayerMovement : MonoBehaviour
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
 
-        rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
+        // Life > 0 then MOVE, YOU ARE ON MY WAY
+        if (lifePoints > 0)
+        {
+            rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
 
-        ////////////__FlipX__\\\\\\\\\\\\
-        if ((horizontal > 0) && (spriteRender.flipX))
+            ////////////__FlipX__\\\\\\\\\\\\
+            if ((horizontal > 0) && (spriteRender.flipX))
+            {
+                spriteRender.flipX = false;
+            }
+            else if ((horizontal < 0) && (!spriteRender.flipX))
+            {
+                spriteRender.flipX = true;
+            }
+        } else 
         {
-            spriteRender.flipX = false;
-        }
-        else if ((horizontal < 0) && (!spriteRender.flipX))
-        {
-            spriteRender.flipX = true;
+            rb.velocity = new Vector2(0, 0);
         }
 
         ////////////__ANIMATIONS__\\\\\\\\\\\\
@@ -114,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", -1);
         }
 
+
         //__BASIC ATTACK__\\
         if ((basicAttack != 0) && (basicAttackTimer <= 0))
         {
@@ -125,17 +139,18 @@ public class PlayerMovement : MonoBehaviour
             //Create Object
             GameObject BasicAttack = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             basicAttackTimer = basicAttackCD;
-        }
-        else
+        } else if(basicAttackTimer > 0)
         {
             animator.SetBool("BasicAttack", false);
         }
+
 
         //__STRONG ATTACK__\\
         if ((strongAttack != 0) && (strongAttackTimer <= 0))
         {
             //Animação
             animator.SetBool("StrongAttack", true);
+
             //Velocidade = 0
             rb.velocity = new Vector2(0,0);
 
@@ -143,33 +158,37 @@ public class PlayerMovement : MonoBehaviour
             GameObject StrongAttack = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             strongAttackTimer = strongAttackCD;
 
-        }
-        else
+        } else if (strongAttackTimer > 0)
         {
             animator.SetBool("StrongAttack", false);
         }
+
 
         //__BLOCK__\\
         if ((block != 0) && (shieldDefenseTimer <= 0))
         {
             //Animação
             animator.SetBool("Shield", true);
+
             //Velocidade = 0
             rb.velocity = new Vector2(0,0);
 
             //Create Object
             GameObject SheildDefense = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             shieldDefenseTimer = shieldCD;
-        }
-        else 
+
+        }else if (shieldDefenseTimer > 0)
         {
             animator.SetBool("Shield", false);
         }
+
 
         //__DEATH__\\
         animator.SetInteger("Health", lifePoints);
 
     }
+    //END UPDATE
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -177,11 +196,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Shot"))
         {
             lifePoints = lifePoints - 10;
-            animator.SetTrigger("Hitted");
-        }
-        else 
-        {
-            animator.SetTrigger("NotHitted");
+            //animator.SetBool("Hit", true);
+            
+            //animator.SetBool("Hit", false);
+            //hitTimer = hitCd;
+         
         }
 
     }

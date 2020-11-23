@@ -7,17 +7,22 @@ public class ArcherShots : MonoBehaviour
     //Set speed
     public float speed;
 
+    private float YOffSet = 0.5f;
     private Transform player;
     private Vector2 target;
+    private Animator animator;
 
     // Awake is called before Start
     void Awake() {
 
+        //Animator
+        animator = GetComponent<Animator>();
+        
         //Find the player
         player = GameObject.FindWithTag("Player").transform;
         
         //Initial position of the player 
-        target = new Vector2(player.position.x, player.position.y);
+        target = new Vector2(player.position.x, player.position.y + YOffSet);
 
     }
 
