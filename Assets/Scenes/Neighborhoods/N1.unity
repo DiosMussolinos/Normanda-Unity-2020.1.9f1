@@ -416,6 +416,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &935044278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+  m_PrefabInstance: {fileID: 597328366116146600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &935044279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935044278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a48305155f76cc41a06f8451bd764f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreaDistance: 0
+  visionDistance: 0
+  timeBtwShots: 0
+  startTimeBtwShots: 0
+  archerLife: 0
+  CollisionDamage: 0
+  Damage: 0
+  gold: 0
+  experience: 0
+  level: 0
+  projectile: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &597328366116146600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -427,13 +458,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier
       objectReference: {fileID: 0}
+    - target: {fileID: 6313254557995415465, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313254557995415465, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313254557995415465, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7208868770260778010, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.14
+      value: 11.95
       objectReference: {fileID: 0}
     - target: {fileID: 7208868770260778010, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.48
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7208868770260778010, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_LocalPosition.z
@@ -490,11 +533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7395636378707169880, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.31
+      value: 11.73
       objectReference: {fileID: 0}
     - target: {fileID: 7395636378707169880, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.42
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 7395636378707169880, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -566,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_Simulated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_UseFullKinematicContacts
@@ -574,6 +617,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531344019897698748, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531344019897698748, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531344019897698748, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

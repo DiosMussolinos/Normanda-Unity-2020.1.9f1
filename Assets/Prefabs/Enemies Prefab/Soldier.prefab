@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7208868770260778010}
   - component: {fileID: 6313254557995415465}
+  - component: {fileID: 2837651915711646494}
   - component: {fileID: 597328366116146602}
   - component: {fileID: 3174589464901789563}
   m_Layer: 0
@@ -84,6 +85,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2837651915711646494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311895556398274471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a48305155f76cc41a06f8451bd764f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  stoppingDistance: 0
+  retreaDistance: 0
+  visionDistance: 0
+  timeBtwShots: 0
+  startTimeBtwShots: 0
+  archerLife: 0
+  CollisionDamage: 0
+  Damage: 0
+  gold: 0
+  experience: 0
+  level: 0
+  projectile: {fileID: 0}
+  player: {fileID: 0}
 --- !u!61 &597328366116146602
 BoxCollider2D:
   m_ObjectHideFlags: 0
