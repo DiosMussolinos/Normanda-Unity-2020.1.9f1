@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 73cf54c90dd2b814b9e0bd8617931a0e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844a33f01a3f95a49901964af21e6453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  stoppingDistance: 5
-  retreaDistance: 15
-  visionDistance: 20
-  timeBtwShots: 2
+  speed: 2
+  stoppingDistance: 8
+  retreaDistance: 8
+  visionDistance: 10
+  timeBtwShots: 0
   startTimeBtwShots: 2
   archerLife: 10
   projectileDamage: 0
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2455465165429108002}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0

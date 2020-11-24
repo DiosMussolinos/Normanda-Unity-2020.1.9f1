@@ -9,7 +9,7 @@ public class Archer : MonoBehaviour
     public float stoppingDistance;
     public float retreaDistance;
     public float visionDistance;
-   
+
     //Control of shots
     public float timeBtwShots;
     public float startTimeBtwShots;
@@ -20,7 +20,7 @@ public class Archer : MonoBehaviour
     public int gold;
     public int experience;
     public int level;
-    
+
     //Calling stuff
     public GameObject projectile;
     public Transform player;
@@ -34,7 +34,7 @@ public class Archer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class Archer : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        //Timer && distance = SHOOT NIGGA
+        //Timer && distance = SHOOT THAT NUGGET
         if ((timeBtwShots <= 0) && (distance <= visionDistance))
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
@@ -65,7 +65,7 @@ public class Archer : MonoBehaviour
         }
 
         //Reset of the timer
-        if (archerLife <= 0) 
+        if (archerLife <= 0)
         {
             Destroy(gameObject);
         }
@@ -86,5 +86,4 @@ public class Archer : MonoBehaviour
         }
 
     }
-
 }

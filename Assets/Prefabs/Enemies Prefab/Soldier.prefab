@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7208868770260778010
 Transform:
   m_ObjectHideFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 73cf54c90dd2b814b9e0bd8617931a0e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,19 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a48305155f76cc41a06f8451bd764f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  stoppingDistance: 0
-  retreaDistance: 0
-  visionDistance: 0
-  timeBtwShots: 0
-  startTimeBtwShots: 0
-  archerLife: 0
-  CollisionDamage: 0
-  Damage: 0
+  speed: 3
+  stoppingDistance: 2
+  runDistance: 4
+  visionDistance: 8
+  timeBtwAttacks: 4
+  startTimeBtwAttacks: 2
+  soldierLife: 10
+  CollisionDamage: 2
+  Damage: 10
   gold: 0
   experience: 0
   level: 0
-  projectile: {fileID: 0}
+  SoldierAttack: {fileID: 54819002358107237, guid: 8c04b3e5977b26549978341dae4e5f88, type: 3}
   player: {fileID: 0}
 --- !u!61 &597328366116146602
 BoxCollider2D:
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 3311895556398274471}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0

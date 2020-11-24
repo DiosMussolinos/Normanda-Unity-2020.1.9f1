@@ -10,13 +10,13 @@ public class ArcherShots : MonoBehaviour
     private float YOffSet = 0.5f;
     private Transform player;
     private Vector2 target;
-    private Animator animator;
+    //private Animator animator;
 
     // Awake is called before Start
     void Awake() {
 
         //Animator
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         
         //Find the player
         player = GameObject.FindWithTag("Player").transform;
@@ -39,6 +39,7 @@ public class ArcherShots : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         //Hits the initial position of the player, BOOM, GET REK
+        /*REMOVER, É PARA ELA CONTINUAR ETERCNAMENTE*/
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
             Destroy(gameObject);

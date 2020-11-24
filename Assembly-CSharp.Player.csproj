@@ -57,12 +57,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\AttackBasicDestroy.cs" />
     <Compile Include="Assets\Scripts\CameraFixed.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
     <Compile Include="Assets\Scripts\Player\ShieldDefenseDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\AttackStrongDestroy.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
     <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
+    <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

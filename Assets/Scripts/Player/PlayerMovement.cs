@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     ////////////__Public__\\\\\\\\\\\\
     public float walkSpeed;
     //__Player Information\\\\\\\\\\\\
-    public int lifePoints;
+    public float lifePoints;
     public int level;
     public int exp;
 
@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__DEATH__\\
-        animator.SetInteger("Health", lifePoints);
+        animator.SetFloat("Health", lifePoints);
 
 
         //__ANIMATION TIMER__\\
@@ -194,13 +194,39 @@ public class PlayerMovement : MonoBehaviour
         //__Colision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
-            lifePoints = lifePoints - 10;
-            //animator.SetBool("Hit", true);
-            
-            //animator.SetBool("Hit", false);
-            //hitTimer = hitCd;
-         
+            lifePoints = lifePoints - 10;         
         }
 
+        //__Colision With Soldier__\\
+        if (collision.gameObject.CompareTag("Soldier"))
+        {
+            lifePoints = lifePoints - 2;
+        }
+
+        //__Colision With Soldier Attack__\\
+        if (collision.gameObject.CompareTag("SoldierAttack"))
+        {
+            lifePoints = lifePoints - 10;
+        }
     }
+    
+    /*
+    ⢀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⣠⣤⣶⣶
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⢰⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣀⣀⣾⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
+    ⣿⣿⣿⣿⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
+    ⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
+    When your spaghetthi code works
+    & The professor likes
+    */
+
 }
