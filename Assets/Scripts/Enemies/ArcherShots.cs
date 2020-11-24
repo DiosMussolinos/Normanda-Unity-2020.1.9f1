@@ -53,7 +53,7 @@ public class ArcherShots : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //Collide with the player, BOOM, GET ANAL
+        //Collide with the player, BOOM, GET UWU
         if (collision.gameObject.CompareTag("Shield"))
         {
             Destroy(gameObject);
