@@ -43,7 +43,7 @@ public class Archer : MonoBehaviour
         //Distance from Enemy and Player
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        //Stay in the same position
+        //__BEHAVIOR__\\
         if (distance > stoppingDistance)
         {
             transform.position = this.transform.position;
