@@ -260,36 +260,72 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 0
     m_Data:
       e00: 0
-      e01: -2.3827736e+18
-      e02: -2.5284234e-29
-      e03: -20.930191
+      e01: -0.0000000013189165
+      e02: 8.027e-42
+      e03: 0.0000000012335599
       e10: NaN
-      e11: 4.5904e-41
-      e12: 4.76e-43
-      e13: 4.74e-43
+      e11: 4.5905e-41
+      e12: 7.43e-43
+      e13: 7.4e-43
       e20: 1.04e-43
-      e21: -2.528474e-29
-      e22: -1.4409309e-26
-      e23: -1.4409309e-26
-      e30: -6.188494e-31
-      e31: 4.76e-43
-      e32: 9.4e-44
-      e33: 9.4e-44
+      e21: 8.262e-42
+      e22: 2.8958146e+13
+      e23: 2.8958146e+13
+      e30: 4.5905e-41
+      e31: 7.43e-43
+      e32: 7.4e-44
+      e33: 7.4e-44
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -2.5284234e-29, g: -2.5284234e-29, b: -2.5284234e-29, a: -2.5284234e-29}
+    m_Data: {r: 8.027e-42, g: 8.027e-42, b: 8.027e-42, a: 8.027e-42}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Origin: {x: 0, y: -2, z: 0}
+  m_Size: {x: 10, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -450,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2455465165429108002, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7395636378707169880, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,7 +546,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110279331656123194, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
       propertyPath: stoppingDistance
-      value: 10
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123194, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: visionDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123194, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: retreaDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123194, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110279331656123198, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd392a52a2c1b8f48a8e6039f3c0a1f8, type: 3}

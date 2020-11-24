@@ -53,8 +53,8 @@ public class Archer : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        //Timet && distance = SHOOT NIGGA
-        if ((timeBtwShots <= 0) && (distance < visionDistance))
+        //Timer && distance = SHOOT NIGGA
+        if ((timeBtwShots <= 0) && (distance <= visionDistance))
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;

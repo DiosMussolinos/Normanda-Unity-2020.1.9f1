@@ -54,34 +54,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void Update()
-    {
-
-        if (basicAttackTimer >= 0) 
-        {
-            basicAttackTimer -= Time.deltaTime;
-        }
-
-        if (strongAttackTimer >= 0)
-        {
-            strongAttackTimer -= Time.deltaTime;
-        }
-
-        if (shieldDefenseTimer >= 0)
-        {
-            shieldDefenseTimer -= Time.deltaTime;
-        }
-
-        //if(hitTimer >= 0)
-        //{
-        //    hitTimer -= Time.deltaTime;
-        //    animator.SetBool("Hit", false);
-        //}
-
-    }
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         ////////////__movimento X & Y__\\\\\\\\\\\\
         float horizontal = Input.GetAxis("Horizontal");
@@ -107,7 +81,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 spriteRender.flipX = true;
             }
-        } else 
+        } 
+        else 
         {
             rb.velocity = new Vector2(0, 0);
         }
@@ -133,6 +108,8 @@ public class PlayerMovement : MonoBehaviour
         {
             //Animação
             animator.SetBool("BasicAttack", true);
+            //animator.SetInteger("Animation", 2);
+            
             //Velocidade = 0
             rb.velocity = new Vector2(0, 0);
 
@@ -142,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         } else if(basicAttackTimer > 0)
         {
             animator.SetBool("BasicAttack", false);
+            //animator.SetInteger("Animation", 0);
         }
 
 
@@ -185,6 +163,27 @@ public class PlayerMovement : MonoBehaviour
 
         //__DEATH__\\
         animator.SetInteger("Health", lifePoints);
+
+
+        //__ANIMATION TIMER__\\
+        //Basic Attack
+        if (basicAttackTimer >= 0)
+        {
+            basicAttackTimer -= Time.deltaTime;
+        }
+
+        //Strong Attack
+        if (strongAttackTimer >= 0)
+        {
+            strongAttackTimer -= Time.deltaTime;
+        }
+
+        //Shield
+        if (shieldDefenseTimer >= 0)
+        {
+            shieldDefenseTimer -= Time.deltaTime;
+        }
+
 
     }
     //END UPDATE
