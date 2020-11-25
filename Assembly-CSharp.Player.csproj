@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
     <Compile Include="Assets\Scripts\Player\AttackAndDefenseDestroy.cs" />
+    <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
