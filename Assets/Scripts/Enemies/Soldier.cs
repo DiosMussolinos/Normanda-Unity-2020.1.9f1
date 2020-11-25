@@ -59,14 +59,12 @@ public class Soldier : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
 
-
         //Timer && distance = Kill that mf
         if ((timeBtwAttacks <= 0) && (distance <= visionDistance))
         {
             Instantiate(SoldierAttack, negativeSpawAttack, Quaternion.identity);
             Instantiate(SoldierAttack, positiveSpawAttack, Quaternion.identity);
             timeBtwAttacks = startTimeBtwAttacks;
-            //rb.velocity = new Vector2(0, 0);
         }
         else
         {
@@ -94,7 +92,6 @@ public class Soldier : MonoBehaviour
         {
             soldierLife = soldierLife - 20;
         }
-
     }
     /*
         ⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄
