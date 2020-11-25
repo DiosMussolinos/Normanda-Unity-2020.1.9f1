@@ -16,8 +16,8 @@ public class Soldier : MonoBehaviour
 
     //Details of Enemy
     public int soldierLife;
-    public int CollisionDamage;
-    public int Damage;
+    public float CollisionDamage;
+    public float Damage;
     public int gold;
     public int experience;
     public int level;
@@ -28,7 +28,6 @@ public class Soldier : MonoBehaviour
 
     private float soldierScale;
     private Rigidbody2D rb;
-    //private Vector3 spawAttack = new Vector3(transform.position.x - 0.8305659f, transform.position.y, transform.position.z);
 
     // Awake is called before Start
     void Awake()
@@ -36,12 +35,12 @@ public class Soldier : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
         soldierScale = (transform.localScale.x / 2) + 1f;
-
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -49,15 +48,16 @@ public class Soldier : MonoBehaviour
     {
         //Distance from Enemy and Player
         float distance = Vector2.Distance(transform.position, player.transform.position);
-
         //Position of The Attacks
-        Vector3 negativeSpawAttack = new Vector3(transform.position.x - 0.8305659f, transform.position.y, transform.position.z);
-        Vector3 positiveSpawAttack = new Vector3(transform.position.x + 0.8305659f, transform.position.y, transform.position.z);
+        Vector3 negativeSpawAttack = new Vector3(transform.position.x - 0.85f, transform.position.y, transform.position.z);
+        Vector3 positiveSpawAttack = new Vector3(transform.position.x + 0.85f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
         if (distance < visionDistance && distance > 2) {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
+
+
 
         //Timer && distance = Kill that mf
         if ((timeBtwAttacks <= 0) && (distance <= visionDistance))

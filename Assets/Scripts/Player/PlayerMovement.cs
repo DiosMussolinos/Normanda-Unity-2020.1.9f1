@@ -191,23 +191,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //__Colision With Archer Shot__\\
+        //__Collision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
             lifePoints = lifePoints - 10;         
         }
 
-        //__Colision With Soldier__\\
+        //__Collision With Soldier__\\
         if (collision.gameObject.CompareTag("Soldier"))
         {
             lifePoints = lifePoints - 2;
         }
 
-        //__Colision With Soldier Attack__\\
+        //__Collision With Soldier Attack__\\
         if (collision.gameObject.CompareTag("SoldierAttack"))
         {
             lifePoints = lifePoints - 10;
         }
+
+        //__Collision With Final Boss__\\
+        if (collision.gameObject.CompareTag("FinalBoss"))
+        {
+            lifePoints = lifePoints - 10;
+        }
+
+        //__Collision With Final Boss Attack__\\
+        if (collision.gameObject.CompareTag("FinalBossAttack"))
+        {
+            lifePoints = lifePoints - 10;
+        }
+
     }
     
     /*

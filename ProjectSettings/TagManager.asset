@@ -11,6 +11,8 @@ TagManager:
   - StrongAttack
   - Shield
   - SoldierAttack
+  - FinalBoss
+  - FinalBossAttack
   layers:
   - Default
   - TransparentFX

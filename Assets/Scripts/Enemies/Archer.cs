@@ -15,11 +15,11 @@ public class Archer : MonoBehaviour
     public float startTimeBtwShots;
 
     //Details of Enemy
-    public int archerLife;
-    public int projectileDamage;
-    public int gold;
-    public int experience;
-    public int level;
+    public float archerLife;
+    public float projectileDamage;
+    public float gold;
+    public float experience;
+    public float level;
 
     //Calling stuff
     public GameObject projectile;

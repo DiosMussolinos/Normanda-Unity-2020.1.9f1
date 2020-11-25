@@ -55,15 +55,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player\AttackBasicDestroy.cs" />
     <Compile Include="Assets\Scripts\CameraFixed.cs" />
     <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
-    <Compile Include="Assets\Scripts\Player\ShieldDefenseDestroy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Player\AttackStrongDestroy.cs" />
     <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackAndDefenseDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
