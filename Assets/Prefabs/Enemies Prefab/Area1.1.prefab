@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1622468760926591821}
   - component: {fileID: 1622468760926591818}
+  - component: {fileID: -1924007782249598758}
   - component: {fileID: 1622468760926591819}
   - component: {fileID: 1622468760926591820}
-  - component: {fileID: -1924007782249598758}
   m_Layer: 0
   m_Name: Area1.1
   m_TagString: FinalBossAttack
@@ -85,6 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1924007782249598758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622468760926591822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245277ab9bde49b48a8ddbdf9d445ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAttackLife: 0.5
 --- !u!61 &1622468760926591819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,16 +145,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &-1924007782249598758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622468760926591822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245277ab9bde49b48a8ddbdf9d445ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossAttackLife: 0.1

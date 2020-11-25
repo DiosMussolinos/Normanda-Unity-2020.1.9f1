@@ -6,9 +6,7 @@ public class FinalBoss : MonoBehaviour
 {
     //Behavior
     public float speed;
-    //public float stoppingDistance;
-    //public float retreaDistance;
-    //public float visionDistance;
+
 
     //Control of Attacks
     public float timeBtwAttacks;
@@ -60,7 +58,7 @@ public class FinalBoss : MonoBehaviour
         Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
-        if (distance > 10)
+        if (distance < 10)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
@@ -69,11 +67,9 @@ public class FinalBoss : MonoBehaviour
         //Timer && distance = Kill that mf
         if (timeBtwAttacks <= 0)
         {
-
+            //Fazer ser child
             Instantiate(topDownAttacks, attackTop, Quaternion.identity);
             Instantiate(topDownAttacks, attackBottom, Quaternion.identity);
-
-            //FINISH IT
             Instantiate(sideAttacks, attackLeft, Quaternion.Euler(0,0,-90));
             Instantiate(sideAttacks, attackRight, Quaternion.Euler(0, 0, -90));
 

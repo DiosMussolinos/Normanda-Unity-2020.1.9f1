@@ -108,18 +108,18 @@ public class PlayerMovement : MonoBehaviour
         {
             //Animação
             animator.SetBool("BasicAttack", true);
-            //animator.SetInteger("Animation", 2);
-            
-            //Velocidade = 0
-            rb.velocity = new Vector2(0, 0);
 
             //Create Object
-            GameObject BasicAttack = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Right BasicAttack
+            GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Left BasicAttack
+            GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x - 2.4f, transform.position.y + 1), Quaternion.identity);
+            
+            //Reset Timer
             basicAttackTimer = basicAttackCD;
         } else if(basicAttackTimer > 0)
         {
             animator.SetBool("BasicAttack", false);
-            //animator.SetInteger("Animation", 0);
         }
 
 
@@ -129,11 +129,13 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("StrongAttack", true);
 
-            //Velocidade = 0
-            rb.velocity = new Vector2(0,0);
-
             //Create Object
-            GameObject StrongAttack = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Right StrongAttack
+            GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Left StrongAttack
+            GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 2.78f, transform.position.y + 1), Quaternion.identity);
+            
+            //Reset Timer
             strongAttackTimer = strongAttackCD;
 
         } else if (strongAttackTimer > 0)
@@ -148,11 +150,13 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("Shield", true);
 
-            //Velocidade = 0
-            rb.velocity = new Vector2(0,0);
-
             //Create Object
-            GameObject SheildDefense = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Right Shield
+            GameObject SheildDefenseRight = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
+            //Left Shield
+            GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 1.6f, transform.position.y + 1), Quaternion.identity);
+
+            //Reset Timer
             shieldDefenseTimer = shieldCD;
 
         }else if (shieldDefenseTimer > 0)
@@ -162,9 +166,18 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__DEATH__\\
-        animator.SetFloat("Health", lifePoints);
+        if (lifePoints <= 0) 
+        {
+            animator.SetBool("Death", true);
+        }
 
 
+        Timer();
+    }
+    //__END UPDATE__\\
+
+    private void Timer() 
+    {
         //__ANIMATION TIMER__\\
         //Basic Attack
         if (basicAttackTimer >= 0)
@@ -183,11 +196,7 @@ public class PlayerMovement : MonoBehaviour
         {
             shieldDefenseTimer -= Time.deltaTime;
         }
-
-
     }
-    //END UPDATE
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -62,6 +62,7 @@ public class Soldier : MonoBehaviour
         //Timer && distance = Kill that mf
         if ((timeBtwAttacks <= 0) && (distance <= visionDistance))
         {
+            //Fazer ser child
             Instantiate(SoldierAttack, negativeSpawAttack, Quaternion.identity);
             Instantiate(SoldierAttack, positiveSpawAttack, Quaternion.identity);
             timeBtwAttacks = startTimeBtwAttacks;
