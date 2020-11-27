@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         ////////////__Attacks && Defenses__\\\\\\\\\\\\
-        ///Melhorar codigo, tirar GetAxis
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
