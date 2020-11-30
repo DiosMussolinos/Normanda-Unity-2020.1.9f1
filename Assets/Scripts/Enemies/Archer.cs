@@ -4,23 +4,6 @@ using UnityEngine;
 
 public class Archer : MonoBehaviour
 {
-    //Behavior
-    public float speed;
-    public float stoppingDistance;
-    public float retreaDistance;
-    public float visionDistance;
-
-    //Control of shots
-    public float timeBtwShots;
-    public float startTimeBtwShots;
-
-    //Details of Enemy
-    public float archerLife;
-    public float projectileDamage;
-    public float gold;
-    public float experience;
-    public float level;
-
     //Calling stuff
     public GameObject projectile;
     public Transform player;
@@ -44,28 +27,28 @@ public class Archer : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         //__BEHAVIOR__\\
-        if (distance > stoppingDistance)
+        if (distance > SourceCode.archerStoppingDistance)
         {
             transform.position = this.transform.position;
         }
-        else if (distance < retreaDistance)
+        else if (distance < SourceCode.archerRetreaDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -SourceCode.archerSpeed * Time.deltaTime);
         }
 
         //Timer && distance = SHOOT THAT NUGGET
-        if ((timeBtwShots <= 0) && (distance <= visionDistance))
+        if ((SourceCode.timeBtwShots <= 0) && (distance <= SourceCode.archerVisionDistance))
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
+            SourceCode.timeBtwShots = SourceCode.startTimeBtwShots;
         }
         else
         {
-            timeBtwShots -= Time.deltaTime;
+            SourceCode.timeBtwShots -= Time.deltaTime;
         }
 
         //Reset of the timer
-        if (archerLife <= 0)
+        if (SourceCode.archerLife <= 0)
         {
             Destroy(gameObject);
         }
@@ -76,13 +59,13 @@ public class Archer : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
-            archerLife = archerLife - 10;
+            SourceCode.archerLife = SourceCode.archerLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
-            archerLife = archerLife - 20;
+            SourceCode.archerLife = SourceCode.archerLife - SourceCode.strongAttackDMG;
         }
 
     }

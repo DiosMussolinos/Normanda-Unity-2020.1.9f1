@@ -3,29 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Soldier : MonoBehaviour
-{
-    //Behavior
-    public float speed;
-    public float stoppingDistance;
-    public float runDistance;
-    public float visionDistance;
-
-    //Control of shots
-    public float timeBtwAttacks;
-    public float startTimeBtwAttacks;
-
-    //Details of Enemy
-    public int soldierLife;
-    public float CollisionDamage;
-    public float Damage;
-    public int gold;
-    public int experience;
-    public int level;
-    
+{   
     //Calling stuff
     public GameObject SoldierAttack;
     public Transform player;
-
     private float soldierScale;
     private Rigidbody2D rb;
 
@@ -35,6 +16,7 @@ public class Soldier : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
         soldierScale = (transform.localScale.x / 2) + 1f;
+       
     }
 
     // Start is called before the first frame update
@@ -53,27 +35,27 @@ public class Soldier : MonoBehaviour
         Vector3 positiveSpawAttack = new Vector3(transform.position.x + 0.85f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
-        if (distance < visionDistance && distance > 2) {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        if (distance < SourceCode.soldierVisionDistance && distance > 2) {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.soldierSpeed * Time.deltaTime);
         }
 
 
 
         //Timer && distance = Kill that mf
-        if ((timeBtwAttacks <= 0) && (distance <= visionDistance))
+        if ((SourceCode.timeBtwAttacks <= 0) && (distance <= SourceCode.soldierVisionDistance))
         {
             //Fazer ser child
             Instantiate(SoldierAttack, negativeSpawAttack, Quaternion.identity);
             Instantiate(SoldierAttack, positiveSpawAttack, Quaternion.identity);
-            timeBtwAttacks = startTimeBtwAttacks;
+            SourceCode.timeBtwAttacks = SourceCode.startTimeBtwAttacks;
         }
         else
         {
-            timeBtwAttacks -= Time.deltaTime;
+            SourceCode.timeBtwAttacks -= Time.deltaTime;
         }
         
         //Reset of the timer
-        if (soldierLife <= 0)
+        if (SourceCode.soldierLife <= 0)
         {
             Destroy(gameObject);
         }
@@ -85,32 +67,32 @@ public class Soldier : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
-            soldierLife = soldierLife - 10;
+            SourceCode.soldierLife = SourceCode.soldierLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
-            soldierLife = soldierLife - 20;
+            SourceCode.soldierLife = SourceCode.soldierLife - SourceCode.strongAttackDMG;
         }
     }
-    /*
-        ⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄
-        ⢀⡋⣡⣴⣶⣶⡀⠄⠄⠙⢿⣿⣿⣿⣿⣿⣴⣿⣿⣿⢃⣤⣄⣀⣥⣿⣿⠄
-        ⢸⣇⠻⣿⣿⣿⣧⣀⢀⣠⡌⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠿⣿⣿⣿⠄
-        ⢸⣿⣷⣤⣤⣤⣬⣙⣛⢿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡍⠄⠄⢀⣤⣄⠉⠋⣰
-        ⣖⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⢇⣿⣿⡷⠶⠶⢿⣿⣿⠇⢀⣤
-        ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣽⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣷⣶⣥⣴⣿⡗
-        ⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄
-        ⣦⣌⣛⣻⣿⣿⣧⠙⠛⠛⡭⠅⠒⠦⠭⣭⡻⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄
-        ⣿⣿⣿⣿⣿⣿⣿⡆⠄⠄⠄⠄⠄⠄⠄⠄⠹⠈⢋⣽⣿⣿⣿⣿⣵⣾⠃⠄
-        ⣿⣿⣿⣿⣿⣿⣿⣿⠄⣴⣿⣶⣄⠄⣴⣶⠄⢀⣾⣿⣿⣿⣿⣿⣿⠃⠄⠄
-        ⠈⠻⣿⣿⣿⣿⣿⣿⡄⢻⣿⣿⣿⠄⣿⣿⡀⣾⣿⣿⣿⣿⣛⠛⠁⠄⠄⠄
-        ⠄⠄⠈⠛⢿⣿⣿⣿⠁⠞⢿⣿⣿⡄⢿⣿⡇⣸⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄
-        ⠄⠄⠄⠄⠄⠉⠻⣿⣿⣾⣦⡙⠻⣷⣾⣿⠃⠿⠋⠁⠄⠄⠄⠄⠄⢀⣠⣴
-        ⣿⣶⣶⣮⣥⣒⠲⢮⣝⡿⣿⣿⡆⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣠
-        It works senpai
 
-    */
+    /*
+     ⡆⣐⢕⢕⢕⢕⢕⢕⢕⢕⠅⢗⢕⢕⢕⢕⢕⢕⢕⠕⠕⢕⢕⢕⢕⢕⢕⢕⢕⢕
+  ⢐⢕⢕⢕⢕⢕⣕⢕⢕⠕⠁⢕⢕⢕⢕⢕⢕⢕⢕⠅⡄⢕⢕⢕⢕⢕⢕⢕⢕⢕
+  ⢕⢕⢕⢕⢕⠅⢗⢕⠕⣠⠄⣗⢕⢕⠕⢕⢕⢕⠕⢠⣿⠐⢕⢕⢕⠑⢕⢕⠵⢕
+  ⢕⢕⢕⢕⠁⢜⠕⢁⣴⣿⡇⢓⢕⢵⢐⢕⢕⠕⢁⣾⢿⣧⠑⢕⢕⠄⢑⢕⠅⢕
+  ⢕⢕⠵⢁⠔⢁⣤⣤⣶⣶⣶⡐⣕⢽⠐⢕⠕⣡⣾⣶⣶⣶⣤⡁⢓⢕⠄⢑⢅⢑
+  ⠍⣧⠄⣶⣾⣿⣿⣿⣿⣿⣿⣷⣔⢕⢄⢡⣾⣿⣿⣿⣿⣿⣿⣿⣦⡑⢕⢤⠱⢐
+  ⢠⢕⠅⣾⣿⠋⢿⣿⣿⣿⠉⣿⣿⣷⣦⣶⣽⣿⣿⠈⣿⣿⣿⣿⠏⢹⣷⣷⡅⢐
+  ⣔⢕⢥⢻⣿⡀⠈⠛⠛⠁⢠⣿⣿⣿⣿⣿⣿⣿⣿⡀⠈⠛⠛⠁⠄⣼⣿⣿⡇⢔
+  ⢕⢕⢽⢸⢟⢟⢖⢖⢤⣶⡟⢻⣿⡿⠻⣿⣿⡟⢀⣿⣦⢤⢤⢔⢞⢿⢿⣿⠁⢕
+  ⢕⢕⠅⣐⢕⢕⢕⢕⢕⣿⣿⡄⠛⢀⣦⠈⠛⢁⣼⣿⢗⢕⢕⢕⢕⢕⢕⡏⣘⢕
+  ⢕⢕⠅⢓⣕⣕⣕⣕⣵⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣷⣕⢕⢕⢕⢕⡵⢀⢕⢕
+  ⢑⢕⠃⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃⢕⢕⢕
+  ⣆⢕⠄⢱⣄⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⢁⢕⢕⠕⢁
+  ⣿⣦⡀⣿⣿⣷⣶⣬⣍⣛⣛⣛⡛⠿⠿⠿⠛⠛⢛⣛⣉⣭⣤⣂⢜⠕⢑⣡⣴⣿
+    CODE OPTIMIZATION DONE WITH PAIN
+     */
 
 }

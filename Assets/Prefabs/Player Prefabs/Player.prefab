@@ -586,6 +586,7 @@ GameObject:
   - component: {fileID: 1211454006095542793}
   - component: {fileID: 1814205611}
   - component: {fileID: 7753721851723393017}
+  - component: {fileID: 3469492908657661705}
   - component: {fileID: 7935446132822877533}
   - component: {fileID: 5198384303318657302}
   m_Layer: 0
@@ -674,24 +675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b35c96ae434474d8f041459fac1b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 6
-  lifePoints: 20
-  level: 1
-  exp: 0
-  basicAttackDMG: 0
-  basicAttackCD: 1
-  basicAttackTimer: 0
   BasicAttackPrefab: {fileID: 1199930616516501619, guid: b8c2b54cdc9da864e91586a96eddd975, type: 3}
-  strongAttackDMG: 0
-  strongAttackCD: 2
-  strongAttackTimer: 0
   StrongAttackPrefab: {fileID: 1199930616516501619, guid: 7a26ed2bf047dd544aa3b3fb4fdefa22, type: 3}
-  percentageDefense: 0
-  shieldCD: 2
-  shieldDefenseTimer: 0
   ShieldPrefab: {fileID: 1199930616516501619, guid: 12739ebc3af5fa441825bfc29e9ef83a, type: 3}
-  hitCd: 0.5
-  hitTimer: 0
 --- !u!50 &7753721851723393017
 Rigidbody2D:
   serializedVersion: 4
@@ -700,7 +686,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3268317184448462553}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -713,6 +699,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &3469492908657661705
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268317184448462553}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.035, y: 0.859375}
+  m_Size: {x: 1.08, y: 1.71875}
+  m_Direction: 0
 --- !u!61 &7935446132822877533
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -720,7 +722,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3268317184448462553}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

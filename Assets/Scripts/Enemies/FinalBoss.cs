@@ -4,32 +4,10 @@ using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
 {
-    //Behavior
-    public float speed;
-
-
-    //Control of Attacks
-    public float timeBtwAttacks;
-    public float startTimeBtwAttacks;
-
-    //Details of Enemy
-    public float finalBossLife;
-    public float attackDamage;
-    public float projectileDamage;
-    public float gold;
-    public float experience;
-    public float level;
-
     //Calling stuff
     public GameObject topDownAttacks;
     public GameObject sideAttacks;
     public Transform player;
-
-    //Variables For Stages//Math//Behavior
-    public float finalBossStage;
-    public float finalBossLifeForMath;
-    //public bool onLayr;
-
 
     // Awake is called before Start
     void Awake()
@@ -60,12 +38,12 @@ public class FinalBoss : MonoBehaviour
         //__BEHAVIOR__\\
         if (distance < 10)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.finalBossSpeed * Time.deltaTime);
         }
         //__BEHAVIOR__\\
 
         //Timer && distance = Kill that mf
-        if (timeBtwAttacks <= 0)
+        if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 5))
         {
             //Fazer ser child
             Instantiate(topDownAttacks, attackTop, Quaternion.identity);
@@ -73,15 +51,15 @@ public class FinalBoss : MonoBehaviour
             Instantiate(sideAttacks, attackLeft, Quaternion.Euler(0,0,-90));
             Instantiate(sideAttacks, attackRight, Quaternion.Euler(0, 0, -90));
 
-            timeBtwAttacks = startTimeBtwAttacks;
+            SourceCode.finalBossTimeBtwAttacks = SourceCode.finalBossStartTimeBtwAttacks;
         }
         else
         {
-            timeBtwAttacks -= Time.deltaTime;
+            SourceCode.finalBossTimeBtwAttacks -= Time.deltaTime;
         }
 
         //Reset of the timer
-        if (finalBossLife <= 0)
+        if (SourceCode.finalBossLife <= 0)
         {
             Destroy(gameObject);
         }
@@ -92,13 +70,31 @@ public class FinalBoss : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
-            finalBossLife = finalBossLife - 10;
+            SourceCode.finalBossLife = SourceCode.finalBossLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
-            finalBossLife = finalBossLife - 20;
+            SourceCode.finalBossLife = SourceCode.finalBossLife - SourceCode.strongAttackDMG;
         }
     }
+
+    /*
+    ⠄⠄⠄⢀⣤⣾⣿⡟⠋⠄⠄⠄⣀⡿⠄⠊⠄⠄⠄⠄⠄⠄⢸⠇⠄⢀⠃⠙⣿⣿
+    ⣤⠒⠛⠛⠛⠛⠛⠛⠉⠉⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠸⠄⢀⠊⠄⠄⠈⢿
+    ⣿⣠⠤⠴⠶⠒⠶⠶⠤⠤⣤⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⠃⠄⠂⣀⣀⣀⡀⠄
+    ⡏⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠙⠂⠄⠄⠄⠄⠄⠄⢀⢎⠐⠛⠋⠉⠉⠉⠉⠛
+    ⡇⠄⠄⠄⣀⡀⠄⠄⠄⢀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠎⠁⠄⠄⠄⠄⠄⠄⠄⠄
+    ⡧⠶⣿⣿⣿⣿⣿⣿⠲⠦⣭⡃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⡀⠄⠄⠄⠄⠄⠄
+    ⡇⠄⣿⣿⣿⣿⣿⣿⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢰⣾⣿⣿⣿⡟⠛⠶⠄
+    ⡇⠄⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣼⣿⣿⣿⣿⡇⠄⠄⢀
+    ⡇⠄⢿⣿⣿⣿⣿⣷⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣿⣿⣿⣿⣿⡇⠄⠄⢊
+    ⢠⠄⠈⠛⠛⠛⠛⠋⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⡦⠁⠄⠄⣼
+    ⢸⠄⠈⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠉⠉⠄⠄⠄⠄⢰⣿
+    ⢸⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠁⠉⠄⢸⣿
+    ⠄⣆⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢸⣿
+    ⠄⢿⣷⣶⣄⡀⠄⠄⠄⠄⠄⠄⠉⠉⠉⠉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣴⣿⣿
+    ⠄⢸⣿⣿⣿⣿⣷⣦⣤⣀⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⣠⣤⣶⣿⣿⣿⣿⣿
+    */
 }

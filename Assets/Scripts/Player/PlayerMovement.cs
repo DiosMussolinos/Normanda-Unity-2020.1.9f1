@@ -8,35 +8,17 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRender;
-
+    
     ////////////__Public__\\\\\\\\\\\\
-    public float walkSpeed;
-    //__Player Information\\\\\\\\\\\\
-    public float lifePoints;
-    public int level;
-    public int exp;
-
-    //Basic Attack Information\\
-    public int basicAttackDMG;
-    public float basicAttackCD;
-    public float basicAttackTimer = 0f;
     public GameObject BasicAttackPrefab;
-
-    //Strong Attack Information\\
-    public int strongAttackDMG;
-    public float strongAttackCD;
-    public float strongAttackTimer = 0f;
     public GameObject StrongAttackPrefab;
 
     //Shield Defense Information\\
-    public int percentageDefense;
-    public float shieldCD;
-    public float shieldDefenseTimer = 0f;
     public GameObject ShieldPrefab;
 
     //Public Hit Information\\
-    public float hitCd;
-    public float hitTimer = 0.3f; 
+    //public float hitCd;
+    //public float hitTimer = 0.3f; 
 
     //Awake is called before the Start
     void Awake()
@@ -45,13 +27,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRender = GetComponent<SpriteRenderer>();
+        
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -62,14 +44,15 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         ////////////__Attacks && Defenses__\\\\\\\\\\\\
+        
         float basicAttack = Input.GetAxis("Fire1");
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
 
         // Life > 0 then MOVE, YOU ARE ON MY WAY
-        if (lifePoints > 0)
+        if (SourceCode.lifePoints > 0)
         {
-            rb.velocity = new Vector2(horizontal * walkSpeed, vertical * walkSpeed);
+            rb.velocity = new Vector2(horizontal * SourceCode.walkSpeed, vertical * SourceCode.walkSpeed);
 
             ////////////__FlipX__\\\\\\\\\\\\
             if ((horizontal > 0) && (spriteRender.flipX))
@@ -103,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__BASIC ATTACK__\\
-        if ((basicAttack != 0) && (basicAttackTimer <= 0))
+        if ((basicAttack != 0) && (SourceCode.basicAttackTimer <= 0))
         {
             //Animação
             animator.SetBool("BasicAttack", true);
@@ -115,15 +98,15 @@ public class PlayerMovement : MonoBehaviour
             GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x - 2.4f, transform.position.y + 1), Quaternion.identity);
             
             //Reset Timer
-            basicAttackTimer = basicAttackCD;
-        } else if(basicAttackTimer > 0)
+            SourceCode.basicAttackTimer = SourceCode.basicAttackCD;
+        } else if(SourceCode.basicAttackTimer > 0)
         {
             animator.SetBool("BasicAttack", false);
         }
 
 
         //__STRONG ATTACK__\\
-        if ((strongAttack != 0) && (strongAttackTimer <= 0))
+        if ((strongAttack != 0) && (SourceCode.strongAttackTimer <= 0))
         {
             //Animação
             animator.SetBool("StrongAttack", true);
@@ -133,18 +116,18 @@ public class PlayerMovement : MonoBehaviour
             GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             //Left StrongAttack
             GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 2.78f, transform.position.y + 1), Quaternion.identity);
-            
-            //Reset Timer
-            strongAttackTimer = strongAttackCD;
 
-        } else if (strongAttackTimer > 0)
+            //Reset Timer
+            SourceCode.strongAttackTimer = SourceCode.strongAttackCD;
+
+        } else if (SourceCode.strongAttackTimer > 0)
         {
             animator.SetBool("StrongAttack", false);
         }
 
 
         //__BLOCK__\\
-        if ((block != 0) && (shieldDefenseTimer <= 0))
+        if ((block != 0) && (SourceCode.shieldDefenseTimer <= 0))
         {
             //Animação
             animator.SetBool("Shield", true);
@@ -156,21 +139,21 @@ public class PlayerMovement : MonoBehaviour
             GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 1.6f, transform.position.y + 1), Quaternion.identity);
 
             //Reset Timer
-            shieldDefenseTimer = shieldCD;
+            SourceCode.shieldDefenseTimer = SourceCode.shieldCD;
 
-        }else if (shieldDefenseTimer > 0)
+        }else if (SourceCode.shieldDefenseTimer > 0)
         {
             animator.SetBool("Shield", false);
         }
 
 
         //__DEATH__\\
-        if (lifePoints <= 0) 
+        if (SourceCode.lifePoints <= 0) 
         {
             animator.SetBool("Death", true);
         }
 
-
+        //Debug.Log(SourceCode.lifePoints);
         Timer();
     }
     //__END UPDATE__\\
@@ -179,21 +162,21 @@ public class PlayerMovement : MonoBehaviour
     {
         //__ANIMATION TIMER__\\
         //Basic Attack
-        if (basicAttackTimer >= 0)
+        if (SourceCode.basicAttackTimer >= 0)
         {
-            basicAttackTimer -= Time.deltaTime;
+            SourceCode.basicAttackTimer -= Time.deltaTime;
         }
 
         //Strong Attack
-        if (strongAttackTimer >= 0)
+        if (SourceCode.strongAttackTimer >= 0)
         {
-            strongAttackTimer -= Time.deltaTime;
+            SourceCode.strongAttackTimer -= Time.deltaTime;
         }
 
         //Shield
-        if (shieldDefenseTimer >= 0)
+        if (SourceCode.shieldDefenseTimer >= 0)
         {
-            shieldDefenseTimer -= Time.deltaTime;
+            SourceCode.shieldDefenseTimer -= Time.deltaTime;
         }
     }
 
@@ -202,31 +185,31 @@ public class PlayerMovement : MonoBehaviour
         //__Collision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
-            lifePoints = lifePoints - 10;         
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.projectileDamage;         
         }
 
         //__Collision With Soldier__\\
         if (collision.gameObject.CompareTag("Soldier"))
         {
-            lifePoints = lifePoints - 2;
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierCollisionDamage;
         }
 
         //__Collision With Soldier Attack__\\
         if (collision.gameObject.CompareTag("SoldierAttack"))
         {
-            lifePoints = lifePoints - 10;
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierDamage;
         }
 
         //__Collision With Final Boss__\\
         if (collision.gameObject.CompareTag("FinalBoss"))
         {
-            lifePoints = lifePoints - 10;
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.finalBossTouchDamage;
         }
 
         //__Collision With Final Boss Attack__\\
         if (collision.gameObject.CompareTag("FinalBossAttack"))
         {
-            lifePoints = lifePoints - 10;
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.finalBossAttackDamage;
         }
 
     }
@@ -247,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
     ⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
     ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
     When your spaghetthi code works
-    & The professor likes
+        & The professor likes
     */
 
 }
