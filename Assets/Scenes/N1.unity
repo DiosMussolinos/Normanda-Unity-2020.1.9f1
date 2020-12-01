@@ -2966,6 +2966,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 746287391, guid: 83ef640ad4c247544ba199382bdb9f01, type: 3}
+      propertyPath: m_Name
+      value: GameUI
+      objectReference: {fileID: 0}
     - target: {fileID: 7738854526906899208, guid: 83ef640ad4c247544ba199382bdb9f01, type: 3}
       propertyPath: m_Name
       value: Canvas
