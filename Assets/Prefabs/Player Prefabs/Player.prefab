@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicAttackPrefab: {fileID: 1199930616516501619, guid: b8c2b54cdc9da864e91586a96eddd975, type: 3}
   StrongAttackPrefab: {fileID: 1199930616516501619, guid: 7a26ed2bf047dd544aa3b3fb4fdefa22, type: 3}
+  blockInstantiate: 0
   ShieldPrefab: {fileID: 1199930616516501619, guid: 12739ebc3af5fa441825bfc29e9ef83a, type: 3}
 --- !u!50 &7753721851723393017
 Rigidbody2D:

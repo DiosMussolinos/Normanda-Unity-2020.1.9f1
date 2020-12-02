@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     ////////////__Public__\\\\\\\\\\\\
     public GameObject BasicAttackPrefab;
     public GameObject StrongAttackPrefab;
-
+    public bool blockInstantiate = false;
     //Shield Defense Information\\
     public GameObject ShieldPrefab;
 
@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -91,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("BasicAttack", true);
 
-            //Create Object
+            //Create Object\\
             //Right BasicAttack
             GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             //Left BasicAttack
@@ -111,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("StrongAttack", true);
 
-            //Create Object
+            //Create Object\\
             //Right StrongAttack
             GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             //Left StrongAttack
@@ -127,23 +128,30 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__BLOCK__\\
-        if ((block != 0) && (SourceCode.shieldDefenseTimer <= 0))
+        if ((block != 0) && (!blockInstantiate))
         {
             //Animação
             animator.SetBool("Shield", true);
 
-            //Create Object
+            //Create Object\\
             //Right Shield
             GameObject SheildDefenseRight = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             //Left Shield
             GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 1.6f, transform.position.y + 1), Quaternion.identity);
 
             //Reset Timer
-            SourceCode.shieldDefenseTimer = SourceCode.shieldCD;
+            //SourceCode.shieldDefenseTimer = SourceCode.shieldCD;
+            //Vel = 0;
+            rb.velocity = new Vector2(0, 0);
 
-        }else if (SourceCode.shieldDefenseTimer > 0)
+
+            blockInstantiate = true;
+        }
+
+        if  ((block == 0) && (blockInstantiate = true))
         {
             animator.SetBool("Shield", false);
+            blockInstantiate = false;
         }
 
 
@@ -153,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Death", true);
         }
 
-        //Debug.Log(SourceCode.lifePoints);
+        
         Timer();
     }
     //__END UPDATE__\\
@@ -174,10 +182,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Shield
-        if (SourceCode.shieldDefenseTimer >= 0)
-        {
-            SourceCode.shieldDefenseTimer -= Time.deltaTime;
-        }
+        //if (SourceCode.shieldDefenseTimer >= 0)
+        //{
+        //    SourceCode.shieldDefenseTimer -= Time.deltaTime;
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

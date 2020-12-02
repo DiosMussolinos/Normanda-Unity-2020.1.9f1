@@ -11,7 +11,6 @@ public class GoToD1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
-            Debug.Log("Enter NIGGA");
             SceneManager.LoadScene("D1");
         }
     }
