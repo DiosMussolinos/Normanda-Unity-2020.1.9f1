@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     ////////////__Public__\\\\\\\\\\\\
     public GameObject BasicAttackPrefab;
     public GameObject StrongAttackPrefab;
-    public bool blockInstantiate = false;
     //Shield Defense Information\\
     public GameObject ShieldPrefab;
 
@@ -128,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__BLOCK__\\
-        if ((block != 0) && (blockInstantiate != true))
+        if ((block != 0) && (SourceCode.blockInstantiate != true))
         {
             //Animação
             animator.SetBool("Shield", true);
@@ -145,13 +144,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
 
 
-            blockInstantiate = true;
+            SourceCode.blockInstantiate = true;
         }
 
-        if  ((block == 0) && (blockInstantiate = true))
+        if  ((block == 0) && (SourceCode.blockInstantiate = true))
         {
             animator.SetBool("Shield", false);
-            blockInstantiate = false;
+            SourceCode.blockInstantiate = false;
         }
 
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5213809625254376663}
   - component: {fileID: 1550744990916489944}
   - component: {fileID: -7863312929324849503}
+  - component: {fileID: -4015869281917168138}
   m_Layer: 0
   m_Name: ShieldPrefab
   m_TagString: Shield
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1199930616516501619}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 123d64ff5dffb9d4cbb65255ac7ac0f3, type: 3}
   m_Name: 
@@ -145,3 +146,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-4015869281917168138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199930616516501619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1571f50021c2d5f40855a6e3513eacdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
