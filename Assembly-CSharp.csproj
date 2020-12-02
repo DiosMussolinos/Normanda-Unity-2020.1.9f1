@@ -57,9 +57,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD1.cs" />
      <Compile Include="Assets\Scripts\CameraFixed.cs" />
+     <Compile Include="Assets\Scripts\UI\ExpUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN3.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN1.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -68,14 +70,13 @@
      <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
      <Compile Include="Assets\Scripts\SourceCode.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
+     <Compile Include="Assets\Scripts\UI\GoldUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD3.cs" />
      <Compile Include="Assets\Scripts\UI\LifeUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
      <Compile Include="Assets\Scripts\Player\AttackAndDefenseDestroy.cs" />
-     <Compile Include="Assets\Scripts\UI\GoldUIText.cs" />
-     <Compile Include="Assets\Scripts\UI\ExpUIText.cs" />
-     <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
+     <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -362,6 +363,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>C:/Users/User/Desktop/3ºSemesterProject/Assets/Libraries/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -708,6 +712,20 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{4811BDEA-18A2-6E1D-12B9-6DD815852420}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{830E5CFC-23C3-14FF-989C-C82324D04635}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{C3C588A5-0C5B-C108-4644-E3E6448F8351}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
