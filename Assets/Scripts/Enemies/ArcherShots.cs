@@ -49,7 +49,7 @@ public class ArcherShots : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Collide with the player, BOOM, GET FUCKED
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

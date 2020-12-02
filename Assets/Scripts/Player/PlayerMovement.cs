@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //__BLOCK__\\
-        if ((block != 0) && (!blockInstantiate))
+        if ((block != 0) && (blockInstantiate != true))
         {
             //Animação
             animator.SetBool("Shield", true);
