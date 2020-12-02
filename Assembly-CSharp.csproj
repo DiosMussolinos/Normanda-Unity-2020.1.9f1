@@ -55,17 +55,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player\DefenseDestroy.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD1.cs" />
      <Compile Include="Assets\Scripts\CameraFixed.cs" />
      <Compile Include="Assets\Scripts\UI\ExpUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN3.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
      <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN1.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\AttackDestroy.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD2.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN2.cs" />
      <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
@@ -76,9 +79,7 @@
      <Compile Include="Assets\Scripts\UI\LifeUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
-     <Compile Include="Assets\Scripts\Player\DefenseDestroy.cs" />
-     <Compile Include="Assets\Scripts\Player\AttackDestroy.cs" />
+     <Compile Include="Assets\Scripts\MenuScript\MenuFunctions.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

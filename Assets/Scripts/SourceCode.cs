@@ -29,7 +29,6 @@ public class SourceCode
     public static float percentageDefense;
     public static float shieldCD = 0f;
     public static float shieldDefenseTimer = 0f;
-    //public bool blockInstantiate = false;
     public static bool blockInstantiate = false;
 
     //Recieve damage\\
