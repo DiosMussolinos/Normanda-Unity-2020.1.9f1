@@ -50,6 +50,7 @@ public class Archer : MonoBehaviour
         //Reset of the timer
         if (SourceCode.archerLife <= 0)
         {
+            SourceCode.playerExp = SourceCode.playerExp + SourceCode.archerExp;
             Destroy(gameObject);
         }
     }

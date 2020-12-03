@@ -39,7 +39,7 @@ public class SourceCode
 
     ////////////////////////__ARCHER__\\\\\\\\\\\\\\\\\\\\\\\\
     //Behavior\\
-    public static float archerSpeed = 3f;
+    public static float archerSpeed = 2f;
     public static float archerStoppingDistance = 6f;
     public static float archerRetreaDistance = 4f;
     public static float archerVisionDistance = 8f;
@@ -48,7 +48,7 @@ public class SourceCode
     public static float archerLife = 20;
     public static int projectileDamage = 10;
     public static int archerGold;
-    public static int archerExp;
+    public static int archerExp = 10;
     public static int archerLevel;
 
     //Control of shots\\
@@ -76,7 +76,7 @@ public class SourceCode
 
     ////////////////////////__SLIME_KING__\\\\\\\\\\\\\\\\\\\\\\\\
 
-
+    ////////////////////////__ARCHER_KING__\\\\\\\\\\\\\\\\\\\\\\\\
 
     ////////////////////////__FINAL_BOSS__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float finalBossSpeed = 2f;

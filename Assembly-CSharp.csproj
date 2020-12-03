@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
      <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
+     <Compile Include="Assets\Scripts\NPC&apos;s\Priest.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN1.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
