@@ -20,7 +20,7 @@ public class Priest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((Input.GetKeyDown(KeyCode.Space)) && (playerInRange = true))
+        if((Input.GetKeyDown(KeyCode.Space)) && (playerInRange == true))
         {
             if (dialogBox.activeInHierarchy)
             {
@@ -40,7 +40,7 @@ public class Priest : MonoBehaviour
         if (collider.CompareTag("Player")) 
         {
             playerInRange = true;
-            Debug.Log("IN");
+            
         }
     }
 
@@ -49,7 +49,7 @@ public class Priest : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             playerInRange = false;
-            Debug.Log("OUT");
+            dialogBox.SetActive(false);
         }
     }
 
