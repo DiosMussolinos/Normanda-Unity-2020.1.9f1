@@ -8,7 +8,7 @@ public class Priest : MonoBehaviour
 
     public GameObject dialogBox;
     public Text dialogText;
-    public string dialog;
+    public string[] dialog;
     public bool playerInRange = false;
 
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class Priest : MonoBehaviour
             else 
             {
                 dialogBox.SetActive(true);
-                dialogText.text = dialog;
+                dialogText.text = dialog[Random.Range(0, dialog.Length)];
             }
         }
     }

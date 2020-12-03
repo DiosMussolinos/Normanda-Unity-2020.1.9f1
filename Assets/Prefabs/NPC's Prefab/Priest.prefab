@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8569192442100364291}
   - component: {fileID: 5395440021840738218}
-  - component: {fileID: 126599186}
   - component: {fileID: 126599189}
+  - component: {fileID: 126599186}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -84,6 +84,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &126599189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037210675139662385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88a2d9482d53c54496ca54905ab01be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog:
+  - Welcome to the home of baby satan
+  - bbb
+  - ccc
+  - ccc
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  playerInRange: 0
 --- !u!61 &126599186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,19 +138,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5358014, y: 1}
   m_EdgeRadius: 0
---- !u!114 &126599189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9037210675139662385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88a2d9482d53c54496ca54905ab01be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog: 
-  playerInRange: 0
