@@ -1,7 +1,29 @@
-Citadel guard: 
+CITADEL GUARD:
+1 - I always wanted to be a guardian soldier, they see all the action.
 
-You shall not trespass!
-----------------------------------------------------------------------------
-Frase pra Blacksmith: 
-"Want to burn 6 million cookies?"
-"Lookin' to protect yourself, or doing some deaths" (parafraseando Skyrim e mudando algumas coisas)
+--------------------------------------------------------------------------------------
+BLACKSMITH: 
+1 - I am doing my best to teach my son to have the strength to bang it all day. The hammer of course.
+2 - Want to listen about my battle of swords?
+3 
+
+--------------------------------------------------------------------------------------
+PRIEST:
+1 - I have always been a fan of Michael Jackson. I love how he inspires the youth
+2 - Please stop pestering me. God's hand may be invisible, mine is not.
+3 - They say the biggest miracle of Jesus Christ was having 12 close friends after turning 30.
+4 - The rules never mentioned about kids...
+5 - Please stop pestering me. God's hand may be invisible, mine is not.
+
+--------------------------------------------------------------------------------------
+Citadel Soldier:
+1 - I have always wanted to be a citadel guardian, I heard they have a pension plan.
+
+--------------------------------------------------------------------------------------
+The barman:
+1 - The majority of people die at 30. If I can't sell my drinks to minors I will go bankrupt!
+2 - I'm thinking of buying the upstairs floor and expanding my business with women, if you know what I mean.
+3 - Believe me or not, my most loyal consumer is the priest.
+4 - The best part of my job is confessing weird things to drunk customers and then saying I never said anything. You should see their faces.
+5 - Sex on the beach? Wait are you seriously telling me that's a drink's name? Which loser created that?
+6 - Drink options? I have green ale, orange ale, and red ale. It's a medieval game, what did you expect?
