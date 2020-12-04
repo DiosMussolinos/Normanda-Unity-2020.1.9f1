@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4341157223916618135}
   - component: {fileID: 15046251071357502}
   - component: {fileID: 3272243828343560937}
-  - component: {fileID: 5392216546556425606}
+  - component: {fileID: 7455378763251474710}
   m_Layer: 0
   m_Name: River Guardian
   m_TagString: Untagged
@@ -112,8 +112,8 @@ MonoBehaviour:
   - 11
   - 12
   playerInRange: 0
---- !u!61 &5392216546556425606
-BoxCollider2D:
+--- !u!58 &7455378763251474710
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,16 +125,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7679007, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.5358014, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 1.5

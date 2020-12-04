@@ -142,8 +142,8 @@ GameObject:
   - component: {fileID: 1814205611}
   - component: {fileID: 7753721851723393017}
   - component: {fileID: 3469492908657661705}
-  - component: {fileID: 7935446132822877533}
   - component: {fileID: 5198384303318657302}
+  - component: {fileID: 438184898}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -231,7 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicAttackPrefab: {fileID: 1199930616516501619, guid: b8c2b54cdc9da864e91586a96eddd975, type: 3}
   StrongAttackPrefab: {fileID: 1199930616516501619, guid: 7a26ed2bf047dd544aa3b3fb4fdefa22, type: 3}
-  blockInstantiate: 0
   ShieldPrefab: {fileID: 1199930616516501619, guid: 12739ebc3af5fa441825bfc29e9ef83a, type: 3}
 --- !u!50 &7753721851723393017
 Rigidbody2D:
@@ -270,32 +269,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.035, y: 0.859375}
   m_Size: {x: 1.08, y: 1.71875}
   m_Direction: 0
---- !u!61 &7935446132822877533
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3268317184448462553}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0326865, y: 0.86021864}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 3.125, y: 1.71875}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.12394, y: 1.7059066}
-  m_EdgeRadius: 0
 --- !u!95 &5198384303318657302
 Animator:
   serializedVersion: 3
@@ -315,3 +288,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &438184898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268317184448462553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3e529627456c24bab5fe334e1f2274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 0000000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

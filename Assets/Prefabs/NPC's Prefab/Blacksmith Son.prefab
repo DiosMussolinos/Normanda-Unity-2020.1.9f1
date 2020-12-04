@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6141243291094393673}
   - component: {fileID: 7579983953290469600}
-  - component: {fileID: 6775028504047716978}
-  - component: {fileID: 2581115793978677080}
+  - component: {fileID: 7488319829460492633}
+  - component: {fileID: 308929215}
+  - component: {fileID: 3893894117692281814}
+  - component: {fileID: 4727905409259814603}
   m_Layer: 0
   m_Name: Blacksmith Son
   m_TagString: Untagged
@@ -84,36 +86,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6775028504047716978
+--- !u!114 &7488319829460492633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6826164121015502203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6812225d306f32748bf62e957501f311, type: 3}
+  m_Script: {fileID: 11500000, guid: 5101369a5393458409e2b777f1d7b3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
   dialog:
-  - aaa
-  - bbb
-  - ccc
-  - ddd
-  - eee
-  - fff
-  - ggg
-  - hhh
-  - iii
-  - mmm
-  - nnn
-  - ppp
+  - a
+  - b
+  - b
+  - b
+  - b
+  - b
+  - b
+  - b
+  - b
+  - b
   playerInRange: 0
---- !u!61 &2581115793978677080
-BoxCollider2D:
+  moveSpeed: 2
+  npcPoints:
+  - {x: -7, y: 0, z: 0}
+  - {x: -7, y: -5, z: 0}
+  pointsIndex: 0
+  controlE: {fileID: 3887011231198461454, guid: a036881912c5b8b41a0c42eac00af830, type: 3}
+--- !u!50 &308929215
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826164121015502203}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &3893894117692281814
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,16 +152,24 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7679007, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.5358014, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 1.5
+--- !u!114 &4727905409259814603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826164121015502203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog:
+  - a
+  - b
+  playerInRange: 0

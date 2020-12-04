@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4261805405855632447}
   - component: {fileID: 517753897444036502}
   - component: {fileID: 7673910439645099026}
-  - component: {fileID: 5606729129992665134}
+  - component: {fileID: 9024524235620834558}
   m_Layer: 0
   m_Name: Barman
   m_TagString: Untagged
@@ -112,8 +112,8 @@ MonoBehaviour:
   - 11
   - 12
   playerInRange: 0
---- !u!61 &5606729129992665134
-BoxCollider2D:
+--- !u!58 &9024524235620834558
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,16 +125,6 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.7679007, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.5358014, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 1.5
