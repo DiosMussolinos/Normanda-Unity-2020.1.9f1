@@ -63,10 +63,10 @@
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN3.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
-     <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN1.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
+     <Compile Include="Assets\Scripts\NPC&apos;s\StaticNPC.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\AttackDestroy.cs" />
@@ -74,16 +74,16 @@
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN2.cs" />
      <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
      <Compile Include="Assets\Scripts\SourceCode.cs" />
+     <Compile Include="Assets\Scripts\NPC&apos;s\DynamicNPC.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
      <Compile Include="Assets\Scripts\UI\GoldUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD3.cs" />
      <Compile Include="Assets\Scripts\Inventory\Pickup.cs" />
      <Compile Include="Assets\Scripts\UI\LifeUIText.cs" />
      <Compile Include="Assets\Scripts\MenuScript\MenuFunctions.cs" />
+     <Compile Include="Assets\Scripts\SourceFunctions.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\Scripts\NPC&apos;s\DynamicNPC.cs" />
-     <Compile Include="Assets\Scripts\NPC&apos;s\StaticNPC.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -91,6 +91,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Scripts\NPC&apos;s\Frases para os NPCs.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Prefabs\NPC&apos;s Prefab\Frases para os NPCs.txt" />
      <None Include="Assets\Images&amp;Animation\Tiles\Dungeon\Licença.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -101,7 +102,6 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Prefabs\NPC&apos;s Prefab\Frases para os NPCs 1.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

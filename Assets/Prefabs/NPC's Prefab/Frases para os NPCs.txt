@@ -1,0 +1,103 @@
+CITADEL GUARD:
+1 - I always wanted to be a guardian soldier, they see all the action.
+2 - Did you know that i cannot move? if a do, im fired and my marriage is over...
+3 - Imagine me as a british soldier, god... my life sucks...
+4 - pension plan? Oh yes, those 3 gold coins to someone who worked 40 years.
+5 - boy, grab me a green ale, i need alcohol before meeting my mother in law.
+6 - A sword or a spear? short or long? my wife see the difference from far away.
+7 - shii... There is someone around...
+8 - shii... There is someone around...
+9 - shii... There is someone around...
+10 - shii... There is someone around...
+11 - shii... There is someone around...
+12 - shii... There is someone around...
+--------------------------------------------------------------------------------------
+BLACKSMITH: 
+1 - I am doing my best to teach my son to have the strength to bang it all day. The hammer of course.
+2 - Want to listen about my battle of swords?
+3 - We don't accept refunds. It's a sword, be a men and die with it.
+4 - No gold? Go to the other world and get a sword from a body!
+5 - I need to buy food to my children, talk with me when you have gold.
+6 - Have you heard about our god? The barman knows our priest, talk with him to understand it better.
+7 - I used to do engagement rings. As you can see, no one like it. 
+8 - BLACK PLAGUE, soon everything will be 50% off.
+9 - Do you know why there are only 7 people on this city...?
+10 - Dumb luck was a gift that i have since i was a child.
+11 - Work as the smartest, but with the luck of the dumbest. What a quality!
+12 - You must end this bloodshed before both worlds are dead...
+--------------------------------------------------------------------------------------
+PRIEST:
+1 - I have always been a fan of Michael Jackson. I love how he inspires the youth.
+2 - Please stop pestering me. God's hand may be invisible, mine is not.
+3 - Outsides should be welcome, as long as they help to maintain the peace of our land.
+4 - The rules never mentioned about kids...
+5 - Please stop pestering me. God's hand may be invisible, mine is not.
+6 - Morning Son, if you are here for the pray we are close.
+7 - Yeah, i know, a city in danger, we are all close... And people can't even pray...
+8 - Imagine being a priest and need to explain what is happening to others.
+9 - I really don't understand what happened, i know that a lot of people disappear and adventurers never came back.
+10 - This started two months a go... People are already starving as they are locked in their homes...
+11 - As a priest i must give people hope with words, could you give them with you actions?
+12 - "Strange women lying in ponds distributing swords is no base for government". I prefer the idea of a god.
+
+
+--------------------------------------------------------------------------------------
+Citadel Soldier:
+1 - I have always wanted to be a citadel guardian, I heard they have a pension plan.
+2 - Smile and wave. It's what the people want from us.
+3 - It's our fault if they commit crimes? I don't think so, that's why i kill them all.
+4 - No, i don't know what I'm doing with my life. I'm here for the money that i needed some years a go...
+5 - "I'm the knights of the Round table, we dance whene'er we're able, we do routines and chorus scenes!".
+6 - Not again, please, leave me alone...
+7 - Magic Moments come to our live when we least expect. Maybe life choose you to come here for a reason.
+8 - I just hope I'm strong to deal with the monters when they come. I want my children to live.
+9 - Keep our land in peace, and we will help as we can.
+10 - I used to barg, losing only when they got me
+11 - My captain tried to save this land, now he is dead...
+12 - All the slaves were killed as sacrifice to protect our people!
+
+
+--------------------------------------------------------------------------------------
+The barman:
+1 - The majority of people die at 30. If I can't sell my drinks to minors I will go bankrupt!
+2 - I'm thinking of buying the upstairs floor and expanding my business with women, if you know what I mean.
+3 - Believe me or not, my most loyal consumer is the priest.
+4 - The best part of my job is confessing weird things to drunk customers and then saying I never said anything. You should see their faces.
+5 - If you need a therapist it's on the other side of the street.
+6 - Drink options? I have green ale, orange ale, and red ale. It's a medieval game, what did you expect?
+7 - I listen about a princess that went to the other world and neve came back. There are rummors that she is a god now.
+8 - Last time someone like you arrive, the princess wasn't kidnapped and we had a king.
+9 - My child, you wouldn't believe in all the stories that i have listen in my life.
+10 - With all the problems that we have, there is a punk around that poison peoples drinks. Don't accept anything from strangers...
+11 - A wise men once told me: "be drunk during a fight, so you don't notice if you lose".
+12 - Everything can be solved with a drink, a sword and a woman!
+
+--------------------------------------------------------------------------------------
+The Blacksmith’s Son (filho do ferreiro)
+1 - My dad said he can make 6 million swords in the oven over 5 years, I don't believe him. It's simple mathematics!
+2 - I don't have the strength to hold a hammer yet. But someday I hope I have it so I can bang it really hard. Swords of course.
+3 - I do really want to be a soldier, but the family business will be ruined... 
+4 - Want to make an order? Talk with my dad, I'm 10...
+5 - Let me play!
+6 - I'm not suppose to talk with strangers...
+7 - Please, leave me alone...
+8 - Why are you in my house?
+9 - Can i play with your sword?
+10 - You know, i have a shield just like your's.
+11 - I just hope i dont die for Measles 
+12 - Buy something from my dad, I'm hungry...
+
+--------------------------------------------------------------------------------------
+The River Guardian (um soldado especial)
+1 - A lot of people don't take my job seriously because they think I literally guard a river
+2 - If you die, can I keep your equipment?
+3 - Beware, big monsters ahead. whispers not as big as your mom though.
+4 - People never realize how lonely it is to guard a dungeon. You will be my friend, right?
+5 - My dream was to be a hero, but then you came along. Guess I can't be a protagonist, huh?
+6 - People say if you hold the down and B button you have a higher chance of capturing a monster. Not sure about that though.
+7 - The monsters took my wife away from me, that's why i'm here... 
+8 - Oh yes, look at me. I'm a guy with armor that exist to tell people about a portal. I'm so important...
+9 - I was once know as Black Knight, i used to live in Monty Python
+10 - None shall pass, if you pass, you shall die.
+11 - I move for no men.
+12 - This is only a scratch, I'M INVINCIBLE!

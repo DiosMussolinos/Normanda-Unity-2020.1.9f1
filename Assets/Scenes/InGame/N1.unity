@@ -5503,7 +5503,8 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7673910439645099026, guid: 7db20882919cfd94f8a105ec2da81ee6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7db20882919cfd94f8a105ec2da81ee6, type: 3}
 --- !u!1001 &1982032351742552804
 PrefabInstance:
@@ -5568,7 +5569,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3272243828343560937, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
 --- !u!1001 &5705966234176638198
 PrefabInstance:
@@ -5633,7 +5635,8 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6479468033744074834, guid: 642026b6fc27a8e47a5093867a720d16, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 642026b6fc27a8e47a5093867a720d16, type: 3}
 --- !u!1001 &6396854608944316678
 PrefabInstance:
@@ -5698,7 +5701,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blacksmith
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3473247260611534081, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
 --- !u!1001 &6880631552173514289
 PrefabInstance:
@@ -5763,7 +5767,8 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8281038883404402168, guid: fba2f741e5476534a9fff948991f7784, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fba2f741e5476534a9fff948991f7784, type: 3}
 --- !u!1001 &8115247707313404337
 PrefabInstance:
@@ -5905,5 +5910,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Priest
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 126599189, guid: b326695e98dff3244af8511509f58206, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b326695e98dff3244af8511509f58206, type: 3}
