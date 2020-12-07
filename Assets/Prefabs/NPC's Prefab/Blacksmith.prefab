@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8271776247324758540}
   - component: {fileID: 5674772651951444389}
-  - component: {fileID: 3473247260611534081}
   - component: {fileID: 3410304909026020693}
   m_Layer: 0
   m_Name: Blacksmith
@@ -84,34 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3473247260611534081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739864609126986814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36fade8c2a1f4a34b972e4dcd8f68a38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog:
-  - Want to burn 6 million cookies?
-  - Lookin' to protect yourself, or doing some deaths
-  - Do you really want my sword?
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  playerInRange: 0
 --- !u!58 &3410304909026020693
 CircleCollider2D:
   m_ObjectHideFlags: 0

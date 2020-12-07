@@ -12,7 +12,7 @@ public class ExpUIText : MonoBehaviour
     void Update()
     {
 
-        expText.text = SourceCode.playerExp.ToString();
+        expText.text = SourceCode.playerExp.ToString() + " / " + SourceCode.playerExpToNextLevel.ToString();
 
     }
 }

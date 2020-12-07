@@ -14,7 +14,7 @@ public class SourceCode
     public static int maxLifePoints = 100;
     public static int playerLevel = 1;
     public static int playerExp = 0;
-    public static int playerExpToNextLevel = 1;
+    public static int playerExpToNextLevel = 0;
     public static int playerGold = 0;
 
     //Basic Attack Information\\
@@ -56,6 +56,7 @@ public class SourceCode
     //Control of shots\\
     public static float timeBtwShots = 2f;
     public static float startTimeBtwShots = 1f;
+
 
     ////////////__SOLDIER__\\\\\\\\\\\\\\\\\\\\\\\\
     //Behavior

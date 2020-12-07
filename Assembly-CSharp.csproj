@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CameraFixed.cs" />
      <Compile Include="Assets\Scripts\UI\ExpUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
+     <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN3.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Scripts\SourceCode.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\DynamicNPC.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
+     <Compile Include="Assets\Scripts\Player\LevelSystem.cs" />
      <Compile Include="Assets\Scripts\UI\GoldUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD3.cs" />
      <Compile Include="Assets\Scripts\Inventory\Pickup.cs" />
@@ -84,8 +86,6 @@
      <Compile Include="Assets\Scripts\SourceFunctions.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\HealthBar.cs" />
-     <Compile Include="Assets\Scripts\Player\LevelSystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
