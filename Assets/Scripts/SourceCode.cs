@@ -11,8 +11,10 @@ public class SourceCode
     ////////////////////////__PLAYER__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float walkSpeed = 6f;
     public static int lifePoints = 100;
+    public static int maxLifePoints = 100;
     public static int playerLevel = 1;
     public static int playerExp = 0;
+    public static int playerExpToNextLevel = 1;
     public static int playerGold = 0;
 
     //Basic Attack Information\\
@@ -47,7 +49,7 @@ public class SourceCode
     //Details of Enemy\\
     public static float archerLife = 20;
     public static int projectileDamage = 10;
-    public static int archerGold;
+    public static int archerGold = 100;
     public static int archerExp = 10;
     public static int archerLevel;
 
@@ -69,9 +71,9 @@ public class SourceCode
     //Details of Enemy
     public static int soldierLife = 10;
     public static int soldierCollisionDamage = 2;
-    public static int soldierDamage;
-    public static int soldierGold;
-    public static int soldierExp;
+    public static int soldierDamage = 10;
+    public static int soldierGold = 100;
+    public static int soldierExp = 5;
     public static int soldierLevel;
 
     ////////////////////////__SLIME_KING__\\\\\\\\\\\\\\\\\\\\\\\\
@@ -89,8 +91,8 @@ public class SourceCode
     public static int finalBossLife = 40;
     public static int finalBossTouchDamage = 2;
     public static int finalBossAttackDamage = 10;
-    public static float finalBossGold = 0f;
-    public static float finalBossEXP = 0f;
+    public static int finalBossGold = 9;
+    public static int finalBossEXP = 20;
 
     /*
       ⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄

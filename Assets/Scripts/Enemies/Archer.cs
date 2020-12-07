@@ -51,6 +51,7 @@ public class Archer : MonoBehaviour
         if (SourceCode.archerLife <= 0)
         {
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.archerExp;
+            SourceCode.playerGold = SourceCode.playerGold + SourceCode.archerGold;
             Destroy(gameObject);
         }
     }

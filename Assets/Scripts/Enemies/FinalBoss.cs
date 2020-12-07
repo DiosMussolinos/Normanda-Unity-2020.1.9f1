@@ -61,6 +61,8 @@ public class FinalBoss : MonoBehaviour
         //Reset of the timer
         if (SourceCode.finalBossLife <= 0)
         {
+            SourceCode.playerExp = SourceCode.playerExp + SourceCode.finalBossEXP;
+            SourceCode.playerGold = SourceCode.playerGold + SourceCode.finalBossGold;
             Destroy(gameObject);
         }
     }

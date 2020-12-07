@@ -162,6 +162,9 @@ public class PlayerMovement : MonoBehaviour
 
         
         Timer();
+
+
+
     }
     //__END UPDATE__\\
 
@@ -179,12 +182,6 @@ public class PlayerMovement : MonoBehaviour
         {
             SourceCode.strongAttackTimer -= Time.deltaTime;
         }
-
-        //Shield
-        //if (SourceCode.shieldDefenseTimer >= 0)
-        //{
-        //    SourceCode.shieldDefenseTimer -= Time.deltaTime;
-        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
