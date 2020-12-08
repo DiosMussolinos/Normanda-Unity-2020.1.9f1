@@ -18,17 +18,18 @@ public class SourceCode
     public static int playerGold = 0;
 
     //Basic Attack Information\\
-    public static int basicAttackDMG = 10;
+    public static int basicAttackDMG = 5;
     public static float basicAttackCD = 1f;
     public static float basicAttackTimer = 0f;
 
     //Strong Attack Information\\
-    public static int strongAttackDMG = 20;
+    public static int strongAttackDMG = 10;
+    public static float strongAttackCD = 5f;
     public static float strongAttackTimer = 0f;
-    public static float strongAttackCD = 2f;
+    
 
     //Shield Defense Information\\
-    public static float percentageDefense;
+    public static float percentageDefense = 0;
     public static float shieldCD = 0f;
     public static float shieldDefenseTimer = 0f;
     public static bool blockInstantiate = false;
@@ -49,7 +50,7 @@ public class SourceCode
     //Details of Enemy\\
     public static float archerLife = 20;
     public static int projectileDamage = 10;
-    public static int archerGold = 100;
+    public static int archerGold = 10;
     public static int archerExp = 10;
     public static int archerLevel;
 
@@ -58,7 +59,7 @@ public class SourceCode
     public static float startTimeBtwShots = 1f;
 
 
-    ////////////__SOLDIER__\\\\\\\\\\\\\\\\\\\\\\\\
+    ////////////////////////__SOLDIER__\\\\\\\\\\\\\\\\\\\\\\\\
     //Behavior
     public static float soldierSpeed = 3f;
     public static float soldierStoppingDistance = 2f;
@@ -73,7 +74,7 @@ public class SourceCode
     public static int soldierLife = 10;
     public static int soldierCollisionDamage = 2;
     public static int soldierDamage = 10;
-    public static int soldierGold = 100;
+    public static int soldierGold = 10;
     public static int soldierExp = 5;
     public static int soldierLevel;
 

@@ -29,13 +29,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -160,10 +153,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Death", true);
         }
 
-        
+        if(SourceCode.lifePoints > SourceCode.maxLifePoints) 
+        {
+            SourceCode.lifePoints = SourceCode.maxLifePoints;
+        }
+
         Timer();
-
-
 
     }
     //__END UPDATE__\\
