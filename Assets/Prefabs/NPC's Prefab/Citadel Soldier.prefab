@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1276559505538016962}
   - component: {fileID: 3295745532417893739}
-  - component: {fileID: 6479468033744074834}
   - component: {fileID: 1440773810916561480}
   m_Layer: 0
   m_Name: Citadel Soldier
@@ -84,34 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6479468033744074834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888763334496747760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4d9c5cc48583148af0e8a4f80d2c9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  playerInRange: 0
 --- !u!58 &1440773810916561480
 CircleCollider2D:
   m_ObjectHideFlags: 0

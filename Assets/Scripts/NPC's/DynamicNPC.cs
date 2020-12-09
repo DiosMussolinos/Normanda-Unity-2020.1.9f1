@@ -33,6 +33,7 @@ public class DynamicNPC : MonoBehaviour
             if (transform.position == npcPoints[pointsIndex])
             {
                 pointsIndex++;
+                Debug.Log(pointsIndex);
             }
 
             if (pointsIndex == (npcPoints.Length))
