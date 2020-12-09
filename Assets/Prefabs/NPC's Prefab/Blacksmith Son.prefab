@@ -100,8 +100,20 @@ MonoBehaviour:
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
   dialog:
-  - a
-  - b
+  - My dad said he can make 6 million swords in the oven over 5 years, I don't believe
+    him. It's simple mathematics!
+  - I don't have the strength to hold a hammer yet. But someday I hope I have it
+    so I can bang it really hard. Swords of course.
+  - 'I do really want to be a soldier, but the family business will be ruined... '
+  - Want to make an order? Talk with my dad, I'm 10...
+  - Let me play!
+  - I'm not suppose to talk with strangers...
+  - Please, leave me alone...
+  - Why are you in my house?
+  - bCan i play with your sword?
+  - bYou know, i have a shield just like your's.
+  - ' just hope i dont die for Measle.'
+  - Buy something from my dad, I'm hungry...
   playerInRange: 0
   moveSpeed: 3
   npcPoints:

@@ -115,5 +115,18 @@ MonoBehaviour:
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
   dialog:
-  - a
+  - I am doing my best to teach my son to have the strength to bang it all day. The
+    hammer of course.
+  - Want to listen about my battle of swords?
+  - We don't accept refunds. It's a sword, be a men and die with it.
+  - No gold? Go to the other world and get a sword from a body!
+  - I need to buy food to my children, talk with me when you have gold.
+  - Have you heard about our god? The barman knows our priest, talk with him to understand
+    it better.
+  - 'I used to do engagement rings. As you can see, no one like it. '
+  - BLACK PLAGUE, soon everything will be 50% off.
+  - Do you know why there are only 7 people on this city...?
+  - Dumb luck was a gift that i have since i was a child.
+  - Work as the smartest, but with the luck of the dumbest. What a quality!
+  - You must end this bloodshed before both worlds are dead...
   playerInRange: 0

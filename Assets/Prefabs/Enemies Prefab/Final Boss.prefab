@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da461faa9c587d84fa88063b4f87e2f2, type: 3}
-  m_Color: {r: 0.169837, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 32d026714e68de44386ba30ddcca30a0, type: 3}
+  m_Color: {r: 0.4666667, g: 0.4666667, b: 0.4666667, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,20 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5172cfa4fe6a84fa1f6f05ed7ce748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  timeBtwAttacks: 4
-  startTimeBtwAttacks: 2
-  finalBossLife: 10
-  attackDamage: 0
-  projectileDamage: 0
-  gold: 0
-  experience: 0
-  level: 0
   topDownAttacks: {fileID: 1622468760926591822, guid: 39ce5ba72996bb744aa4d52127663952, type: 3}
   sideAttacks: {fileID: 4284350757268392584, guid: de04f7ef1aeef9f49915c78d27a25252, type: 3}
   player: {fileID: 0}
-  finalBossStage: 0
-  finalBossLifeForMath: 0
 --- !u!61 &-4872515477943825014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.48}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

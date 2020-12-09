@@ -86,7 +86,7 @@ public class SourceCode
     public static float finalBossSpeed = 2f;
 
     //Control of Attacks
-    public static float finalBossTimeBtwAttacks = 1f;
+    public static float finalBossTimeBtwAttacks = 3f;
     public static float finalBossStartTimeBtwAttacks = 2f;
 
     //Details of Enemy

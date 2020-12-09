@@ -9,7 +9,7 @@ public class LevelSystem : MonoBehaviour
     {
 
         LevelUp();
-        Debug.Log(SourceCode.lifePoints);
+        
     }
 
     private void LevelUp()

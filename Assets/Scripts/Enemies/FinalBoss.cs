@@ -36,14 +36,14 @@ public class FinalBoss : MonoBehaviour
         Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
-        if (distance < 10)
+        if (distance < 5)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.finalBossSpeed * Time.deltaTime);
         }
         //__BEHAVIOR__\\
 
         //Timer && distance = Kill that mf
-        if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 5))
+        if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 2.5f))
         {
             //Fazer ser child
             Instantiate(topDownAttacks, attackTop, Quaternion.identity);

@@ -150,6 +150,10 @@ public class PlayerMovement : MonoBehaviour
         //__DEATH__\\
         if (SourceCode.lifePoints <= 0) 
         {
+
+            //Ridigbody OFF
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            //ANIMAÇÃO
             animator.SetBool("Death", true);
         }
 

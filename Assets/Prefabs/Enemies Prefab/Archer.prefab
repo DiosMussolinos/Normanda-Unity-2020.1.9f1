@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7395636378707169880}
   - component: {fileID: 8531344019897698748}
   - component: {fileID: 8110279331656123194}
-  - component: {fileID: 8110279331656123195}
   - component: {fileID: 8110279331656123198}
+  - component: {fileID: 1180777972}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Archer
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2455465165429108002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.142, y: 0.381, z: 0}
-  m_LocalScale: {x: 0.8305659, y: 1.2505585, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,11 +71,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1460304023
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: da461faa9c587d84fa88063b4f87e2f2, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 59789eaa3f5799d42bde5ec4d4546d78, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,45 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844a33f01a3f95a49901964af21e6453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  stoppingDistance: 8
-  retreaDistance: 8
-  visionDistance: 10
-  timeBtwShots: 0
-  startTimeBtwShots: 2
-  archerLife: 10
-  projectileDamage: 0
-  gold: 0
-  experience: 0
-  level: 0
+  archerLife: 35
   projectile: {fileID: 7843367960436711337, guid: 945f666382a12494195a46429c5588e9, type: 3}
   player: {fileID: 0}
---- !u!61 &8110279331656123195
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2455465165429108002}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &8110279331656123198
 Rigidbody2D:
   serializedVersion: 4
@@ -157,3 +121,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!70 &1180777972
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455465165429108002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: -0.1}
+  m_Size: {x: 0.25, y: 0.46}
+  m_Direction: 0

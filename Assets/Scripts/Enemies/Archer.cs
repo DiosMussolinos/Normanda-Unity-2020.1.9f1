@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Archer : MonoBehaviour
 {
+
+    public int archerLife;
+
     //Calling stuff
     public GameObject projectile;
     public Transform player;
@@ -48,7 +51,7 @@ public class Archer : MonoBehaviour
         }
 
         //Reset of the timer
-        if (SourceCode.archerLife <= 0)
+        if (archerLife <= 0)
         {
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.archerExp;
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.archerGold;
@@ -61,13 +64,13 @@ public class Archer : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
-            SourceCode.archerLife = SourceCode.archerLife - SourceCode.basicAttackDMG;
+            archerLife = archerLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
-            SourceCode.archerLife = SourceCode.archerLife - SourceCode.strongAttackDMG;
+            archerLife = archerLife - SourceCode.strongAttackDMG;
         }
 
     }
