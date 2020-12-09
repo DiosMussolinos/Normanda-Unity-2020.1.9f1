@@ -42,7 +42,7 @@ public class LevelSystem : MonoBehaviour
 
             ////////////////////////__ARCHER__\\\\\\\\\\\\\\\\\\\\\\\\
             //Bigger Life
-            SourceCode.archerLife = SourceCode.archerLife + 2;
+             
             //Less CD in shots
             SourceCode.timeBtwShots = SourceCode.timeBtwShots - 0.05f;
 

@@ -4980,6 +4980,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
+    - target: {fileID: 4727905409259814603, guid: 11d6061fb06a471419889362ce495502, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141243291094393673, guid: 11d6061fb06a471419889362ce495502, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7
@@ -5036,6 +5040,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
+    - target: {fileID: 7488319829460492633, guid: 11d6061fb06a471419889362ce495502, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d6061fb06a471419889362ce495502, type: 3}
 --- !u!1001 &1897702964

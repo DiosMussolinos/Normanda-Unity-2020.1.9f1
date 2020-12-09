@@ -94,7 +94,6 @@
      <None Include="Assets\Scripts\NPC&apos;s\Frases para os NPCs.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Prefabs\NPC&apos;s Prefab\Frases para os NPCs.txt" />
-     <None Include="Assets\Images&amp;Animation\Tiles\Dungeon\Licença.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
