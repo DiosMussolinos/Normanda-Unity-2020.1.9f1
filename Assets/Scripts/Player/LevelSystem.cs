@@ -49,7 +49,7 @@ public class LevelSystem : MonoBehaviour
 
             ////////////////////////__SOLDIER__\\\\\\\\\\\\\\\\\\\\\\\\
             //Bigger Life
-            SourceCode.soldierLife = SourceCode.soldierLife + 2;
+            //SourceCode.soldierLife = SourceCode.soldierLife + 2;
         }
     }
 }

@@ -18,12 +18,12 @@ public class SourceCode
     public static int playerGold = 0;
 
     //Basic Attack Information\\
-    public static int basicAttackDMG = 5;
+    public static int basicAttackDMG = 10;
     public static float basicAttackCD = 1f;
     public static float basicAttackTimer = 0f;
 
     //Strong Attack Information\\
-    public static int strongAttackDMG = 10;
+    public static int strongAttackDMG = 20;
     public static float strongAttackCD = 5f;
     public static float strongAttackTimer = 0f;
     
@@ -48,7 +48,7 @@ public class SourceCode
     public static float archerVisionDistance = 8f;
 
     //Details of Enemy\\
-    public static float archerLife = 20;
+    //public static float archerLife = 20;
     public static int projectileDamage = 10;
     public static int archerGold = 10;
     public static int archerExp = 10;
@@ -67,11 +67,11 @@ public class SourceCode
     public static float soldierVisionDistance = 4f;
 
     //Control of shots
-    public static float timeBtwAttacks = 4f;
-    public static float startTimeBtwAttacks = 2f;
+    public static float timeBtwAttacks = 2f;
+    public static float startTimeBtwAttacks = 5f;
 
     //Details of Enemy
-    public static int soldierLife = 10;
+    //public static int soldierLife = 10;
     public static int soldierCollisionDamage = 2;
     public static int soldierDamage = 10;
     public static int soldierGold = 10;

@@ -14,22 +14,13 @@ public class ArcherShots : MonoBehaviour
 
     // Awake is called before Start
     void Awake() {
-
-        //Animator
-        //animator = GetComponent<Animator>();
         
         //Find the player
         player = GameObject.FindWithTag("Player").transform;
-        
+
         //Initial position of the player 
         target = new Vector2(player.position.x, player.position.y + YOffSet);
 
-    }
-
-    //Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     //Update is called once per frame
@@ -39,11 +30,12 @@ public class ArcherShots : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         //Hits the initial position of the player, BOOM, GET REK
-        /*REMOVER, É PARA ELA CONTINUAR ETERCNAMENTE*/
         if (transform.position.x == target.x && transform.position.y == target.y)
         {
             Destroy(gameObject);
         }
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,6 +48,12 @@ public class ArcherShots : MonoBehaviour
 
         //Collide with the player, BOOM, GET UWU
         if (collision.gameObject.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
+
+        //Collide with the player, BOOM, GET DELETED
+        if (collision.gameObject.CompareTag("TileCollision"))
         {
             Destroy(gameObject);
         }

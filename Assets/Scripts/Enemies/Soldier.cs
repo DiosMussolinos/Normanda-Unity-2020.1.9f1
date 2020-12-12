@@ -86,6 +86,15 @@ public class Soldier : MonoBehaviour
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.soldierGold;
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.soldierExp;
             Destroy(gameObject);
+
+            /*
+            if (challenge = true) 
+            {
+
+                post.enemykilled + 1;
+
+            }
+            */
         }
 
     }
