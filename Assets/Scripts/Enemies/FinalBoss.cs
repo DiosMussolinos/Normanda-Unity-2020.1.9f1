@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
 {
+    public int finalBossLife = 40;
+
     //Calling stuff
     public GameObject topDownAttacks;
     public GameObject sideAttacks;
     public Transform player;
+    public GameObject portal;
 
     // Awake is called before Start
     void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
-     
+
     }
 
 
@@ -59,12 +62,15 @@ public class FinalBoss : MonoBehaviour
         }
 
         //Reset of the timer
-        if (SourceCode.finalBossLife <= 0)
+        if (finalBossLife <= 0)
         {
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.finalBossEXP;
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.finalBossGold;
+            portal.gameObject.SetActive(true);
             Destroy(gameObject);
         }
+
+        Debug.Log(finalBossLife);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -72,13 +78,13 @@ public class FinalBoss : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
-            SourceCode.finalBossLife = SourceCode.finalBossLife - SourceCode.basicAttackDMG;
+            finalBossLife = finalBossLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
-            SourceCode.finalBossLife = SourceCode.finalBossLife - SourceCode.strongAttackDMG;
+            finalBossLife = finalBossLife - SourceCode.strongAttackDMG;
         }
     }
 

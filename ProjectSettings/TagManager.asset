@@ -17,6 +17,7 @@ TagManager:
   - MediumPotion
   - BigPotion
   - TileCollision
+  - PortalToN1
   layers:
   - Default
   - TransparentFX
