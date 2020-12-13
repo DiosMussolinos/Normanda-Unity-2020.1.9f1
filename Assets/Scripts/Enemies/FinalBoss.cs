@@ -5,25 +5,28 @@ using UnityEngine;
 public class FinalBoss : MonoBehaviour
 {
     public int finalBossLife = 40;
+    public int maxFinalBossLife = 40;
 
+    public float interestedStartTimer = 3;
+    public float interestedTime;
+    
     //Calling stuff
     public GameObject topDownAttacks;
     public GameObject sideAttacks;
     public Transform player;
+    public Transform startPosition;
     public GameObject portal;
+
+
+    private bool interest = true;
+
+
 
     // Awake is called before Start
     void Awake()
     {
         player = GameObject.FindWithTag("Player").transform;
-
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        startPosition = GameObject.FindWithTag("PosiçãoInicial").transform;
     }
 
     // Update is called once per frame
@@ -39,14 +42,30 @@ public class FinalBoss : MonoBehaviour
         Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
-        if (distance < 5)
+        if ((distance < 5) && (interest = true) && (interestedTime > 0))
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.finalBossSpeed * Time.deltaTime);
+        }
+        else
+        {
+            interest = false;
+        }
+        
+        if((interest == false) && (interestedTime <= 0))
+        {
+            transform.position = Vector2.MoveTowards(transform.position, startPosition.position, SourceCode.finalBossSpeed * Time.deltaTime);
+        }
+
+        if(transform.position == startPosition.position)
+        {
+            interest = true;
+            finalBossLife = maxFinalBossLife;
+            interestedTime = interestedStartTimer;
         }
         //__BEHAVIOR__\\
 
         //Timer && distance = Kill that mf
-        if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 2.5f))
+        if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 3f))
         {
             
             Instantiate(topDownAttacks, attackTop, Quaternion.identity);
@@ -74,9 +93,17 @@ public class FinalBoss : MonoBehaviour
             //Morte ao capitalismo
             Destroy(gameObject);
         }
-
-    
+        InterestedTime();
     }
+
+    private void InterestedTime()
+    {
+        if(interest == false)
+        {
+            interestedTime -= Time.deltaTime;
+        }
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -94,6 +121,15 @@ public class FinalBoss : MonoBehaviour
             finalBossLife = finalBossLife - SourceCode.strongAttackDMG;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("TocaFinalBoss"))
+        {
+            interest = false;
+        }
+    }
+
 
     /*
     ⠄⠄⠄⢀⣤⣾⣿⡟⠋⠄⠄⠄⣀⡿⠄⠊⠄⠄⠄⠄⠄⠄⢸⠇⠄⢀⠃⠙⣿⣿

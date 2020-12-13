@@ -18,6 +18,8 @@ TagManager:
   - BigPotion
   - TileCollision
   - PortalToN1
+  - TocaFinalBoss
+  - "Posi\xE7\xE3oInicial"
   layers:
   - Default
   - TransparentFX
