@@ -10,15 +10,22 @@ public class Soldier : MonoBehaviour
     public GameObject SoldierAttack;
     public Transform player;
     private float soldierScale;
+    private SpriteRenderer spriteRender;
     private Rigidbody2D rb;
     private Animator animator;
 
     // Awake is called before Start
     void Awake()
     {
+
         rb = GetComponent<Rigidbody2D>();
+        //Find Player
         player = GameObject.FindWithTag("Player").transform;
+        //Algum dia eu lembro o que é isso - Gabriel - 13/12/2020
         soldierScale = (transform.localScale.x / 2) + 1f;
+        //Fazer o flip
+        spriteRender = GetComponent<SpriteRenderer>();
+        //Controle de animação
         animator = GetComponent<Animator>();
     }
 
@@ -36,7 +43,9 @@ public class Soldier : MonoBehaviour
         //Position of The Attacks
         Vector3 negativeSpawAttack = new Vector3(transform.position.x - 0.85f, transform.position.y, transform.position.z);
         Vector3 positiveSpawAttack = new Vector3(transform.position.x + 0.85f, transform.position.y, transform.position.z);
-
+        
+        //Distance From The player in the X to Flip    
+        float distanceXFromPlayer = transform.position.x - player.transform.position.x;
 
         if (soldierLife > 0)
         {
@@ -45,15 +54,22 @@ public class Soldier : MonoBehaviour
             {
 
                 //Animation
-                animator.SetBool("SeePlayer", true);
+                animator.SetBool("Walk", true);
 
                 transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.soldierSpeed * Time.deltaTime);
+            } 
+            else
+            {
+                //Animation
+                animator.SetBool("Walk", false);
             }
 
             //Timer && distance = Kill that mf
             if ((SourceCode.timeBtwAttacks <= 0) && (distance <= SourceCode.soldierVisionDistance))
             {
+                //Animation
                 animator.SetBool("Attack", true);
+
                 //Fazer ser child
                 Instantiate(SoldierAttack, negativeSpawAttack, Quaternion.identity);
                 Instantiate(SoldierAttack, positiveSpawAttack, Quaternion.identity);
@@ -61,20 +77,23 @@ public class Soldier : MonoBehaviour
             }
             else
             {
-                animator.SetBool("Attack", false);
                 SourceCode.timeBtwAttacks -= Time.deltaTime;
+                //Animation
+                animator.SetBool("Attack", false);
             }
 
-            ////////////__FlipX__\\\\\\\\\\\\
-            /*if ((Vector2.MoveTowards.x > 0) && (spriteRender.flipX))
+            if (distanceXFromPlayer > 0)
             {
+
+                //Turn around
+                spriteRender.flipX = true;
+
+            }
+            else 
+            {
+                //Turn around
                 spriteRender.flipX = false;
             }
-            else if ((horizontal < 0) && (!spriteRender.flipX))
-            {
-                spriteRender.flipX = true;
-            }
-            */
 
         }
 
@@ -82,7 +101,7 @@ public class Soldier : MonoBehaviour
         //Reset of the timer
         if (soldierLife <= 0)
         {
-            animator.SetFloat("Life_Soldier", soldierLife);
+            
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.soldierGold;
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.soldierExp;
             Destroy(gameObject);

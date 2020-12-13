@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7208868770260778010}
   - component: {fileID: 6313254557995415465}
   - component: {fileID: 2837651915711646494}
-  - component: {fileID: 3174589464901789563}
   - component: {fileID: -4924355859760032433}
   - component: {fileID: 1876566953}
+  - component: {fileID: 3174589464901789563}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1460304023
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 23e58d36b596bfa4aaa8823b7ccb3787, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36363f3530862b942b68b86355590401, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,30 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a48305155f76cc41a06f8451bd764f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldierLife: 20
+  soldierLife: 35
   SoldierAttack: {fileID: 54819002358107237, guid: 8c04b3e5977b26549978341dae4e5f88, type: 3}
   player: {fileID: 0}
---- !u!50 &3174589464901789563
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3311895556398274471}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 100000
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!95 &-4924355859760032433
 Animator:
   serializedVersion: 3
@@ -132,7 +111,7 @@ Animator:
   m_GameObject: {fileID: 3311895556398274471}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1385ea9253a1c5e4d9029f7b83d0ac88, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75ac0dd3e1dc47d45933ceaf7fc59899, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -157,3 +136,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.21, y: 0.39}
   m_Direction: 0
+--- !u!50 &3174589464901789563
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311895556398274471}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 100000
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5

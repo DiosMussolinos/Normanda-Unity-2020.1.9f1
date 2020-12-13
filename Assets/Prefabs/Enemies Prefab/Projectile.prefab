@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7859050093133577656}
   - component: {fileID: -3055003495135802442}
   - component: {fileID: 1947254742247517461}
+  - component: {fileID: -2249506482351654178}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Shot
@@ -135,3 +136,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &-2249506482351654178
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843367960436711337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b6d1a6471b2ed9d4daed843b6feef723, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

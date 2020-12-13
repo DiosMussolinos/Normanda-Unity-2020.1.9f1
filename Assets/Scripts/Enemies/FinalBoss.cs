@@ -70,7 +70,7 @@ public class FinalBoss : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Debug.Log(finalBossLife);
+    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

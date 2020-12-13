@@ -11,6 +11,7 @@ public class Archer : MonoBehaviour
     public GameObject projectile;
     public Transform player;
     private SpriteRenderer spriteRender;
+    private Animator animator;
 
 
     public float timeBtwAttacks;
@@ -19,10 +20,13 @@ public class Archer : MonoBehaviour
     // Awake is called before Start
     void Awake()
     {
+        //Find Player Position
         player = GameObject.FindWithTag("Player").transform;
-
-
+        
+        //Find Component
         spriteRender = GetComponent<SpriteRenderer>();
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,20 +36,27 @@ public class Archer : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
         //Distance From The player in the X to Flip    
-        float distenceXFromPlayer = transform.position.x - player.transform.position.x;
-        
+        float distanceXFromPlayer = transform.position.x - player.transform.position.x;
 
-        //__BEHAVIOR__\\
+
+        ////////////////////////__BEHAVIOR__\\\\\\\\\\\\\\\\\\\\\\\\
         if (distance > SourceCode.archerStoppingDistance)
         {
             transform.position = this.transform.position;
+
+            animator.SetBool("Walk", false);
+        
         }
-        else if (distance < SourceCode.archerRetreaDistance)
+        if (distance < SourceCode.archerRetreaDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -SourceCode.archerSpeed * Time.deltaTime);
+            
+            animator.SetBool("Walk", true);
         }
+        ////////////////////////__BEHAVIOR__\\\\\\\\\\\\\\\\\\\\\\\\
 
-        if (distenceXFromPlayer > 0)
+
+        if (distanceXFromPlayer > 0)
         {
             //Turn around
             spriteRender.flipX = true;
@@ -54,16 +65,17 @@ public class Archer : MonoBehaviour
             {
                 //Create Shot
                 Instantiate(projectile, new Vector3(transform.position.x - 0.6f, transform.position.y, transform.position.z), Quaternion.identity);
+                //RestartTimer
                 timeBtwAttacks = startTimeBtwAttacks;
             }
             else
             {
-                //RestartTimer
+                //RestartTheCountDown
                 timeBtwAttacks -= Time.deltaTime;
             }
         }
 
-        if (distenceXFromPlayer < 0)
+        if (distanceXFromPlayer < 0)
         {
             //Turn around
             spriteRender.flipX = false;
@@ -72,11 +84,12 @@ public class Archer : MonoBehaviour
             {
                 //Create Shot
                 Instantiate(projectile, new Vector3(transform.position.x + 0.6f, transform.position.y, transform.position.z), Quaternion.identity);
+                //RestartTimer
                 timeBtwAttacks = startTimeBtwAttacks;
             }
             else
             {
-                //RestartTimer
+                //RestartTheCountDown
                 timeBtwAttacks -= Time.deltaTime;
             }
         }
