@@ -43,18 +43,21 @@ public class ArcherShots : MonoBehaviour
         //Collide with the player, BOOM, GET FUCKED
         if (collision.gameObject.CompareTag("Player"))
         {
+            //Destruir
             Destroy(gameObject);
         }
 
         //Collide with the player, BOOM, GET UWU
         if (collision.gameObject.CompareTag("Shield"))
         {
+            //Destruir
             Destroy(gameObject);
         }
 
         //Collide with the player, BOOM, GET DELETED
         if (collision.gameObject.CompareTag("TileCollision"))
         {
+            //Destruir
             Destroy(gameObject);
         }
 

@@ -112,12 +112,14 @@ public class Archer : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
+            //Recieve DMG BasicAttack
             archerLife = archerLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
+            //Recieve DMG Strong
             archerLife = archerLife - SourceCode.strongAttackDMG;
         }
 

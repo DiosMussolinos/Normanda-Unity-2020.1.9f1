@@ -12,12 +12,10 @@ public class PlayerMovement : MonoBehaviour
     ////////////__Public__\\\\\\\\\\\\
     public GameObject BasicAttackPrefab;
     public GameObject StrongAttackPrefab;
+
     //Shield Defense Information\\
     public GameObject ShieldPrefab;
 
-    //Public Hit Information\\
-    //public float hitCd;
-    //public float hitTimer = 0.3f; 
 
     //Awake is called before the Start
     void Awake()

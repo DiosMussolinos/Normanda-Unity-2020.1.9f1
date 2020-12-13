@@ -67,8 +67,8 @@ public class SourceCode
     public static float soldierVisionDistance = 4f;
 
     //Control of shots
-    public static float timeBtwAttacks = 2f;
-    public static float startTimeBtwAttacks = 5f;
+    //public static float timeBtwAttacks = 2f;
+    //public static float startTimeBtwAttacks = 5f;
 
     //Details of Enemy
     //public static int soldierLife = 10;

@@ -48,7 +48,7 @@ public class FinalBoss : MonoBehaviour
         //Timer && distance = Kill that mf
         if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 2.5f))
         {
-            //Fazer ser child
+            
             Instantiate(topDownAttacks, attackTop, Quaternion.identity);
             Instantiate(topDownAttacks, attackBottom, Quaternion.identity);
             Instantiate(sideAttacks, attackLeft, Quaternion.Euler(0,0,-90));
@@ -64,9 +64,14 @@ public class FinalBoss : MonoBehaviour
         //Reset of the timer
         if (finalBossLife <= 0)
         {
+            //Ser a putinha do player e dar suas recompensas
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.finalBossEXP;
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.finalBossGold;
+
+            //Ativar Portal para a cidade
             portal.gameObject.SetActive(true);
+
+            //Morte ao capitalismo
             Destroy(gameObject);
         }
 
@@ -78,12 +83,14 @@ public class FinalBoss : MonoBehaviour
         //Colision basic attack
         if (collision.gameObject.CompareTag("BasicAttack"))
         {
+            //Recieve DMG BasicAttack
             finalBossLife = finalBossLife - SourceCode.basicAttackDMG;
         }
 
         //Colision Strong attack
         if (collision.gameObject.CompareTag("StrongAttack"))
         {
+            //Recieve DMG Strong
             finalBossLife = finalBossLife - SourceCode.strongAttackDMG;
         }
     }
