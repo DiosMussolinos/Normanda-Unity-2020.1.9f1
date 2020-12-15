@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class StaticNPC : MonoBehaviour
 {
     public GameObject dialogBox;
+    public GameObject pressToTalk;
     public Text dialogText;
     public string[] dialog;
     public bool playerInRange = false;
@@ -39,6 +40,7 @@ public class StaticNPC : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             playerInRange = true;
+            pressToTalk.SetActive(true);
 
         }
     }
@@ -49,6 +51,7 @@ public class StaticNPC : MonoBehaviour
         {
             playerInRange = false;
             dialogBox.SetActive(false);
+            pressToTalk.SetActive(false);
         }
     }
 }

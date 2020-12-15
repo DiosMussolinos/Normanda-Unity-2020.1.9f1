@@ -864,6 +864,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
+    - target: {fileID: 1805249823, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1548691885}
     - target: {fileID: 4017104606145292197, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
       propertyPath: m_Name
       value: River Guardian
@@ -2716,6 +2720,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 1231887610}
+    - target: {fileID: 8403274796063705427, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1548691885}
     - target: {fileID: 8739864609126986814, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
       propertyPath: m_Name
       value: Blacksmith
@@ -6033,7 +6041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8135679, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
