@@ -51,7 +51,9 @@ public class FinalBoss : MonoBehaviour
             interest = false;
         }
         
-        if((interest == false) && (interestedTime <= 0))
+        //Desativa o interesse do player
+        //Não permite ele a recuperar interesse até o timer ser o TOTAL
+        if ((interest == false) && (interestedTime <= 0))
         {
             transform.position = Vector2.MoveTowards(transform.position, startPosition.position, SourceCode.finalBossSpeed * Time.deltaTime);
         }
@@ -124,6 +126,8 @@ public class FinalBoss : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        //Desativa o interesse do player
+        //Não permite ele a recuperar interesse até o timer ser o TOTAL
         if (collision.gameObject.CompareTag("TocaFinalBoss"))
         {
             interest = false;

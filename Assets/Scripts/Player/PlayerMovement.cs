@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", -1);
         }
-
+        //__MOVEMENT X & Y__\\
 
         //__BASIC ATTACK__\\
         if ((basicAttack != 0) && (SourceCode.basicAttackTimer <= 0))
@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
             SourceCode.basicAttackTimer = SourceCode.basicAttackCD;
         } else if(SourceCode.basicAttackTimer > 0)
         {
+            //Return To Idle or others
             animator.SetBool("BasicAttack", false);
         }
 
@@ -102,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("StrongAttack", true);
 
-            //Create Object\\
+            ////Create Object\\\\
             //Right StrongAttack
             GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
             //Left StrongAttack
@@ -113,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
         } else if (SourceCode.strongAttackTimer > 0)
         {
+            //Return To Idle or others
             animator.SetBool("StrongAttack", false);
         }
 
@@ -134,12 +136,13 @@ public class PlayerMovement : MonoBehaviour
             //Vel = 0;
             rb.velocity = new Vector2(0, 0);
 
-
+            //if(blockInstantiate = true) { DONT INTANTIATE AGAIN }
             SourceCode.blockInstantiate = true;
         }
 
         if  ((block == 0) && (SourceCode.blockInstantiate = true))
         {
+            //Destroy shield prefab instanciate
             animator.SetBool("Shield", false);
             SourceCode.blockInstantiate = false;
         }

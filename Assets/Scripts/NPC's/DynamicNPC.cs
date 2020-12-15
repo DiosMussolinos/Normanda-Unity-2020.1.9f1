@@ -34,12 +34,13 @@ public class DynamicNPC : MonoBehaviour
 
             if (transform.position == npcPoints[pointsIndex])
             {
+                //Next point of the array of Locations
                 pointsIndex++;
-                
             }
 
             if (pointsIndex == (npcPoints.Length))
             {
+                //Going Back to the start point
                 pointsIndex = 0;
             }
         }
@@ -48,11 +49,12 @@ public class DynamicNPC : MonoBehaviour
         {
             if (dialogBox.activeInHierarchy)
             {
+                //Not worthy for a good joke
                 dialogBox.SetActive(false);
             }
             else
             {
-
+                //Have a free sample of a joke
                 dialogBox.SetActive(true);
                 dialogText.text = dialog[Random.Range(0, dialog.Length)];
             }
@@ -65,8 +67,9 @@ public class DynamicNPC : MonoBehaviour
 
         if (collider.CompareTag("Player"))
         {
-
+            //Npc Stop
             playerInRange = true;
+            //Press an be happy
             pressToTalk.enabled = true;
         }
     }
@@ -75,8 +78,11 @@ public class DynamicNPC : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            //Npc walks
             playerInRange = false;
+            //Joke off
             dialogBox.SetActive(false);
+            //Off the happy moments
             pressToTalk.enabled = false;
         }
     }

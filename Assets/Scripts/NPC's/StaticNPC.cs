@@ -11,12 +11,6 @@ public class StaticNPC : MonoBehaviour
     public string[] dialog;
     public bool playerInRange = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,10 +18,12 @@ public class StaticNPC : MonoBehaviour
         {
             if (dialogBox.activeInHierarchy)
             {
+                //Not worthy for a good joke
                 dialogBox.SetActive(false);
             }
             else
             {
+                //Have a free sample of a joke
                 dialogBox.SetActive(true);
                 dialogText.text = dialog[Random.Range(0, dialog.Length)];
             }
@@ -39,9 +35,10 @@ public class StaticNPC : MonoBehaviour
 
         if (collider.CompareTag("Player"))
         {
+            //Npc Stop
             playerInRange = true;
+            //Press an be happy
             pressToTalk.enabled = true;
-
         }
     }
 
@@ -49,8 +46,11 @@ public class StaticNPC : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            //Npc walks
             playerInRange = false;
+            //Joke off
             dialogBox.SetActive(false);
+            //Off the happy moments
             pressToTalk.enabled = false;
         }
     }

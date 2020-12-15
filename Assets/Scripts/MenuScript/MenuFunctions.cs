@@ -13,6 +13,7 @@ public class MenuFunctions : MonoBehaviour
 
     public void LoadGame()
     {
+        //Add LOAD GAME HERE
         Debug.Log("not yet bitch");
     }
 
