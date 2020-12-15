@@ -7,6 +7,7 @@ public class DynamicNPC : MonoBehaviour
 {
     public GameObject dialogBox;
     public Text dialogText;
+    public GameObject pressToTalk;
     public string[] dialog;
     public bool playerInRange = false;
 
@@ -14,6 +15,7 @@ public class DynamicNPC : MonoBehaviour
     public Vector3[] npcPoints;
     public int pointsIndex;
     public GameObject controlE;
+    public Transform pressToTalkPos;
 
     private Rigidbody2D rb;
 
@@ -55,6 +57,7 @@ public class DynamicNPC : MonoBehaviour
                 dialogText.text = dialog[Random.Range(0, dialog.Length)];
             }
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -64,6 +67,7 @@ public class DynamicNPC : MonoBehaviour
         {
 
             playerInRange = true;
+            pressToTalk.SetActive(true);
         }
     }
 
@@ -73,6 +77,7 @@ public class DynamicNPC : MonoBehaviour
         {
             playerInRange = false;
             dialogBox.SetActive(false);
+            pressToTalk.SetActive(false);
         }
     }
 }
