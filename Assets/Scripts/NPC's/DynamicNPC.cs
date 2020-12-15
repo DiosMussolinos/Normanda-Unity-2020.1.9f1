@@ -7,7 +7,7 @@ public class DynamicNPC : MonoBehaviour
 {
     public GameObject dialogBox;
     public Text dialogText;
-    public GameObject pressToTalk;
+    public Image pressToTalk;
     public string[] dialog;
     public bool playerInRange = false;
 
@@ -67,7 +67,7 @@ public class DynamicNPC : MonoBehaviour
         {
 
             playerInRange = true;
-            pressToTalk.SetActive(true);
+            pressToTalk.enabled = true;
         }
     }
 
@@ -77,7 +77,7 @@ public class DynamicNPC : MonoBehaviour
         {
             playerInRange = false;
             dialogBox.SetActive(false);
-            pressToTalk.SetActive(false);
+            pressToTalk.enabled = false;
         }
     }
 }
