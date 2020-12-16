@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\UI\ExpUIText.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SoldierHealthBar.cs" />
      <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
+     <Compile Include="Assets\Scripts\Player\StopTime.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoToN3.cs" />
@@ -97,7 +98,6 @@
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SetActive.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\Scripts\Player\StopTime.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
