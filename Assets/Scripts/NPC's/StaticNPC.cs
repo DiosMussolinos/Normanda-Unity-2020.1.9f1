@@ -11,6 +11,14 @@ public class StaticNPC : MonoBehaviour
     public string[] dialog;
     public bool playerInRange = false;
 
+
+    void Start() 
+    {
+
+        pressToTalk.enabled = false;
+
+    }
+
     // Update is called once per frame
     void Update()
     {

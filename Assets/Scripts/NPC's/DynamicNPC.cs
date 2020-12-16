@@ -23,6 +23,8 @@ public class DynamicNPC : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        pressToTalk.enabled = false;
     }
 
     // Update is called once per frame
@@ -64,7 +66,6 @@ public class DynamicNPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-
         if (collider.CompareTag("Player"))
         {
             //Npc Stop

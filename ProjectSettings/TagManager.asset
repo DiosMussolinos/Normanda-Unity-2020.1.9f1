@@ -69,9 +69,9 @@ TagManager:
   - name: Terreno
     uniqueID: 1557579059
     locked: 0
-  - name: Player
-    uniqueID: 1460304023
-    locked: 0
   - name: Casas
     uniqueID: 2489846959
+    locked: 0
+  - name: Player
+    uniqueID: 1460304023
     locked: 0

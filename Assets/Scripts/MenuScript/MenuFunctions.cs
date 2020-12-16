@@ -41,5 +41,4 @@ public class MenuFunctions : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-
 }
