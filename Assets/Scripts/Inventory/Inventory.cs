@@ -61,21 +61,35 @@ public class Inventory : MonoBehaviour
         inventoryOpen = false;
     }
 
-    private void DisplayItems() 
+    public void DisplayItems() 
     {
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < slots.Length; i++)
         {
-            //Update Inventory Slots
-            slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemSprite;
+            if (i < items.Count)
+            {
+                //Update Inventory Slots
+                slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemSprite;
 
-            //Update Slots Count Text - GET FUCKED, IM UNDERSTANDING THIS CODE
-            slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
-            slots[i].transform.GetChild(1).GetComponent<Text>().text = itemAmount[i].ToString();
+                //Update Slots Count Text - GET FUCKED, IM UNDERSTANDING THIS CODE
+                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = itemAmount[i].ToString();
+
+            }
+            else
+            {
+                //Update Inventory Slots
+                slots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(0, 0, 0, 0);
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
+
+                //Update Slots Count Text - GET FUCKED, IM UNDERSTANDING THIS CODE
+                slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(0, 0, 0, 0);
+                slots[i].transform.GetChild(1).GetComponent<Text>().text = null;
+            }
         }
     }
 
-    private void AddItem(Item _item) 
+    public void AddItem(Item _item) 
     {
         //if there is one existing item in our bags (List)
 

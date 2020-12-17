@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 0);
         }
-
+          
         ////////////__ANIMATIONS__\\\\\\\\\\\\
         //__MOVEMENT X & Y__\\
         if (horizontal != 0)
@@ -131,8 +131,6 @@ public class PlayerMovement : MonoBehaviour
             //Left Shield
             GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 1.6f, transform.position.y + 1), Quaternion.identity);
 
-            //Reset Timer
-            //SourceCode.shieldDefenseTimer = SourceCode.shieldCD;
             //Vel = 0;
             rb.velocity = new Vector2(0, 0);
 

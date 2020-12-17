@@ -94,10 +94,12 @@
      <Compile Include="Assets\Scripts\ChangeScenes\GoToD3.cs" />
      <Compile Include="Assets\Scripts\UI\LifeUIText.cs" />
      <Compile Include="Assets\Scripts\MenuScript\MenuFunctions.cs" />
+     <Compile Include="Assets\Scripts\Inventory\PickUpItem.cs" />
      <Compile Include="Assets\Scripts\SourceFunctions.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SetActive.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
+     <Compile Include="Assets\Scripts\Inventory\GameManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
