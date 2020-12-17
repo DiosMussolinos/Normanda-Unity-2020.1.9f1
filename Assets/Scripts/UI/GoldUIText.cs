@@ -10,7 +10,7 @@ public class GoldUIText : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         goldText.text = SourceCode.playerGold.ToString();
         //goldText.text = SourceCode.strongAttackCD.ToString();

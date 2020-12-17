@@ -9,7 +9,7 @@ public class LifeUIText : MonoBehaviour
     public Text lifeText;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         lifeText.text = SourceCode.lifePoints.ToString();
     }

@@ -9,7 +9,7 @@ public class ExpUIText : MonoBehaviour
     public Text expText;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         expText.text = SourceCode.playerExp.ToString() + " / " + SourceCode.playerExpToNextLevel.ToString();

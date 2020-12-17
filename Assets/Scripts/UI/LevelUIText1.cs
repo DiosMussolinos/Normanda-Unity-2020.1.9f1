@@ -9,7 +9,7 @@ public class LevelUIText1 : MonoBehaviour
     public Text levelText;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         levelText.text = "Level " + SourceCode.playerLevel.ToString();
     }
