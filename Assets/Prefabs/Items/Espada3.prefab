@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3883300909854286074}
   - component: {fileID: 3883300909854286055}
   - component: {fileID: 3883300909854286072}
+  - component: {fileID: 7289674431488163562}
   m_Layer: 0
   m_Name: Espada3
   m_TagString: Untagged
@@ -110,6 +111,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a67ccafea49734d42a00a9a8ae55490f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}
+--- !u!114 &7289674431488163562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883300909854286075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a00b51bbd756b4eb9e036f4816f221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}

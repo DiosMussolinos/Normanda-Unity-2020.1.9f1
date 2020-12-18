@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
 
     //public Dictionary<Item, int> itemDict = new Dictionary<Item, int>();//OPTIONAL
 
-
-
-
     private void Awake()
     {
         if (instance == null)
@@ -32,9 +29,9 @@ public class GameManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        DontDestroyOnLoad(gameObject);
+       DontDestroyOnLoad(gameObject);
     }
-
+    
     private void Start()
     {
         DisplayItems();
@@ -42,8 +39,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
-
         if (Input.GetKeyDown(KeyCode.I))
         {
 
@@ -86,6 +81,9 @@ public class GameManager : MonoBehaviour
                 slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                 slots[i].transform.GetChild(1).GetComponent<Text>().text = itemAmount[i].ToString();
 
+                //Enable Button
+                //slots[i].transform.GetChild(2).GetComponent<Button>().interactable = true;
+
             }
             else
             {
@@ -96,6 +94,9 @@ public class GameManager : MonoBehaviour
                 //Update Slots Count Text - GET FUCKED, IM UNDERSTANDING THIS CODE
                 slots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(0, 0, 0, 0);
                 slots[i].transform.GetChild(1).GetComponent<Text>().text = null;
+
+                //Disable Button
+                //slots[i].transform.GetChild(2).GetComponent<Button>().interactable = false;
             }
         }
     }
@@ -108,10 +109,10 @@ public class GameManager : MonoBehaviour
         {
             items.Add(_item);
             itemAmount.Add(1);
+
         }
         else
         {
-            Debug.Log("You Have already this One");
             for (int i = 0; i < items.Count; i++)
             {
                 if (_item == items[i])
@@ -122,6 +123,30 @@ public class GameManager : MonoBehaviour
         }
         DisplayItems();
     }
+      
+    public void RemoveItem(Item _item)
+    {
+       //if there is one existing item in our bags (List)
 
+       if (items.Contains(_item))
+       {
+            for (int i = 0; i < items.Count; i++) 
+            {
+                if (_item == items[i]) 
+                {
+
+                    itemAmount[i]--;
+                    if (itemAmount[i] == 0) 
+                    {
+                        items.Remove(_item);
+                        itemAmount.Remove(itemAmount[i]);
+                    }
+                    
+                }
+            }
+       } 
+       DisplayItems();
+    }
+      
 
 }

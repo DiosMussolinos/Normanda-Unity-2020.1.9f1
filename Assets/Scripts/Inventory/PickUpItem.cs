@@ -12,8 +12,6 @@ public class PickUpItem : MonoBehaviour
             Destroy(gameObject);
 
             GameManager.instance.AddItem(itemData);
-
-            //Inventory.AddItem(itemData);
         }
     }
 

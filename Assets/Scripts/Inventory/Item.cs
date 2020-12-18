@@ -17,15 +17,6 @@ public class Item : ScriptableObject
     public int price;
     public int rarity;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool usable;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
