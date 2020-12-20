@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\Enemies\Health Bars\ArcherHealthBarPos.cs" />
      <Compile Include="Assets\Scripts\SourceCode.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\DynamicNPC.cs" />
+     <Compile Include="Assets\Scripts\Inventory\ItemButton.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
      <Compile Include="Assets\Scripts\Player\LevelSystem.cs" />
      <Compile Include="Assets\Scripts\UI\GoldUIText.cs" />
@@ -100,7 +101,6 @@
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SetActive.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\Scripts\Inventory\ItemButton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

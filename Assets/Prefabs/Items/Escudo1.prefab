@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8550846924837801893}
   - component: {fileID: 8550846924837801894}
   - component: {fileID: 8550846924837801895}
-  - component: {fileID: 8968971132218427562}
   m_Layer: 0
   m_Name: Escudo1
   m_TagString: Untagged
@@ -111,19 +110,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a67ccafea49734d42a00a9a8ae55490f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 9f8b4ac7c779fc543bd0dd1701894a01, type: 2}
---- !u!114 &8968971132218427562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8550846924837801898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a00b51bbd756b4eb9e036f4816f221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 9f8b4ac7c779fc543bd0dd1701894a01, type: 2}

@@ -50,7 +50,6 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         {
             GameManager.instance.RemoveItem(thisItem);
             SourceCode.lifePoints = SourceCode.lifePoints + thisItem.life;
-            //Debug.Log("QUE MERDA");
         }
     }
 }

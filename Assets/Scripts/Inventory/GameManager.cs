@@ -147,6 +147,5 @@ public class GameManager : MonoBehaviour
        } 
        DisplayItems();
     }
-      
-
+     
 }

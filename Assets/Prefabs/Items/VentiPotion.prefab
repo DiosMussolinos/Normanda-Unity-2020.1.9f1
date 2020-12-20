@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2837728695156754557}
   - component: {fileID: 2837728695156754554}
   - component: {fileID: 2837728695156754555}
-  - component: {fileID: 2569155956108232996}
   m_Layer: 0
   m_Name: VentiPotion
   m_TagString: Untagged
@@ -111,19 +110,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a67ccafea49734d42a00a9a8ae55490f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
---- !u!114 &2569155956108232996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2837728695156754558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a00b51bbd756b4eb9e036f4816f221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}

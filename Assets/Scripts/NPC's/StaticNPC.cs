@@ -14,9 +14,7 @@ public class StaticNPC : MonoBehaviour
 
     void Start() 
     {
-
         pressToTalk.enabled = false;
-
     }
 
     // Update is called once per frame
