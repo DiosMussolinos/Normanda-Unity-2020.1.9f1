@@ -37,7 +37,7 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         if(thisItem != null) 
         {
             itemImage.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            //Debug.Log("Enter " + thisItem.itemName);
+            
             itemImage.sprite = thisItem.itemSprite;
         }
     }
@@ -49,7 +49,23 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         if ((thisItem != null) && (thisItem.itemType == "Potion"))
         {
             GameManager.instance.RemoveItem(thisItem);
-            SourceCode.lifePoints = SourceCode.lifePoints + thisItem.life;
+            SourceCode.lifePoints += thisItem.life;
         }
+
+        if ((thisItem != null) && (thisItem.itemType == "Sword"))
+        {
+            //GameManager.instance.RemoveItem(thisItem);
+            SourceCode.ItemValues[0] = thisItem.damage;
+            //SourceCode.basicAttackDMG += SourceCode.ItemValues[0];
+            
+
+        }
+        /*
+        if ((thisItem != null) && (thisItem.itemType == "Shields"))
+        {
+            GameManager.instance.RemoveItem(thisItem);
+            SourceCode.ActiveItems[1] = thisItem;
+        }
+        */
     }
 }

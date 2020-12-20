@@ -21,3 +21,4 @@ MonoBehaviour:
   life: 0
   price: 0
   rarity: 0
+  usable: 0

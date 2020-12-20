@@ -16,8 +16,9 @@ MonoBehaviour:
   itemType: Sword
   itemDes: Old European sword
   itemSprite: {fileID: 21300000, guid: 957097665fc68c148a9fbb65ad5c42dd, type: 3}
-  damage: 0
+  damage: 20
   shield: 0
   life: 0
   price: 0
   rarity: 0
+  usable: 0

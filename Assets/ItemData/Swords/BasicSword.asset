@@ -16,8 +16,9 @@ MonoBehaviour:
   itemType: Sword
   itemDes: Initial Sword
   itemSprite: {fileID: 21300000, guid: a2ff9d40cfbcac64fb9097fcdce0335c, type: 3}
-  damage: 0
+  damage: 5
   shield: 0
   life: 0
   price: 0
   rarity: 1
+  usable: 0

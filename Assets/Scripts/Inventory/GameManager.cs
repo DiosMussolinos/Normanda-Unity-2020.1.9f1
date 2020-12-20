@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour
                 OpenInventory();
             }
         }
+
+        Debug.Log(SourceCode.basicAttackDMG);
+
     }
 
     void OpenInventory()
