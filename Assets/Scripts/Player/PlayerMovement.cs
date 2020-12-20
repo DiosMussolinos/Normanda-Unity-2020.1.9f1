@@ -191,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         //__Collision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.projectileDamage;         
+            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.projectileDamage;
         }
 
         //__Collision With Soldier__\\
@@ -203,19 +203,33 @@ public class PlayerMovement : MonoBehaviour
         //__Collision With Soldier Attack__\\
         if (collision.gameObject.CompareTag("SoldierAttack"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierDamage;
+            if (SourceCode.blockInstantiate == true)
+            {
+                SourceCode.lifePoints = (int)(SourceCode.lifePoints - (SourceCode.soldierDamage - SourceCode.percentageDefense/10));
+            }
+            else
+            {
+                SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierDamage;
+            }
         }
 
         //__Collision With Final Boss__\\
         if (collision.gameObject.CompareTag("FinalBoss"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.finalBossTouchDamage;
+            SourceCode.lifePoints -= SourceCode.finalBossTouchDamage;
         }
 
         //__Collision With Final Boss Attack__\\
         if (collision.gameObject.CompareTag("FinalBossAttack"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.finalBossAttackDamage;
+            if (SourceCode.blockInstantiate == true)
+            {
+                SourceCode.lifePoints = (int)(SourceCode.lifePoints - (SourceCode.finalBossAttackDamage - SourceCode.percentageDefense / 10));
+            }
+            else
+            {
+                SourceCode.lifePoints -= SourceCode.finalBossAttackDamage;
+            }
         }
 
     }

@@ -31,7 +31,7 @@ public class SourceCode
     
 
     //Shield Defense Information\\
-    public static float percentageDefense = 0;
+    public static float percentageDefense = 40;
     public static float shieldCD = 0f;
     public static float shieldDefenseTimer = 0f;
     public static bool blockInstantiate = false;
@@ -93,8 +93,8 @@ public class SourceCode
 
     //Details of Enemy
     public static int finalBossLife = 40;
-    public static int finalBossTouchDamage = 2;
-    public static int finalBossAttackDamage = 10;
+    public static int finalBossTouchDamage = 4;
+    public static int finalBossAttackDamage = 20;
     public static int finalBossGold = 9;
     public static int finalBossEXP = 20;
 
