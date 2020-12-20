@@ -54,18 +54,19 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
 
         if ((thisItem != null) && (thisItem.itemType == "Sword"))
         {
+            SourceCode.basicAttackDMG = 10;
+            SourceCode.strongAttackDMG = 20;
             //GameManager.instance.RemoveItem(thisItem);
-            SourceCode.ItemValues[0] = thisItem.damage;
-            //SourceCode.basicAttackDMG += SourceCode.ItemValues[0];
-            
-
+            SourceCode.basicAttackDMG += thisItem.damage;
+            SourceCode.strongAttackDMG += thisItem.damage;
+            //SourceCode.basicAttackDMG += SourceCode.ItemValues[0]; 
         }
-        /*
+        
         if ((thisItem != null) && (thisItem.itemType == "Shields"))
         {
-            GameManager.instance.RemoveItem(thisItem);
-            SourceCode.ActiveItems[1] = thisItem;
+            SourceCode.percentageDefense = 0;
+            SourceCode.percentageDefense += thisItem.shield;
         }
-        */
+        
     }
 }

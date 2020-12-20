@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: BastardSword
   m_EditorClassIdentifier: 
-  itemName: q
+  itemName: Bastard
   itemType: Sword
   itemDes: a
   itemSprite: {fileID: 21300000, guid: 1ffa9181f7b13d642a4789013a1b5953, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: Claymore
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Claymore
   itemType: Sword
   itemDes: 
   itemSprite: {fileID: 21300000, guid: e550f80eba00e504d85b4b691e8cb325, type: 3}
