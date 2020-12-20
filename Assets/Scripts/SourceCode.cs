@@ -16,7 +16,9 @@ public class SourceCode
     public static int playerExp = 0;
     public static int playerExpToNextLevel = 0;
     public static int playerGold = 0;
-
+    
+    //Values to Sum with the Damages and Shields
+    public static int[] ItemValues = {0, 0};
     //Basic Attack Information\\
     public static int basicAttackDMG = 10;
     public static float basicAttackCD = 1f;
