@@ -42,7 +42,7 @@ public class FinalBoss : MonoBehaviour
         Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
 
         //__BEHAVIOR__\\
-        if ((distance < 5) && (interest = true) && (interestedTime > 0))
+        if ((distance > 3) && (distance < 6) && (interest = true) && (interestedTime > 0))
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.finalBossSpeed * Time.deltaTime);
         }

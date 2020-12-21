@@ -15,6 +15,12 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     public Image itemOn1;
     public Image itemOn2;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+
     void Start() 
     {
         itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);

@@ -1316,7 +1316,7 @@ RectTransform:
   - {fileID: 246657975}
   - {fileID: 1686215622}
   m_Father: {fileID: 316907608}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1574,6 +1574,7 @@ RectTransform:
   - {fileID: 691205358}
   - {fileID: 237330444}
   - {fileID: 1496140266}
+  - {fileID: 2040070600}
   - {fileID: 269903961}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -3809,8 +3810,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691205357}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -978.4371, y: -547.83356, z: -11.468247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1581272860}
@@ -4488,13 +4489,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1770089864}
     - target: {fileID: 8403274796063705427, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 1231887610}
-    - target: {fileID: 8403274796063705427, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
       propertyPath: pressToTalk
       value: 
       objectReference: {fileID: 1987901649}
+    - target: {fileID: 8403274796063705427, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 1231887610}
     - target: {fileID: 8739864609126986814, guid: 14d571c0c067c194ba2ff62a20ce8be7, type: 3}
       propertyPath: m_Name
       value: Blacksmith
@@ -7005,10 +7006,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 266762643}
     m_Modifications:
     - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
-      propertyPath: buttonID
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
       propertyPath: itemImage
       value: 
       objectReference: {fileID: 1577683044}
@@ -7110,23 +7107,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
---- !u!1 &1115640492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3268317184448462553, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
-  m_PrefabInstance: {fileID: 8115247707313404337}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1115640494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115640492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bee67bcc04186e43934b455208d1779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1161161679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7593096449507531748, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
@@ -7674,10 +7654,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1231887610}
     - target: {fileID: 1830371038024275040, guid: 11d6061fb06a471419889362ce495502, type: 3}
-      propertyPath: controlE
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1830371038024275040, guid: 11d6061fb06a471419889362ce495502, type: 3}
       propertyPath: pressToTalk
       value: 
       objectReference: {fileID: 1987901649}
@@ -7685,18 +7661,6 @@ PrefabInstance:
       propertyPath: pressToTalkPos
       value: 
       objectReference: {fileID: 1335306494}
-    - target: {fileID: 1830371038024275040, guid: 11d6061fb06a471419889362ce495502, type: 3}
-      propertyPath: dialog.Array.data[10]
-      value: I just hope i dont die for Measle.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1830371038024275040, guid: 11d6061fb06a471419889362ce495502, type: 3}
-      propertyPath: dialog.Array.data[9]
-      value: You know, i have a shield just like your's.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1830371038024275040, guid: 11d6061fb06a471419889362ce495502, type: 3}
-      propertyPath: dialog.Array.data[8]
-      value: Can i play with your sword?
-      objectReference: {fileID: 0}
     - target: {fileID: 6141243291094393673, guid: 11d6061fb06a471419889362ce495502, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.43
@@ -9942,10 +9906,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266762643}
     m_Modifications:
-    - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
-      propertyPath: buttonID
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
       propertyPath: itemImage
       value: 
@@ -22385,6 +22345,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blacksmithSonPos: {fileID: 1168911286}
+--- !u!1 &2040070599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040070600}
+  m_Layer: 0
+  m_Name: Store
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2040070600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040070599}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -962.0737, y: -546.5706, z: -5.8311825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 316907608}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041456009
 GameObject:
   m_ObjectHideFlags: 0
@@ -22734,10 +22724,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266762643}
     m_Modifications:
-    - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
-      propertyPath: buttonID
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
       propertyPath: itemImage
       value: 
@@ -24002,8 +23988,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5861594670491960881, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
 --- !u!1001 &8550846924370969469
 PrefabInstance:

@@ -18,5 +18,4 @@ public class Item : ScriptableObject
     public int rarity;
 
     public bool usable;
-
 }
