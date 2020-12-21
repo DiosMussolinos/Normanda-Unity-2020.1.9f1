@@ -61,6 +61,13 @@ public class ArcherShots : MonoBehaviour
             Destroy(gameObject);
         }
 
+        //Collide with Final Boss
+        if (collision.gameObject.CompareTag("FinalBoss"))
+        {
+            //Destruir
+            Destroy(gameObject);
+        }
+
     }
 
 }
