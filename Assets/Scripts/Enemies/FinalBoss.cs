@@ -122,6 +122,16 @@ public class FinalBoss : MonoBehaviour
             //Recieve DMG Strong
             finalBossLife = finalBossLife - SourceCode.strongAttackDMG;
         }
+
+        //Colision with the bullet
+        if (collision.gameObject.CompareTag("Shot"))
+        {
+            //Recieve DMG Strong
+            finalBossLife = finalBossLife - SourceCode.projectileDamage;
+        }
+
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

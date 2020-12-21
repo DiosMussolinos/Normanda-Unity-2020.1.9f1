@@ -13,9 +13,6 @@ TagManager:
   - SoldierAttack
   - FinalBoss
   - FinalBossAttack
-  - SmallPotion
-  - MediumPotion
-  - BigPotion
   - TileCollision
   - PortalToN1
   - TocaFinalBoss
