@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: ShieldOfNombril
   m_EditorClassIdentifier: 
-  itemName: Shield of Nombril
+  itemName: Nombril
   itemType: Shield
   itemDes: +10 Shield
   itemSprite: {fileID: 21300000, guid: 859dab0871a4ea74f84738b6dceaa3cc, type: 3}

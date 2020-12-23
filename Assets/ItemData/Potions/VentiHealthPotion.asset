@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: VentiHealthPotion
   m_EditorClassIdentifier: 
-  itemName: Venti
+  itemName: Medium
   itemType: Potion
   itemDes: +15 Health
   itemSprite: {fileID: 21300000, guid: 48eb5042daafb3645975fdab3e4e3779, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: EscutcheonShield
   m_EditorClassIdentifier: 
-  itemName: Escutcheon Shield
+  itemName: Escutcheon
   itemType: Shield
   itemDes: +15 Shield
   itemSprite: {fileID: 21300000, guid: 5bb090d5a70234f4a8384f2aa1774f95, type: 3}

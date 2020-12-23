@@ -44,7 +44,7 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
 
             //Mudar Texto
             //Name
-            itemName.GetComponent<Text>().text = thisItem.name;
+            itemName.GetComponent<Text>().text = thisItem.itemName;
             //Description
             itemDescription.GetComponent<Text>().text = thisItem.itemDes;
         }

@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] slots;
 
-    //public Dictionary<Item, int> itemDict = new Dictionary<Item, int>();//OPTIONAL
-
     private void Awake()
     {
         if (instance == null)
@@ -45,12 +43,14 @@ public class GameManager : MonoBehaviour
             if (inventoryOpen)
             {
                 CloseInventory();
+                
             }
             else
             {
                 OpenInventory();
             }
         }
+    
     }
 
     void OpenInventory()

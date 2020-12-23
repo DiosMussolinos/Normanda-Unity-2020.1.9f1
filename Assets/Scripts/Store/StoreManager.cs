@@ -8,12 +8,13 @@ public class StoreManager : MonoBehaviour
     public static StoreManager instance;
     public static bool storeOpen = false;
     public GameObject storeUI;
-    
-    
+
     public List<Item> SeelItems = new List<Item>();
 
     public GameObject[] storeSlots;
 
+
+    /*
     private void Awake()
     {
         if (instance == null)
@@ -28,7 +29,7 @@ public class StoreManager : MonoBehaviour
             }
         }
         DontDestroyOnLoad(gameObject);
-    }
+    }*/
 
     void Start()
     {
@@ -37,17 +38,21 @@ public class StoreManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        
+        if (Input.GetKeyDown(KeyCode.Space) && (storeOpen = false))
         {
-            if (storeOpen)
-            {
-                OpenStore();
-            }
-            else
-            {
-                CloseStore();
-            }
+            storeUI.SetActive(true);
+            Time.timeScale = 0f;
+            storeOpen = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && (storeOpen = true))
+        {
+            storeUI.SetActive(false);
+            Time.timeScale = 1f;
+            storeOpen = false;
+        }
+
     }
 
     void OpenStore() 
@@ -55,6 +60,7 @@ public class StoreManager : MonoBehaviour
         storeUI.SetActive(true);
         Time.timeScale = 0f;
         storeOpen = true;
+
     }
 
     void CloseStore()
@@ -77,5 +83,4 @@ public class StoreManager : MonoBehaviour
                 storeSlots[i].transform.GetChild(1).GetComponent<Text>().text = SeelItems[i].price.ToString();
         }
     }
-    
 }
