@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Radier
   itemType: Sword
-  itemDes: Old European sword
-  itemSprite: {fileID: 21300000, guid: 957097665fc68c148a9fbb65ad5c42dd, type: 3}
-  damage: 20
+  itemDes: +10 Damage
+  itemSprite: {fileID: 21300000, guid: 1ffa9181f7b13d642a4789013a1b5953, type: 3}
+  damage: 10
   shield: 0
   life: 0
-  price: 4
+  price: 2
   rarity: 0
   usable: 0
