@@ -7736,6 +7736,10 @@ PrefabInstance:
       propertyPath: itemOn2
       value: 
       objectReference: {fileID: 83754578}
+    - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
+      propertyPath: buttonID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7593096449507531748, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
       propertyPath: m_Name
       value: Slot (1)
@@ -25336,6 +25340,10 @@ PrefabInstance:
       propertyPath: itemOn2
       value: 
       objectReference: {fileID: 83754578}
+    - target: {fileID: 1705297787, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
+      propertyPath: buttonID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7593096449507531748, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
       propertyPath: m_Name
       value: Slot
