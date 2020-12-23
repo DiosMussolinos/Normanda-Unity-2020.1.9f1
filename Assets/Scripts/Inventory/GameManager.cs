@@ -109,7 +109,6 @@ public class GameManager : MonoBehaviour
         {
             items.Add(_item);
             itemAmount.Add(1);
-
         }
         else
         {
@@ -147,5 +146,4 @@ public class GameManager : MonoBehaviour
        } 
        DisplayItems();
     }
-     
 }

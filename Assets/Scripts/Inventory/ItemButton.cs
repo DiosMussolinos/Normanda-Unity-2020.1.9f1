@@ -9,16 +9,11 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     public int buttonID;
     public Item itemData;
     [SerializeField] private Item thisItem;
+    
     //public Sprite itemImage;
     public Image itemImage;
-
     public Image itemOn1;
     public Image itemOn2;
-
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
 
 
     void Start() 

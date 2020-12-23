@@ -6,10 +6,6 @@ public class PickUpItem : MonoBehaviour
 {
     public Item itemData;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(itemData);
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

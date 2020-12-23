@@ -19,6 +19,6 @@ MonoBehaviour:
   damage: 0
   shield: 10
   life: 0
-  price: 0
+  price: 2
   rarity: 0
   usable: 0

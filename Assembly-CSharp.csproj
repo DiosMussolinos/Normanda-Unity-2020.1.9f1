@@ -76,6 +76,8 @@
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SoldierHealthBarPos.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\BossHeathBarPos.cs" />
+     <Compile Include="Assets\Scripts\Store\StoreManager.cs" />
+     <Compile Include="Assets\Scripts\Store\ItemStoreButton.cs" />
      <Compile Include="Assets\Scripts\Inventory\GameManager.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\ArcherHealthBar.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\NPC Names\RiverGuardian.cs" />
