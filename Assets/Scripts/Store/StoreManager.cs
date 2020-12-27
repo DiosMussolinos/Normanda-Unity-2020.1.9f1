@@ -9,11 +9,9 @@ public class StoreManager : MonoBehaviour
     public static bool storeOpen = false;
     public GameObject storeUI;
 
-    public List<Item> SeelItems;
+    public List<Item> SeelItems = new List<Item>();
     
     public GameObject[] storeSlots;
-
-
     
     private void Awake()
     {
@@ -22,8 +20,6 @@ public class StoreManager : MonoBehaviour
 
     void Start()
     {
-        SeelItems = new List<Item>();
-
         DisplayStore();
     }
 
@@ -69,7 +65,7 @@ public class StoreManager : MonoBehaviour
                 storeSlots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
                 storeSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = SeelItems[i].itemSprite;
 
-                //Update Slots Count Text - GET FUCKED, IM UNDERSTANDING THIS CODE
+                //Update Slots Count Text
                 storeSlots[i].transform.GetChild(1).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                 storeSlots[i].transform.GetChild(1).GetComponent<Text>().text = SeelItems[i].price.ToString();
         }

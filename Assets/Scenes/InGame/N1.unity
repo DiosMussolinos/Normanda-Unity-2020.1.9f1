@@ -11077,6 +11077,10 @@ PrefabInstance:
       propertyPath: itemName
       value: 
       objectReference: {fileID: 1847798653}
+    - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
 --- !u!1001 &1560188155
@@ -26222,25 +26226,17 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
-      propertyPath: buttonID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
-      propertyPath: thisItem
-      value: 
-      objectReference: {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
-    - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
       propertyPath: itemImage
       value: 
       objectReference: {fileID: 1853768398}
     - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
-      propertyPath: itemDescription
-      value: 
-      objectReference: {fileID: 1804906823}
-    - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
       propertyPath: itemName
       value: 
       objectReference: {fileID: 1847798653}
+    - target: {fileID: 7016429118484594970, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
+      propertyPath: itemDescription
+      value: 
+      objectReference: {fileID: 1804906823}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07418eab0033d24abbb8f8a8538f30b, type: 3}
 --- !u!1001 &5942717222827874610

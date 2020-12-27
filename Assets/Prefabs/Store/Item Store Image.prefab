@@ -228,7 +228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00000000
+  m_Text: Item.Price
 --- !u!1 &5301523040999254116
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,5 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c17fdc76c4b0b347b530d18cddbbf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonID: 1
-  thisItem: {fileID: 0}
+  buttonID: 0
+  itemData: {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
+  thisItem: {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
+  itemImage: {fileID: 0}
+  itemName: {fileID: 0}
+  itemDescription: {fileID: 0}
