@@ -15,6 +15,10 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     public Image itemOn1;
     public Image itemOn2;
 
+    private void Awake()
+    {
+
+    }
 
     void Start() 
     {

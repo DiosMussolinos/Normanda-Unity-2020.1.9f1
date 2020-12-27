@@ -16,7 +16,8 @@ public class FinalBoss : MonoBehaviour
     public Transform player;
     public Transform startPosition;
     public GameObject portal;
-
+    //////////////\\\\\\\\\\\\\\
+    
 
     private bool interest = true;
 
@@ -27,6 +28,7 @@ public class FinalBoss : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         startPosition = GameObject.FindWithTag("PosiçãoInicial").transform;
+        portal.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

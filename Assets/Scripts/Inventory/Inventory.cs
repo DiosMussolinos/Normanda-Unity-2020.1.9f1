@@ -9,8 +9,8 @@ public class Inventory : MonoBehaviour
     public static bool inventoryOpen = false;
     public GameObject inventoryUI;
 
-    public List<Item> items = new List<Item>(); //LIST OF ITEMS WE HAVE
-    public List<int> itemAmount = new List<int>(); //AMOUNT OF ITEMS PER ITEM
+    public List<Item> items; //LIST OF ITEMS WE HAVE
+    public List<int> itemAmount; //AMOUNT OF ITEMS PER ITEM
 
     public GameObject[] slots;
 
@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
 
     void Start() 
     {
+        items = new List<Item>();
+        itemAmount = new List<int>();
         DisplayItems();
     }
 

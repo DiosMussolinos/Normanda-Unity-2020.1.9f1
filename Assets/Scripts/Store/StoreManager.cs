@@ -9,30 +9,21 @@ public class StoreManager : MonoBehaviour
     public static bool storeOpen = false;
     public GameObject storeUI;
 
-    public List<Item> SeelItems = new List<Item>();
-
+    public List<Item> SeelItems;
+    
     public GameObject[] storeSlots;
 
 
-    /*
+    
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            if (instance != this)
-            {
-                Destroy(gameObject);
-            }
-        }
         DontDestroyOnLoad(gameObject);
-    }*/
+    }
 
     void Start()
     {
+        SeelItems = new List<Item>();
+
         DisplayStore();
     }
 
