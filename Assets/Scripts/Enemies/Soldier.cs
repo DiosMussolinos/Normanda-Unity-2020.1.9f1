@@ -52,7 +52,7 @@ public class Soldier : MonoBehaviour
 
    
         //__BEHAVIOR__\\
-        if (distance < SourceCode.soldierVisionDistance && distance > 2)
+        if (distance < SourceCode.soldierVisionDistance && distance > 1.5)
         {
             //Animation
             animator.SetBool("Walk", true);

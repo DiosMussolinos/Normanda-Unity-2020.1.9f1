@@ -66,7 +66,7 @@ public class SourceCode
     public static float soldierSpeed = 3f;
     public static float soldierStoppingDistance = 2f;
     public static float soldierRunDistance = 4f;
-    public static float soldierVisionDistance = 4f;
+    public static float soldierVisionDistance = 6f;
 
     //Control of shots
     //public static float timeBtwAttacks = 2f;

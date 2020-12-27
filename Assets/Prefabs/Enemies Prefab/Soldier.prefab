@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1460304023
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 36363f3530862b942b68b86355590401, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,8 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldierLife: 35
-  SoldierAttack: {fileID: 54819002358107237, guid: 8c04b3e5977b26549978341dae4e5f88, type: 3}
   player: {fileID: 0}
+  SoldierAttack: {fileID: 54819002358107237, guid: 8c04b3e5977b26549978341dae4e5f88, type: 3}
+  timeBtwAttacks: 1
+  startTimeBtwAttacks: 3.5
 --- !u!95 &-4924355859760032433
 Animator:
   serializedVersion: 3
@@ -111,7 +113,7 @@ Animator:
   m_GameObject: {fileID: 3311895556398274471}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 75ac0dd3e1dc47d45933ceaf7fc59899, type: 2}
+  m_Controller: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
