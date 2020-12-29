@@ -81,6 +81,21 @@ public class SourceCode
     public static int soldierLevel;
 
     ////////////////////////__SLIME_KING__\\\\\\\\\\\\\\\\\\\\\\\\
+    //Behavior\\
+    public static float slimeSpeed = 2f;
+    public static float slimeStoppingDistance = 6f;
+    public static float slimeRetreaDistance = 4f;
+    public static float slimeVisionDistance = 8f;
+
+    //Details of Enemy\\
+    public static int slimeProjectileDamage = 10;
+    public static int slimeGold = 10;
+    public static int slimeExp = 10;
+    public static int slimeLevel;
+
+    //Control of shots\\
+    public static float slimeTimeBtwShots = 2f;
+    public static float slimeStartTimeBtwShots = 1f;
 
     ////////////////////////__ARCHER_KING__\\\\\\\\\\\\\\\\\\\\\\\\
 
