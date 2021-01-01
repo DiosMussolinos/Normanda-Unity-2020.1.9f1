@@ -15,7 +15,21 @@ public class StoreManager : MonoBehaviour
     
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+        }
     }
 
     void Start()

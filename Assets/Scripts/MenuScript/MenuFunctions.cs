@@ -8,6 +8,7 @@ public class MenuFunctions : MonoBehaviour
 {
     public void StartGame() 
     {
+        SourceCode.lifePoints = SourceCode.maxLifePoints;
         SceneManager.LoadScene("N1");
     }
 
@@ -40,5 +41,10 @@ public class MenuFunctions : MonoBehaviour
     public void BackToMainMenu() 
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void TryAgain() 
+    {
+        SourceCode.lifePoints = (SourceCode.maxLifePoints / 2);
     }
 }

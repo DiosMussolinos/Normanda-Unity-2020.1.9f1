@@ -5,11 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class StopTime : MonoBehaviour
 {
+    public static StopTime instance;
 
     public static bool gamePaused = false;
 
     public GameObject pauseUI;
     public GameObject optionsPause;
+
+    void Awake() {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+        }
+
+    }
 
     // Update is called once per frame
     void Update()

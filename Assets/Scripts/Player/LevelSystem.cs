@@ -33,15 +33,23 @@ public class LevelSystem : MonoBehaviour
             ////////////////////////__PLAYER__\\\\\\\\\\\\\\\\\\\\\\\\
             //Level + 1
             SourceCode.playerLevel = SourceCode.playerLevel + 1;
+            
             //Restart of value 
             SourceCode.playerExp = SourceCode.playerExp - SourceCode.playerExpToNextLevel;
+
+            //Bonus Life
+            SourceCode.lifePoints += 2;
+
+            //New MAX LIFE
+            SourceCode.maxLifePoints += 5;
+
             //New CD For the Strong Attack
             SourceCode.strongAttackCD = SourceCode.strongAttackCD - 0.1f;
             //Bonus Gold  
             SourceCode.playerGold = SourceCode.playerGold + 10;
 
             ////////////////////////__ARCHER__\\\\\\\\\\\\\\\\\\\\\\\\
-            //Bigger Life
+            //Bigger  Life
              
             //Less CD in shots
             SourceCode.timeBtwShots = SourceCode.timeBtwShots - 0.05f;
