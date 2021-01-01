@@ -12845,7 +12845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 273482255, guid: b326695e98dff3244af8511509f58206, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 273482255, guid: b326695e98dff3244af8511509f58206, type: 3}
       propertyPath: dialog.Array.data[0]

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8271776247324758540}
   - component: {fileID: 5674772651951444389}
-  - component: {fileID: 6422209477381643693}
   - component: {fileID: 3410304909026020693}
   - component: {fileID: 8403274796063705427}
+  - component: {fileID: 8342365562713184683}
   m_Layer: 0
   m_Name: Blacksmith
   m_TagString: Untagged
@@ -85,43 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6422209477381643693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739864609126986814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d25787cb82b7a43890776855bac9e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storeUI: {fileID: 0}
-  SeelItems:
-  - {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
-  - {fileID: 11400000, guid: 35ba4905ce22f5548adc064ac8d624fc, type: 2}
-  - {fileID: 11400000, guid: 776d0ca4039929045bcf18d8067d0619, type: 2}
-  - {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}
-  - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
-  - {fileID: 11400000, guid: b40e6e3e9f66deb499e72ec5fedb0ca0, type: 2}
-  - {fileID: 11400000, guid: 9f8b4ac7c779fc543bd0dd1701894a01, type: 2}
-  - {fileID: 11400000, guid: d4804940bf3fa26409708f3f7040c7a3, type: 2}
-  - {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
-  - {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
-  - {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-  storeSlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!58 &3410304909026020693
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -169,3 +132,40 @@ MonoBehaviour:
   - Work as the smartest, but with the luck of the dumbest. What a quality!
   - You must end this bloodshed before both worlds are dead...
   playerInRange: 0
+--- !u!114 &8342365562713184683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739864609126986814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5a52dd772ee264097ff6768c485a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeUI: {fileID: 0}
+  SeelItems:
+  - {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
+  - {fileID: 11400000, guid: 35ba4905ce22f5548adc064ac8d624fc, type: 2}
+  - {fileID: 11400000, guid: 776d0ca4039929045bcf18d8067d0619, type: 2}
+  - {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}
+  - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
+  - {fileID: 11400000, guid: b40e6e3e9f66deb499e72ec5fedb0ca0, type: 2}
+  - {fileID: 11400000, guid: 9f8b4ac7c779fc543bd0dd1701894a01, type: 2}
+  - {fileID: 11400000, guid: d4804940bf3fa26409708f3f7040c7a3, type: 2}
+  - {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
+  - {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
+  - {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
+  storeSlots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

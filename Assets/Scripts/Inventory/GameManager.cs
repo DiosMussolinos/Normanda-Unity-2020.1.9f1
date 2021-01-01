@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
     public static bool inventoryOpen = false;
     public GameObject inventoryUI;
 
-    public List<Item> items; //LIST OF ITEMS WE HAVE
-    public List<int> itemAmount; //AMOUNT OF ITEMS PER ITEM
+    public List<Item> items = new List<Item>(); //LIST OF ITEMS WE HAVE
+    public List<int> itemAmount = new List<int>(); //AMOUNT OF ITEMS PER ITEM
 
     public GameObject[] slots;
 
@@ -26,15 +26,16 @@ public class GameManager : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            else 
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
-       DontDestroyOnLoad(gameObject);
+     
     }
     
     private void Start()
     {
-        items = new List<Item>(); //LIST OF ITEMS WE HAVE
-        itemAmount = new List<int>(); //AMOUNT OF ITEMS PER ITEM
-
         DisplayItems();
     }
 

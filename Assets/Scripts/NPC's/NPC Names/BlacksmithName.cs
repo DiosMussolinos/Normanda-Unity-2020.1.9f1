@@ -17,7 +17,7 @@ public class BlacksmithName : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Vector3 pos = cam.WorldToScreenPoint(new Vector3(blacksmithPos.position.x, blacksmithPos.position.y + 1f, blacksmithPos.position.z));
+       Vector3 pos = cam.WorldToScreenPoint(new Vector3(blacksmithPos.position.x, blacksmithPos.position.y + 1.1f, blacksmithPos.position.z));
         this.gameObject.transform.position = pos;
     }
 }
