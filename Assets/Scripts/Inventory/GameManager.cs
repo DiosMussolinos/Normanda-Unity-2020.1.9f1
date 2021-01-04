@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        else
+        /*else
         {
             if (instance != this)
             {
@@ -30,11 +30,12 @@ public class GameManager : MonoBehaviour
             {
                 DontDestroyOnLoad(gameObject);
             }
-        }     
+        } */
     }
     
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         DisplayItems();
     }
 

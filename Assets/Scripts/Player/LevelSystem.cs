@@ -38,7 +38,7 @@ public class LevelSystem : MonoBehaviour
             SourceCode.playerExp = SourceCode.playerExp - SourceCode.playerExpToNextLevel;
 
             //Bonus Life
-            SourceCode.lifePoints += 2;
+            SourceCode.lifePoints += 5;
 
             //New MAX LIFE
             SourceCode.maxLifePoints += 5;

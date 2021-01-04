@@ -28,20 +28,18 @@ public class ItemStoreNpc : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.E) && (playerInRange == true))
         {
-
-            if (storeUI.activeInHierarchy)
+            if(storeOpen == false)
             {
-                storeUI.SetActive(true);
                 storeOpen = true;
             }
-            else
+            else if (storeOpen == true)
             {
-                storeUI.SetActive(false);
                 storeOpen = false;
             }
+
+            storeUI.SetActive(storeOpen);
         }
     }
     void OpenStore()
