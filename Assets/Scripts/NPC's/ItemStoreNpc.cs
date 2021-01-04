@@ -28,7 +28,7 @@ public class ItemStoreNpc : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && (playerInRange == true))
+        if ((Input.GetKeyDown(KeyCode.E)) && (playerInRange == true))
         {
             if(storeOpen == false)
             {

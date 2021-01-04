@@ -18,6 +18,7 @@ TagManager:
   - TocaFinalBoss
   - "Posi\xE7\xE3oInicial"
   - Slime
+  - NpcUI
   layers:
   - Default
   - TransparentFX
