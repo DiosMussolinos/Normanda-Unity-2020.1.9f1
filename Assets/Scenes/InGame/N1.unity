@@ -598,7 +598,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84335968}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dc3cee9f5e6282449ac62364b25baf9, type: 3}
   m_Name: 
@@ -1855,8 +1855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dee92ff5deab6845bae634707bea6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NpcUi: {fileID: 0}
-  TextPlaque: {fileID: 0}
+  BlacksmithName: {fileID: 0}
+  BlacksmithSonName: {fileID: 0}
+  RiverGuardianName: {fileID: 0}
 --- !u!1 &369238943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7593096449507531748, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
@@ -2705,13 +2706,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item1: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-  MapN2: {fileID: 11400000, guid: cf174cccd8183fe4899c8f1a7e4e1954, type: 2}
+  item2: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
+  MapNextN: {fileID: 11400000, guid: cf174cccd8183fe4899c8f1a7e4e1954, type: 2}
   randomItems:
   - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
   - {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
   - {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
   player: {fileID: 0}
   inRange: 0
+  sp: {fileID: 0}
+  open: {fileID: 21300000, guid: faf7e307eab47b443bc533b79e53d88c, type: 3}
 --- !u!58 &533708369
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2893,11 +2897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341157223916618135, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.49
+      value: -26.44
       objectReference: {fileID: 0}
     - target: {fileID: 4341157223916618135, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.39
+      value: 1.03
       objectReference: {fileID: 0}
     - target: {fileID: 4341157223916618135, guid: 03a15b3f4ae47d149abf2f1a9ab743ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11730,7 +11734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1518449810
 RectTransform:
   m_ObjectHideFlags: 0

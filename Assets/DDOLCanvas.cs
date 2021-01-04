@@ -9,9 +9,18 @@ public class DDOLCanvas : MonoBehaviour
 
     private string sceneName;
 
-    public GameObject NpcUi;
+    //N1
+    public GameObject BlacksmithName;
+    public GameObject BlacksmithSonName;
+    public GameObject RiverGuardianName;
+    //N2
+    //public GameObject BlacksmithName;
+    //public GameObject BlacksmithName;
+    //public GameObject BlacksmithName;
+    //N3
+    //public GameObject BlacksmithName;
+    //public GameObject BlacksmithName;
 
-    public GameObject TextPlaque;
 
     void Awake() 
     {
@@ -22,21 +31,24 @@ public class DDOLCanvas : MonoBehaviour
 
         sceneName = scene.name;
 
-        NpcUi = GameObject.Find("Canvas/GameUI/NPC UI");
+        BlacksmithName = GameObject.Find("Canvas/GameUI/NPC UI/Blacksmith Name");
+        BlacksmithSonName = GameObject.Find("Canvas/GameUI/NPC UI/Blacksmith Son Name");
+        RiverGuardianName = GameObject.Find("Canvas/GameUI/NPC UI/River Guardian Name");
 
-        TextPlaque = GameObject.Find("Canvas/GameUI/TextPlaque");
 
-        if ((sceneName == "D1") || (sceneName == "D2") || (sceneName == "D3"))
+        if (sceneName == "N1")
         {
-            NpcUi.SetActive(false);
-            TextPlaque.SetActive(false);
+            BlacksmithName.SetActive(true);
+            BlacksmithSonName.SetActive(true);
+            RiverGuardianName.SetActive(true);
+        }
+        else
+        {
+            BlacksmithName.SetActive(false);
+            BlacksmithSonName.SetActive(false);
+            RiverGuardianName.SetActive(false);
         }
 
-        if ((sceneName == "N1") || (sceneName == "N2") || (sceneName == "N3"))
-        {
-            NpcUi.SetActive(true);
-            TextPlaque.SetActive(true);
-        }
 
     }
 }

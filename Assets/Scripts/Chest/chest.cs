@@ -6,7 +6,8 @@ public class chest : MonoBehaviour
 {
     //Items ganhos obrigatórios
     public Item item1;
-    public Item MapN2;
+    public Item item2;
+    public Item MapNextN;
     
     //Items ganhos Random
     public Item[] randomItems;
@@ -21,16 +22,22 @@ public class chest : MonoBehaviour
     //Bau already oppened?
     private bool opened = false;
 
+    //Trocar imagem
+    public SpriteRenderer sp;
+    public Sprite open;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        sp = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (opened == false) {
+        if (opened == false)
+        {
             if (Input.GetKeyDown(KeyCode.E) && (inRange == true))
             {
                 //primeira dice roll
@@ -42,11 +49,17 @@ public class chest : MonoBehaviour
 
                 //Dar items obrigatorios
                 GameManager.instance.AddItem(item1);
-                GameManager.instance.AddItem(MapN2);
+                GameManager.instance.AddItem(item2);
+                GameManager.instance.AddItem(MapNextN);
 
                 //não permitir repetição
                 opened = true;
             }
+        }
+        else
+        {
+            //TROCAR IMAGEM
+            sp.sprite = open;
         }
     }
 
