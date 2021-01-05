@@ -122,13 +122,13 @@ public class Archer : MonoBehaviour
             //Recieve DMG Strong
             archerLife = archerLife - SourceCode.strongAttackDMG;
         }
-
+        /*
         //Colision Strong attack
         if (collision.gameObject.CompareTag("Shot"))
         {
             //Recieve DMG Strong
             archerLife = archerLife - SourceCode.projectileDamage;
         }
-
+        */
     }
 }
