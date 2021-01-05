@@ -38,12 +38,13 @@ public class DDOLCanvas : MonoBehaviour
         }*/
          
         
-        if (sceneName != "N1" || sceneName != "N2" || sceneName != "D1")
+        /*if (sceneName != "N1" || sceneName != "N2")
         {
             //Do not destroy this shit
             DontDestroyOnLoad(gameObject);
-        }
-        
+        }*/
+        DontDestroyOnLoad(gameObject);
+
         scene = SceneManager.GetActiveScene();
 
         sceneName = scene.name;
