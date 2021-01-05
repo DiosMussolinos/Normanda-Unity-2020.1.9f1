@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ItemStoreNpc : MonoBehaviour
 {
 
-    public bool playerInRange = false;
+    private bool playerInRange = false;
 
     public static StoreManager instance;
     public static bool storeOpen = false;
@@ -42,12 +42,17 @@ public class ItemStoreNpc : MonoBehaviour
             storeUI.SetActive(storeOpen);
         }
     }
+    
+    /*
+
+    //MUDA MUDA MUDA MUDA MUDA MUDA -In Dio Brando Screams
+
     void OpenStore()
     {
         storeUI.SetActive(true);
         Time.timeScale = 0f;
         storeOpen = true;
-
+    d
     }
 
     void CloseStore()
@@ -56,6 +61,7 @@ public class ItemStoreNpc : MonoBehaviour
         Time.timeScale = 1f;
         storeOpen = false;
     }
+    */
 
     public void DisplayStore()
     {
@@ -89,7 +95,6 @@ public class ItemStoreNpc : MonoBehaviour
             playerInRange = false;
             //Joke off
             storeUI.SetActive(false);
-
         }
     }
 

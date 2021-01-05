@@ -19,6 +19,9 @@ TagManager:
   - "Posi\xE7\xE3oInicial"
   - Slime
   - NpcUI
+  - DialogBox
+  - DialogText
+  - PressToTalk
   layers:
   - Default
   - TransparentFX

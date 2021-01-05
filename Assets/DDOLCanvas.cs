@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DDOLCanvas : MonoBehaviour
 {
+    public static DDOLCanvas canvasExist;
+
     private Scene scene;
 
     private string sceneName;
@@ -24,9 +26,24 @@ public class DDOLCanvas : MonoBehaviour
 
     void Awake() 
     {
-        //Do not destroy this shit
-        DontDestroyOnLoad(gameObject);
 
+        /*
+        if (canvasExist != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }*/
+         
+        
+        if (sceneName == "N1" || sceneName != "N2")
+        {
+            //Do not destroy this shit
+            DontDestroyOnLoad(gameObject);
+        }
+        
         scene = SceneManager.GetActiveScene();
 
         sceneName = scene.name;

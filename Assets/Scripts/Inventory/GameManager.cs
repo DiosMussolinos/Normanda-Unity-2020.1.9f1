@@ -20,22 +20,18 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        /*else
-        {
-            if (instance != this)
-            {
-                Destroy(gameObject);
-            }
-            else 
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-        } */
     }
     
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         DisplayItems();
     }
 
