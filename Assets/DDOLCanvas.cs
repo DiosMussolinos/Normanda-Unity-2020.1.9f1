@@ -38,7 +38,7 @@ public class DDOLCanvas : MonoBehaviour
         }*/
          
         
-        if (sceneName != "N1" || sceneName != "N2")
+        if (sceneName != "N1" || sceneName != "N2" || sceneName != "D1")
         {
             //Do not destroy this shit
             DontDestroyOnLoad(gameObject);

@@ -92,8 +92,10 @@
      <Compile Include="Assets\Scripts\NPC&apos;s\NPC Names\NameSetActive.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\ArcherHealthBarPos.cs" />
      <Compile Include="Assets\Scripts\SourceCode.cs" />
+     <Compile Include="Assets\Scripts\ChangeScenes\GoTo\D1ToN1.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\DynamicNPC.cs" />
      <Compile Include="Assets\Scripts\Enemies\SlimeKing.cs" />
+     <Compile Include="Assets\Scripts\ChangeScenes\GoTo\D2ToN2.cs" />
      <Compile Include="Assets\Scripts\Inventory\ItemButton.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBossAttack.cs" />
      <Compile Include="Assets\Scripts\Player\LevelSystem.cs" />
@@ -108,12 +110,10 @@
      <Compile Include="Assets\Scripts\Inventory\PickUpItem.cs" />
      <Compile Include="Assets\Scripts\SourceFunctions.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SetActive.cs" />
+     <Compile Include="Assets\transitionCode.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
      <Compile Include="Assets\DDOLCanvas.cs" />
-     <Compile Include="Assets\Scripts\ChangeScenes\GoTo\D2ToN2.cs" />
-     <Compile Include="Assets\Scripts\ChangeScenes\GoTo\D1ToN1.cs" />
-     <Compile Include="Assets\transitionCode.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
