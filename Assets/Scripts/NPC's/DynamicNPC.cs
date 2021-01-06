@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DynamicNPC : MonoBehaviour
 {
+    private DynamicNPC exist;
+
     public GameObject dialogBox;
     public Text dialogText;
     public Image pressToTalk;
@@ -17,11 +20,44 @@ public class DynamicNPC : MonoBehaviour
     public GameObject controlE;
     public Transform pressToTalkPos;
 
+    //Scene related
+    private Scene scene;
+    private string sceneName;
+    
+    //PickStuff
     private Rigidbody2D rb;
+
+    void Awake() 
+    {
+        if (exist == null)
+        {
+            exist = this;
+        }
+
+        if (exist != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+
+        sceneName = scene.name;
+
+        if (sceneName != "N1")
+        {
+            gameObject.SetActive(false);
+        }
+
         rb = GetComponent<Rigidbody2D>();
 
         pressToTalk.enabled = false;
@@ -30,6 +66,12 @@ public class DynamicNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (dialogText == null)
+        {
+            Destroy(gameObject);
+        }
+
         if (playerInRange == false)
         {
             transform.position = Vector3.MoveTowards(transform.position, npcPoints[pointsIndex], moveSpeed * Time.deltaTime);

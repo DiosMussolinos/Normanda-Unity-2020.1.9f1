@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ItemStoreNpc : MonoBehaviour
 {
+
+    private ItemStoreNpc exist;
 
     private bool playerInRange = false;
 
@@ -16,18 +19,48 @@ public class ItemStoreNpc : MonoBehaviour
 
     public GameObject[] storeSlots;
 
+    //Scene related
+    private Scene scene;
+    private string sceneName;
+
     private void Awake()
     {
-        
+        if (exist == null)
+        {
+            exist = this;
+        }
+
+        if (exist != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+
+        sceneName = scene.name;
+
+        if (sceneName != "N1")
+        {
+            gameObject.SetActive(false);
+        }
+
         DisplayStore();
     }
 
     void Update()
     {
+        if (storeUI == null)
+        {
+            Destroy(gameObject);
+        }
+
         if ((Input.GetKeyDown(KeyCode.E)) && (playerInRange == true))
         {
             if(storeOpen == false)
@@ -44,9 +77,7 @@ public class ItemStoreNpc : MonoBehaviour
     }
     
     /*
-
     //MUDA MUDA MUDA MUDA MUDA MUDA -In Dio Brando Screams
-
     void OpenStore()
     {
         storeUI.SetActive(true);

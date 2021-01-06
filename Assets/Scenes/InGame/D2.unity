@@ -29444,6 +29444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4924355859760032433, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier

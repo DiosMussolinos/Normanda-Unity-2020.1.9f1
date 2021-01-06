@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class DDOLInventory : MonoBehaviour
 {
-
     void Start() 
     {
         DontDestroyOnLoad(gameObject);
     }
-
 }

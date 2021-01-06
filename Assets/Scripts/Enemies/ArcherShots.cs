@@ -67,13 +67,6 @@ public class ArcherShots : MonoBehaviour
             //Destruir
             Destroy(gameObject);
         }
-
-        if (collision.gameObject.CompareTag("Archer"))
-        {
-            //Destruir
-            Destroy(gameObject);
-        }
-
     }
 
 }

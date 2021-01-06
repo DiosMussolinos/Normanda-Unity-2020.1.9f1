@@ -2,24 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StaticNPC : MonoBehaviour
 {
+    private StaticNPC exist;
+
+    private Scene scene;
+    private string sceneName;
+
     public GameObject dialogBox;
     public Image pressToTalk;
     public Text dialogText;
     public string[] dialog;
     public bool playerInRange = false;
 
+    void Awake() 
+    {
+        if (exist == null)
+        {
+            exist = this;
+        }
+
+        if (exist != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     void Start() 
     {
+        scene = SceneManager.GetActiveScene();
+
+        sceneName = scene.name;
+
+        if (sceneName != "N1")
+        {
+            gameObject.SetActive(false);
+        }
+
         pressToTalk.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (dialogText == null)
+        {
+            Destroy(gameObject);
+        }
+
         if ((Input.GetKeyDown(KeyCode.E)) && (playerInRange == true))
         {
             if (dialogBox.activeInHierarchy)

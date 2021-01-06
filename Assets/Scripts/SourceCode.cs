@@ -97,8 +97,6 @@ public class SourceCode
     public static float slimeTimeBtwShots = 2f;
     public static float slimeStartTimeBtwShots = 1f;
 
-    ////////////////////////__ARCHER_KING__\\\\\\\\\\\\\\\\\\\\\\\\
-
     ////////////////////////__FINAL_BOSS__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float finalBossSpeed = 2f;
 
@@ -113,6 +111,13 @@ public class SourceCode
     public static int finalBossGold = 9;
     public static int finalBossEXP = 20;
 
+
+    ////////////////////////__CHEST_N1__\\\\\\\\\\\\\\\\\\\\\\\\
+    public static bool chestN1 = false;
+    ////////////////////////__CHEST_N2__\\\\\\\\\\\\\\\\\\\\\\\\
+    public static bool chestN2 = false;
+    ////////////////////////__CHEST_N2.2__\\\\\\\\\\\\\\\\\\\\\\\\
+    public static bool chestN22 = false;
 
     /*
       ⣾⣿⠿⠿⠶⠿⢿⣿⣿⣿⣿⣦⣤⣄⢀⡅⢠⣾⣛⡉⠄⠄⠄⠸⢀⣿⠄
