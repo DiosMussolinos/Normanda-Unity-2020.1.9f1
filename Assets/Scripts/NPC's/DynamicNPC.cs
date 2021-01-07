@@ -49,15 +49,6 @@ public class DynamicNPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scene = SceneManager.GetActiveScene();
-
-        sceneName = scene.name;
-
-        if (sceneName != "N1")
-        {
-            gameObject.SetActive(false);
-        }
-
         rb = GetComponent<Rigidbody2D>();
 
         pressToTalk.enabled = false;
@@ -66,6 +57,14 @@ public class DynamicNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scene = SceneManager.GetActiveScene();
+
+        sceneName = scene.name;
+
+        if (sceneName != "N1")
+        {
+            gameObject.SetActive(false);
+        }
 
         if (dialogText == null)
         {

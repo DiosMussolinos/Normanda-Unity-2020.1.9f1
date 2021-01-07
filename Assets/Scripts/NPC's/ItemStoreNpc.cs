@@ -42,6 +42,11 @@ public class ItemStoreNpc : MonoBehaviour
 
     void Start()
     {
+        DisplayStore();
+    }
+
+    void Update()
+    {
         scene = SceneManager.GetActiveScene();
 
         sceneName = scene.name;
@@ -51,11 +56,6 @@ public class ItemStoreNpc : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        DisplayStore();
-    }
-
-    void Update()
-    {
         if (storeUI == null)
         {
             Destroy(gameObject);

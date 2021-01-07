@@ -11,42 +11,32 @@ public class DDOLCanvas : MonoBehaviour
 
     private string sceneName;
 
-    //N1
-    private GameObject BlacksmithName;
-    private GameObject BlacksmithSonName;
-    private GameObject RiverGuardianName;
-    //N2
-    //public GameObject BlacksmithName;
-    //public GameObject BlacksmithName;
-    //public GameObject BlacksmithName;
-    //N3
-    //public GameObject BlacksmithName;
-    //public GameObject BlacksmithName;
+    public GameObject Npc1;
+    public GameObject Npc2;
+    public GameObject Npc3;
+    //public GameObject Npc4;
+    //public GameObject Npc5;
+
 
 
     void Awake() 
     {
         DontDestroyOnLoad(gameObject);
 
+    }
+
+    void Update() 
+    {
         scene = SceneManager.GetActiveScene();
 
         sceneName = scene.name;
 
-        BlacksmithName = GameObject.Find("Canvas/GameUI/NPC UI/Blacksmith Name");
-        BlacksmithSonName = GameObject.Find("Canvas/GameUI/NPC UI/Blacksmith Son Name");
-        RiverGuardianName = GameObject.Find("Canvas/GameUI/NPC UI/River Guardian Name");
-
         if (sceneName == "N1")
         {
-            BlacksmithName.SetActive(true);
-            BlacksmithSonName.SetActive(true);
-            RiverGuardianName.SetActive(true);
+            Npc1.gameObject.SetActive(true);
+            Npc2.gameObject.SetActive(true);
+            Npc3.gameObject.SetActive(true);
         }
-        else
-        {
-            BlacksmithName.SetActive(false);
-            BlacksmithSonName.SetActive(false);
-            RiverGuardianName.SetActive(false);
-        }
+
     }
 }

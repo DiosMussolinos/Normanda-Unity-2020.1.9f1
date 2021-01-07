@@ -36,15 +36,6 @@ public class StaticNPC : MonoBehaviour
 
     void Start() 
     {
-        scene = SceneManager.GetActiveScene();
-
-        sceneName = scene.name;
-
-        if (sceneName != "N1")
-        {
-            gameObject.SetActive(false);
-        }
-
         pressToTalk.enabled = false;
     }
 
@@ -54,6 +45,15 @@ public class StaticNPC : MonoBehaviour
         if (dialogText == null)
         {
             Destroy(gameObject);
+        }
+
+        scene = SceneManager.GetActiveScene();
+
+        sceneName = scene.name;
+
+        if (sceneName != "N1")
+        {
+            gameObject.SetActive(false);
         }
 
         if ((Input.GetKeyDown(KeyCode.E)) && (playerInRange == true))
@@ -70,6 +70,8 @@ public class StaticNPC : MonoBehaviour
                 dialogText.text = dialog[Random.Range(0, dialog.Length)];
             }
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
