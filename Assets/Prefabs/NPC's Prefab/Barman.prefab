@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4261805405855632447}
   - component: {fileID: 517753897444036502}
-  - component: {fileID: 7673910439645099026}
   - component: {fileID: 9024524235620834558}
+  - component: {fileID: 1225478930}
   m_Layer: 0
   m_Name: Barman
   m_TagString: Untagged
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1805120337
+  m_SortingLayer: 6
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d8160f3cae981b54297a777cbe5e048a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,34 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7673910439645099026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3505354439774349837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa075ec5f64e8bf4fa54bc72d850c097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  playerInRange: 0
 --- !u!58 &9024524235620834558
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -128,3 +100,40 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &1225478930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3505354439774349837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  pressToTalk: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog:
+  - The majority of people die at 30. If I can't sell my drinks to minors I will
+    go bankrupt!
+  - I'm thinking of buying the upstairs floor and expanding my business with women,
+    if you know what I mean.
+  - Believe me or not, my most loyal consumer is the priest.
+  - The best part of my job is confessing weird things to drunk customers and then
+    saying I never said anything. You should see their faces.
+  - If you need a therapist it's on the other side of the street.
+  - Drink options? I have green ale, orange ale, and red ale. It's a medieval game,
+    what did you expect?
+  - I listen about a princess that went to the other world and neve came back. There
+    are rummors that she is a god now.
+  - Last time someone like you arrive, the princess wasn't kidnapped and we had a
+    king.
+  - My child, you wouldn't believe in all the stories that i have listen in my life.
+  - With all the problems that we have, there is a punk around that poison peoples
+    drinks. Don't accept anything from strangers...
+  - 'A wise men once told me: "be drunk during a fight, so you don''t notice if you
+    lose".'
+  - Everything can be solved with a drink, a sword and a woman!
+  playerInRange: 0

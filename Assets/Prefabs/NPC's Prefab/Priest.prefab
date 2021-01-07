@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8569192442100364291}
   - component: {fileID: 5395440021840738218}
-  - component: {fileID: 273482255}
+  - component: {fileID: 9174800966181680490}
   - component: {fileID: 6663793557669944811}
+  - component: {fileID: 2003119371}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Untagged
@@ -70,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1460304023
+  m_SortingLayerID: -1805120337
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d8160f3cae981b54297a777cbe5e048a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &273482255
+--- !u!114 &9174800966181680490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,43 +94,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 9037210675139662385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5101369a5393458409e2b777f1d7b3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
   pressToTalk: {fileID: 0}
+  dialogText: {fileID: 0}
   dialog:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - I have always been a fan of Michael Jackson. I love how he inspires the youth.
+  - Please stop pestering me. God's hand may be invisible, mine is not.
+  - Outsides should be welcome, as long as they help to maintain the peace of our
+    land.
+  - The rules never mentioned about kids...
+  - Please stop pestering me. God's hand may be invisible, mine is not.
+  - Morning Son, if you are here for the pray we are close.
+  - Yeah, i know, a city in danger, we are all close... And people can't
+  - 'Imagine being a priest and need to explain what is happening to '
+  - 'I really don''t understand what happened, i know that a lot of people '
+  - As a priest i must give people hope with words, could you give them with you
+    actions?
+  - 'This started two months a go... People are already starving as they '
+  - '"Strange women lying in ponds distributing swords is no base for go'
   playerInRange: 0
-  moveSpeed: 0
-  npcPoints:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  pointsIndex: 0
-  controlE: {fileID: 0}
-  pressToTalkPos: {fileID: 0}
 --- !u!58 &6663793557669944811
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +132,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &2003119371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9037210675139662385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  pressToTalk: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog: []
+  playerInRange: 0

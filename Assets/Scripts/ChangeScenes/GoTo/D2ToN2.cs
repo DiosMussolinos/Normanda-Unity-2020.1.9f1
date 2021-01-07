@@ -18,7 +18,7 @@ public class D2ToN2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("N2");
+            SceneManager.LoadScene("N1");
             player.transform.position = new Vector2(teleport.transform.position.x, teleport.transform.position.y);
 
         }
