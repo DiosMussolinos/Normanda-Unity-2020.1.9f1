@@ -169,11 +169,10 @@ public class PlayerMovement : MonoBehaviour
             SourceCode.lifePoints = SourceCode.maxLifePoints;
         }
 
-        if(SourceCode.lifePoints < 0)
+        if (SourceCode.lifePoints < 0)
         {
             SourceCode.lifePoints = 0;
         }
-
             Timer();
     }
     //__END UPDATE__\\

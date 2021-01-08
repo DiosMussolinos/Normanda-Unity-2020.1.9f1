@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuFunctions : MonoBehaviour
 {
+
+
     public void StartGame() 
     {
+        //player.transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
         SourceCode.lifePoints = SourceCode.maxLifePoints;
         SceneManager.LoadScene("N1");
     }
@@ -15,7 +18,6 @@ public class MenuFunctions : MonoBehaviour
     public void LoadGame()
     {
         //Add LOAD GAME HERE
-        Debug.Log("not yet bitch");
     }
 
     public void Options()
