@@ -24,7 +24,6 @@ public class DDOLCanvas : MonoBehaviour
     void Awake() 
     {
         DontDestroyOnLoad(gameObject);
-
     }
 
     void Update() 

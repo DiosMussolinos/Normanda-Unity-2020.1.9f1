@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8271776247324758540}
   - component: {fileID: 5674772651951444389}
   - component: {fileID: 3410304909026020693}
-  - component: {fileID: 8403274796063705427}
   - component: {fileID: 8342365562713184683}
   m_Layer: 0
   m_Name: Blacksmith
@@ -71,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1460304023
+  m_SortingLayerID: -1805120337
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d8160f3cae981b54297a777cbe5e048a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,37 +100,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &8403274796063705427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739864609126986814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
-  pressToTalk: {fileID: 0}
-  dialogText: {fileID: 0}
-  dialog:
-  - I am doing my best to teach my son to have the strength to bang it all day. The
-    hammer of course.
-  - Want to listen about my battle of swords?
-  - We don't accept refunds. It's a sword, be a men and die with it.
-  - No gold? Go to the other world and get a sword from a body!
-  - I need to buy food to my children, talk with me when you have gold.
-  - Have you heard about our god? The barman knows our priest, talk with him to understand
-    it better.
-  - 'I used to do engagement rings. As you can see, no one like it. '
-  - BLACK PLAGUE, soon everything will be 50% off.
-  - Do you know why there are only 7 people on this city...?
-  - Dumb luck was a gift that i have since i was a child.
-  - Work as the smartest, but with the luck of the dumbest. What a quality!
-  - You must end this bloodshed before both worlds are dead...
-  playerInRange: 0
 --- !u!114 &8342365562713184683
 MonoBehaviour:
   m_ObjectHideFlags: 0

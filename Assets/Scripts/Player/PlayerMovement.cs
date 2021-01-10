@@ -43,6 +43,21 @@ public class PlayerMovement : MonoBehaviour
         float strongAttack = Input.GetAxis("Fire2");
         float block = Input.GetAxis("Fire3");
 
+
+        ////////////////////////__CHEAT CODES\\\\\\\\\\\\\\\\\\\\\\\\
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SourceCode.lifePoints = SourceCode.maxLifePoints;
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SourceCode.playerGold += 100;
+        }
+        ////////////////////////__CHEAT CODES\\\\\\\\\\\\\\\\\\\\\\\\
+
+
         // Life > 0 then MOVE, YOU ARE ON MY WAY
         if (SourceCode.lifePoints > 0)
         {
@@ -86,10 +101,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("BasicAttack", true);
 
             //Create Object\\
-            //Right BasicAttack
-            GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
-            //Left BasicAttack
-            GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x - 2.4f, transform.position.y + 1), Quaternion.identity);
+            if (spriteRender.flipX) {
+                GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x-1.5f, transform.position.y + 1), Quaternion.identity);
+            }
+            if (!spriteRender.flipX)
+            {
+                GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x +1.3f, transform.position.y + 1), Quaternion.identity);
+            }
+
             
             //Reset Timer
             SourceCode.basicAttackTimer = SourceCode.basicAttackCD;
@@ -107,11 +126,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("StrongAttack", true);
 
             ////Create Object\\\\
-            //Right StrongAttack
-            GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
-            //Left StrongAttack
-            GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 2.78f, transform.position.y + 1), Quaternion.identity);
-
+            if (spriteRender.flipX)
+            {
+                GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
+            }
+            if (!spriteRender.flipX)
+            {
+                GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
+            }
             //Reset Timer
             SourceCode.strongAttackTimer = SourceCode.strongAttackCD;
 
@@ -121,7 +143,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("StrongAttack", false);
         }
 
-
         //__BLOCK__\\
         if ((block != 0) && (SourceCode.blockInstantiate != true))
         {
@@ -129,10 +150,15 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Shield", true);
 
             //Create Object\\
-            //Right Shield
-            GameObject SheildDefenseRight = Instantiate(ShieldPrefab, new Vector3(transform.position.x, transform.position.y + 1), Quaternion.identity);
-            //Left Shield
-            GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 1.6f, transform.position.y + 1), Quaternion.identity);
+            ////Create Object\\\\
+            if (spriteRender.flipX)
+            {
+                GameObject SheildDefenseRight = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 0.83f, transform.position.y + 1), Quaternion.identity);
+            }
+            if (!spriteRender.flipX)
+            {
+                GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x + 0.75f, transform.position.y + 1), Quaternion.identity);
+            }
 
             //Vel = 0;
             rb.velocity = new Vector2(0, 0);
