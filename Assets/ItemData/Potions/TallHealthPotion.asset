@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: TallHealthPotion
   m_EditorClassIdentifier: 
+  ID: 20
   itemName: Small
   itemType: Potion
   itemDes: +5 Health
-  itemSprite: {fileID: 21300000, guid: 8bb7a2c68f7ac1a4ba023e253c58daf6, type: 3}
   damage: 0
   shield: 0
   life: 5
   price: 5
-  rarity: 0
-  usable: 1
+  itemSprite: {fileID: 21300000, guid: 8bb7a2c68f7ac1a4ba023e253c58daf6, type: 3}

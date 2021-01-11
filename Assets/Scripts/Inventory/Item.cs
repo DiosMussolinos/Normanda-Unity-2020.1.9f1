@@ -5,16 +5,19 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item", fileName = "New Item")]
 public class Item : ScriptableObject
 {
+    public int ID;
     public string itemName;
     public string itemType;
+
+    //Lore or whatever
     public string itemDes;
 
-    public Sprite itemSprite;
+    //Values
     public int damage;
     public int shield;
     public int life;
     public int price;
-    public int rarity;
 
-    public bool usable;
+    //Sprite
+    public Sprite itemSprite;
 }
