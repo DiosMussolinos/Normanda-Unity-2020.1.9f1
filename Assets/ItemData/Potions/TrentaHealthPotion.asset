@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: TrentaHealthPotion
   m_EditorClassIdentifier: 
-  ID: 22
+  ID: NtaPot
   itemName: Big
   itemType: Potion
   itemDes: +30 Health

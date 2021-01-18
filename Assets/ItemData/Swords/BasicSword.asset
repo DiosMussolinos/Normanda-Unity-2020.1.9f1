@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c7ff303c4422d4eb5517d0981a1b95, type: 3}
   m_Name: BasicSword
   m_EditorClassIdentifier: 
+  ID: SicSwo
   itemName: Basic Sword
   itemType: Sword
   itemDes: +5 Damage
-  itemSprite: {fileID: 21300000, guid: a2ff9d40cfbcac64fb9097fcdce0335c, type: 3}
   damage: 5
   shield: 0
   life: 0
   price: 10
-  rarity: 1
-  usable: 0
+  itemSprite: {fileID: 21300000, guid: a2ff9d40cfbcac64fb9097fcdce0335c, type: 3}
