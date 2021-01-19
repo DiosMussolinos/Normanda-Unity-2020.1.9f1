@@ -849,7 +849,7 @@ ScriptsOnlyBuild:
     className: CameraFixed
   - hash:
       serializedVersion: 2
-      Hash: c69aad2d0a0b2e1f7c05fe42cfe7600e
+      Hash: cbd3779b5fdbd88b865963c4a2ad8e66
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Item
@@ -1299,7 +1299,7 @@ ScriptsOnlyBuild:
     className: GoToN2
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 45bb748d1b766402988548ae66c7555d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ArcherShots

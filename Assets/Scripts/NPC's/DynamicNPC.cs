@@ -73,7 +73,7 @@ public class DynamicNPC : MonoBehaviour
 
         if (playerInRange == false)
         {
-            transform.position = Vector3.MoveTowards(transform.position, npcPoints[pointsIndex], moveSpeed * Time.deltaTime);
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, npcPoints[pointsIndex], moveSpeed * Time.deltaTime);
 
             if (transform.position == npcPoints[pointsIndex])
             {
