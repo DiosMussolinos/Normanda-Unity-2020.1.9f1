@@ -8,6 +8,10 @@ public class SourceCode
     // public static String FILE_NAME = "Output.txt"; // Modifiable
     // public static readonly String CODE_PREFIX = "US-"; // Unmodifiable
 
+    ////////////////////////__Login_Info__\\\\\\\\\\\\\\\\\\\\\\\\
+    public static bool logged = false;
+    public static int user_id;
+
     ////////////////////////__PLAYER__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float walkSpeed = 6f;
     public static int lifePoints = 100;
@@ -31,7 +35,7 @@ public class SourceCode
     
 
     //Shield Defense Information\\
-    public static float percentageDefense = 40;
+    public static float percentageDefense = 5;
     public static float shieldCD = 0f;
     public static float shieldDefenseTimer = 0f;
     public static bool blockInstantiate = false;

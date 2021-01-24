@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Claymore
   itemType: Sword
   itemDes: +20 Damage
+  lore: Sword
   damage: 20
   shield: 0
   life: 0

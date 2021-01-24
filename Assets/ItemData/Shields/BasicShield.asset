@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Basic Shield
   itemType: Shield
   itemDes: +5 Shield
+  lore: Escudo
   damage: 0
   shield: 5
   life: 0

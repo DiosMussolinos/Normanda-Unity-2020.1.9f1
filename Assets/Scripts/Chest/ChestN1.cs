@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChestN1 : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ChestN1 : MonoBehaviour
 
     //in range?
     public bool inRange;
+    public Image pressToTalk;
 
     //Trocar imagem
     public SpriteRenderer sp;
@@ -28,6 +30,8 @@ public class ChestN1 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         sp = gameObject.GetComponent<SpriteRenderer>();
+
+        pressToTalk.enabled = false;
     }
 
     // Update is called once per frame
@@ -70,6 +74,7 @@ public class ChestN1 : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             inRange = true;
+            pressToTalk.enabled = true;
         }
     }
 
@@ -78,6 +83,7 @@ public class ChestN1 : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             inRange = false;
+            pressToTalk.enabled = false;
         }
     }
 }

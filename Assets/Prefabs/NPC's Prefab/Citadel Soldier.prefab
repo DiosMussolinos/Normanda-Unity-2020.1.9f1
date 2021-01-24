@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1276559505538016962}
   - component: {fileID: 3295745532417893739}
   - component: {fileID: 1440773810916561480}
-  - component: {fileID: 2103448702}
+  - component: {fileID: 264762318202941793}
   m_Layer: 0
   m_Name: Citadel Soldier
   m_TagString: Untagged
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &2103448702
+--- !u!114 &264762318202941793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,20 +109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1888763334496747760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5101369a5393458409e2b777f1d7b3a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
-  dialogText: {fileID: 0}
   pressToTalk: {fileID: 0}
-  dialog:
-  - Ok boy, look somewhere else for now...
-  - ...
+  dialogText: {fileID: 0}
+  dialog: []
   playerInRange: 0
-  moveSpeed: 2
-  npcPoints:
-  - {x: 6.77, y: 10.03, z: 0}
-  - {x: 6.77, y: -0.03, z: 0}
-  pointsIndex: 0
-  controlE: {fileID: 0}
-  pressToTalkPos: {fileID: 0}

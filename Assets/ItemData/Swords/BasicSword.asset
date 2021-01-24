@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Basic Sword
   itemType: Sword
   itemDes: +5 Damage
+  lore: Sword
   damage: 5
   shield: 0
   life: 0

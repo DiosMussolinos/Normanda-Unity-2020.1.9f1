@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 2953295242264235335}
   - component: {fileID: 2953295242264235334}
   - component: {fileID: 2953295242264235333}
-  - component: {fileID: 2953295242264235332}
-  - component: {fileID: 5711410845993314619}
+  - component: {fileID: 3837248925508885735}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -72,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1460304023
-  m_SortingLayer: 6
+  m_SortingLayer: 5
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5237f2f1e3bdbac42b9cda68c5746186, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101,30 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
---- !u!114 &2953295242264235332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2953295242264235355}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 392de17cc2a956c4cb4ce71945b31f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item1: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-  item2: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-  MapNextN: {fileID: 11400000, guid: cf174cccd8183fe4899c8f1a7e4e1954, type: 2}
-  randomItems:
-  - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
-  - {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
-  - {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
-  player: {fileID: 0}
-  inRange: 0
-  sp: {fileID: 0}
-  open: {fileID: 21300000, guid: faf7e307eab47b443bc533b79e53d88c, type: 3}
---- !u!114 &5711410845993314619
+--- !u!114 &3837248925508885735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,17 +109,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2953295242264235355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b5d99a63a83b24bbd3d1286cc91acd, type: 3}
+  m_Script: {fileID: 11500000, guid: 392de17cc2a956c4cb4ce71945b31f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item1: {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
-  item2: {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
-  MapNextN: {fileID: 11400000, guid: cf174cccd8183fe4899c8f1a7e4e1954, type: 2}
+  item1: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
+  item2: {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
   randomItems:
-  - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
-  - {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-  - {fileID: 11400000, guid: 776d0ca4039929045bcf18d8067d0619, type: 2}
+  - {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}
+  - {fileID: 11400000, guid: 35ba4905ce22f5548adc064ac8d624fc, type: 2}
   player: {fileID: 0}
   inRange: 0
   sp: {fileID: 0}
-  open: {fileID: 0}
+  open: {fileID: 21300000, guid: faf7e307eab47b443bc533b79e53d88c, type: 3}

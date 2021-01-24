@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Radier
   itemType: Sword
   itemDes: +10 Damage
+  lore: Sword
   damage: 10
   shield: 0
   life: 0

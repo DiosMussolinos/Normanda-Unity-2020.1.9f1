@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuFunctions : MonoBehaviour
 {
 
-
-    public void StartGame() 
+    public void StartGame()
     {
         //player.transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
         SourceCode.lifePoints = SourceCode.maxLifePoints;
@@ -40,12 +39,12 @@ public class MenuFunctions : MonoBehaviour
         Application.Quit();
     }
 
-    public void BackToMainMenu() 
+    public void BackToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void TryAgain() 
+    public void TryAgain()
     {
         SourceCode.lifePoints = (SourceCode.maxLifePoints / 2);
     }

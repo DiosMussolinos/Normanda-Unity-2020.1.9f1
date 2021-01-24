@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Escutcheon
   itemType: Shield
   itemDes: +15 Shield
+  lore: Escudo
   damage: 0
   shield: 15
   life: 0

@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Bastard
   itemType: Sword
   itemDes: +15 Damage
+  lore: Sword
   damage: 15
   shield: 0
   life: 0

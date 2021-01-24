@@ -326,3 +326,4 @@ MonoBehaviour:
   itemImage: {fileID: 0}
   itemName: {fileID: 0}
   itemDescription: {fileID: 0}
+  toolTip: {fileID: 0}

@@ -15,7 +15,8 @@ MonoBehaviour:
   ID: MapN3
   itemName: Treasure Map N3
   itemType: Map
-  itemDes: 
+  itemDes: MapaN3
+  lore: MapaN3
   damage: 0
   shield: 0
   life: 0

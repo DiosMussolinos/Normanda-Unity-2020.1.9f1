@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Mortimer
   itemType: Shield
   itemDes: +20 Shield
+  lore: Escudo
   damage: 0
   shield: 20
   life: 0

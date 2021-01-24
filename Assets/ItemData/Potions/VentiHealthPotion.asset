@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Medium
   itemType: Potion
   itemDes: +15 Health
+  lore: Starbucks
   damage: 0
   shield: 0
   life: 15

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class chest : MonoBehaviour
 {
     //Items ganhos obrigatórios
     public Item item1;
     public Item item2;
-    public Item MapNextN;
     
     //Items ganhos Random
     public Item[] randomItems;
@@ -18,6 +18,7 @@ public class chest : MonoBehaviour
 
     //in range?
     public bool inRange;
+    //public Image pressToTalk;
 
     //Bau already oppened?
     private bool opened = false;
@@ -31,6 +32,8 @@ public class chest : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         sp = gameObject.GetComponent<SpriteRenderer>();
+
+        //pressToTalk.enabled = false;
     }
 
     // Update is called once per frame
@@ -50,7 +53,6 @@ public class chest : MonoBehaviour
                 //Dar items obrigatorios
                 GameManager.instance.AddItem(item1);
                 GameManager.instance.AddItem(item2);
-                GameManager.instance.AddItem(MapNextN);
 
                 //não permitir repetição
                 opened = true;
@@ -68,6 +70,7 @@ public class chest : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             inRange = true;
+            //pressToTalk.enabled = true;
         }
     }
 
@@ -76,6 +79,7 @@ public class chest : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             inRange = false;
+            //pressToTalk.enabled = false;
         }
     }
 }

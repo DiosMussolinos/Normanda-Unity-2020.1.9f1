@@ -11,6 +11,7 @@ public class Item : ScriptableObject
 
     //Lore or whatever
     public string itemDes;
+    public string lore;
 
     //Values
     public int damage;

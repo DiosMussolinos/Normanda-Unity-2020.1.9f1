@@ -13,9 +13,12 @@ public class PlayerMovement : MonoBehaviour
     ////////////__Public__\\\\\\\\\\\\
     public GameObject BasicAttackPrefab;
     public GameObject StrongAttackPrefab;
-
-    //Shield Defense Information\\
     public GameObject ShieldPrefab;
+
+    //Time to Hit
+    public float basicTimeToHit = 0.7f;
+    public float strongTimeToHit = 0.4f;
+    public float shieldTimeToHit = 0.5f;
 
 
     //Awake is called before the Start
@@ -33,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         ////////////__movimento X & Y__\\\\\\\\\\\\
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -92,30 +96,34 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("Speed", -1);
         }
-        //__MOVEMENT X & Y__\\
 
+        //__MOVEMENT X & Y__\\
         //__BASIC ATTACK__\\
         if ((basicAttack != 0) && (SourceCode.basicAttackTimer <= 0))
         {
             //Animação
             animator.SetBool("BasicAttack", true);
-
-            //Create Object\\
-            if (spriteRender.flipX) {
-                GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x-1.5f, transform.position.y + 1), Quaternion.identity);
-            }
-            if (!spriteRender.flipX)
-            {
-                GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x +1.3f, transform.position.y + 1), Quaternion.identity);
-            }
-
             
+
+            ////Create Object & Timer To create\\\\
+           
+                if (spriteRender.flipX) {
+                    GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x-1.5f, transform.position.y + 1), Quaternion.identity);
+                }
+                if (!spriteRender.flipX)
+                {
+                    GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x +1.3f, transform.position.y + 1), Quaternion.identity);
+                }
+            
+
             //Reset Timer
             SourceCode.basicAttackTimer = SourceCode.basicAttackCD;
+
         } else if(SourceCode.basicAttackTimer > 0)
         {
             //Return To Idle or others
             animator.SetBool("BasicAttack", false);
+    
         }
 
 
@@ -124,16 +132,19 @@ public class PlayerMovement : MonoBehaviour
         {
             //Animação
             animator.SetBool("StrongAttack", true);
+            
 
-            ////Create Object\\\\
-            if (spriteRender.flipX)
-            {
-                GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
-            }
-            if (!spriteRender.flipX)
-            {
-                GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
-            }
+            ////Create Object & Timer To create\\\\
+           
+                if (spriteRender.flipX)
+                {
+                    GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
+                }
+                if (!spriteRender.flipX)
+                {
+                    GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
+                }
+            
             //Reset Timer
             SourceCode.strongAttackTimer = SourceCode.strongAttackCD;
 
@@ -141,6 +152,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //Return To Idle or others
             animator.SetBool("StrongAttack", false);
+            strongTimeToHit = 0.4f;
         }
 
         //__BLOCK__\\
@@ -149,8 +161,10 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("Shield", true);
 
-            //Create Object\\
-            ////Create Object\\\\
+            //Parar
+            //TODO: TENTAR FAZER ESSA PORRA FUNCIONAR
+
+            ////Create Object & Timer To create\\\\
             if (spriteRender.flipX)
             {
                 GameObject SheildDefenseRight = Instantiate(ShieldPrefab, new Vector3(transform.position.x - 0.83f, transform.position.y + 1), Quaternion.identity);
@@ -159,10 +173,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 GameObject SheildDefenseLeft = Instantiate(ShieldPrefab, new Vector3(transform.position.x + 0.75f, transform.position.y + 1), Quaternion.identity);
             }
-
-            //Vel = 0;
-            rb.velocity = new Vector2(0, 0);
-
             //if(blockInstantiate = true) { DONT INTANTIATE AGAIN }
             SourceCode.blockInstantiate = true;
         }
@@ -217,6 +227,22 @@ public class PlayerMovement : MonoBehaviour
         {
             SourceCode.strongAttackTimer -= Time.deltaTime;
         }
+
+        if(basicTimeToHit >= 0) 
+        {
+            basicTimeToHit -= Time.deltaTime;
+        }
+
+        if (strongTimeToHit >= 0)
+        {
+            strongTimeToHit -= Time.deltaTime;
+        }
+
+        if (shieldTimeToHit >= 0)
+        {
+            shieldTimeToHit -= Time.deltaTime;
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -224,13 +250,13 @@ public class PlayerMovement : MonoBehaviour
         //__Collision With Archer Shot__\\
         if (collision.gameObject.CompareTag("Shot"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.projectileDamage;
+            SourceCode.lifePoints -= SourceCode.projectileDamage;
         }
 
         //__Collision With Soldier__\\
         if (collision.gameObject.CompareTag("Soldier"))
         {
-            SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierCollisionDamage;
+            SourceCode.lifePoints -= SourceCode.soldierCollisionDamage;
         }
 
         //__Collision With Soldier Attack__\\
@@ -242,7 +268,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                SourceCode.lifePoints = SourceCode.lifePoints - SourceCode.soldierDamage;
+                SourceCode.lifePoints -= SourceCode.soldierDamage;
             }
         }
 

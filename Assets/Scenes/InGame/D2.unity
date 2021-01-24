@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 245439726}
   m_Layer: 0
   m_Name: colisoes
-  m_TagString: Untagged
+  m_TagString: TileCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17190,30 +17190,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: MapNextN
-      value: 
-      objectReference: {fileID: 11400000, guid: d4804940bf3fa26409708f3f7040c7a3, type: 2}
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: randomItems.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 37780b4946a57f04c8a5aa9acd684ccb, type: 2}
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: randomItems.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: randomItems.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2877b633515edc74896009198fd5b3df, type: 2}
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: item2
-      value: 
-      objectReference: {fileID: 11400000, guid: 94b546d50e1ac8c458f6be093ac9fcf4, type: 2}
-    - target: {fileID: 2953295242264235332, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
-      propertyPath: item1
-      value: 
-      objectReference: {fileID: 11400000, guid: 15fc0bc01ceb8f040a347bb1dbae77f5, type: 2}
     - target: {fileID: 2953295242264235335, guid: de1429c85fc9c984fb8f256d764b86a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 89.23

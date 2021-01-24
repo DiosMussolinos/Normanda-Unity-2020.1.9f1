@@ -12,6 +12,7 @@ public class ItemStoreNpc : MonoBehaviour
     private bool playerInRange = false;
 
     public static StoreManager instance;
+    public Image pressToTalk;
     public static bool storeOpen = false;
     public GameObject storeUI;
 
@@ -43,6 +44,7 @@ public class ItemStoreNpc : MonoBehaviour
     void Start()
     {
         DisplayStore();
+        pressToTalk.enabled = false;
     }
 
     void Update()
@@ -115,6 +117,9 @@ public class ItemStoreNpc : MonoBehaviour
         {
             //Npc Stop
             playerInRange = true;
+            //Open press to talk
+            pressToTalk.enabled = true;
+
         }
     }
 
@@ -126,6 +131,8 @@ public class ItemStoreNpc : MonoBehaviour
             playerInRange = false;
             //Joke off
             storeUI.SetActive(false);
+            //Close press to talk
+            pressToTalk.enabled = false;
         }
     }
 

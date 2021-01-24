@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Nombril
   itemType: Shield
   itemDes: +10 Shield
+  lore: Escudo
   damage: 0
   shield: 10
   life: 0
