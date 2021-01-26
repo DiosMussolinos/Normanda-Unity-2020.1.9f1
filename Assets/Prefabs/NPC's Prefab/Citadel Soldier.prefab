@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1276559505538016962}
   - component: {fileID: 3295745532417893739}
   - component: {fileID: 1440773810916561480}
-  - component: {fileID: 264762318202941793}
+  - component: {fileID: 968444781}
+  - component: {fileID: 968444785}
   m_Layer: 0
   m_Name: Citadel Soldier
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1888763334496747760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.87, y: -4.64, z: 0}
-  m_LocalScale: {x: 1, y: 1.5285115, z: 1}
+  m_LocalScale: {x: 1.5554961, y: 1.7111202, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1805120337
   m_SortingLayer: 6
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: d8160f3cae981b54297a777cbe5e048a, type: 3}
+  m_Sprite: {fileID: 4389193340307120741, guid: b814339a0002dac42af8655f439cc94a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
---- !u!114 &264762318202941793
+--- !u!114 &968444781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,11 +110,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1888763334496747760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
+  m_Script: {fileID: 11500000, guid: 5101369a5393458409e2b777f1d7b3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
-  pressToTalk: {fileID: 0}
   dialogText: {fileID: 0}
-  dialog: []
+  pressToTalk: {fileID: 0}
+  dialog:
+  - Look somewhere else!
+  - ...
   playerInRange: 0
+  moveSpeed: 1.5
+  npcPoints:
+  - {x: 8.43, y: 0, z: 0}
+  - {x: 8.43, y: 10, z: 0}
+  pointsIndex: 0
+  controlE: {fileID: 0}
+  pressToTalkPos: {fileID: 0}
+--- !u!95 &968444785
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888763334496747760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e9cd5c8a402ba1439e2c10542acf907, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

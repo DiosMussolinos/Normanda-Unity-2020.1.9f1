@@ -15,11 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject StrongAttackPrefab;
     public GameObject ShieldPrefab;
 
-    //Time to Hit
-    public float basicTimeToHit = 0.7f;
-    public float strongTimeToHit = 0.4f;
-    public float shieldTimeToHit = 0.5f;
-
 
     //Awake is called before the Start
     void Awake()
@@ -106,13 +101,12 @@ public class PlayerMovement : MonoBehaviour
             
 
             ////Create Object & Timer To create\\\\
-           
                 if (spriteRender.flipX) {
-                    GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x-1.5f, transform.position.y + 1), Quaternion.identity);
+                    Invoke("BasicAttackRight", 0.15f);
                 }
                 if (!spriteRender.flipX)
                 {
-                    GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x +1.3f, transform.position.y + 1), Quaternion.identity);
+                    Invoke("BasicAttackLeft", 0.15f);
                 }
             
 
@@ -133,17 +127,15 @@ public class PlayerMovement : MonoBehaviour
             //Animação
             animator.SetBool("StrongAttack", true);
             
-
             ////Create Object & Timer To create\\\\
-           
-                if (spriteRender.flipX)
-                {
-                    GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
-                }
-                if (!spriteRender.flipX)
-                {
-                    GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
-                }
+            if (spriteRender.flipX)
+            {
+                Invoke("StrongAttackRight", 0.2f);
+            }
+            if (!spriteRender.flipX)
+            {
+                Invoke("StrongAttackLeft", 0.2f);
+            }
             
             //Reset Timer
             SourceCode.strongAttackTimer = SourceCode.strongAttackCD;
@@ -152,7 +144,6 @@ public class PlayerMovement : MonoBehaviour
         {
             //Return To Idle or others
             animator.SetBool("StrongAttack", false);
-            strongTimeToHit = 0.4f;
         }
 
         //__BLOCK__\\
@@ -160,9 +151,6 @@ public class PlayerMovement : MonoBehaviour
         {
             //Animação
             animator.SetBool("Shield", true);
-
-            //Parar
-            //TODO: TENTAR FAZER ESSA PORRA FUNCIONAR
 
             ////Create Object & Timer To create\\\\
             if (spriteRender.flipX)
@@ -212,7 +200,28 @@ public class PlayerMovement : MonoBehaviour
             Timer();
     }
     //__END UPDATE__\\
+    ////////////////////__INVOKE RELATED__\\\\\\\\\\\\\\\\\\\\
+    void BasicAttackRight()
+    {
+        GameObject BasicAttackRight = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
+    }
 
+    void BasicAttackLeft()
+    {
+        GameObject BasicAttackLeft = Instantiate(BasicAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
+    }
+
+    void StrongAttackRight()
+    {
+        GameObject StrongAttackRight = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x - 1.5f, transform.position.y + 1), Quaternion.identity);
+    }
+
+    void StrongAttackLeft()
+    {
+        GameObject StrongAttackLeft = Instantiate(StrongAttackPrefab, new Vector3(transform.position.x + 1.3f, transform.position.y + 1), Quaternion.identity);
+    }
+    ////////////////////__INVOKE RELATED__\\\\\\\\\\\\\\\\\\\\
+    
     private void Timer() 
     {
         //__ANIMATION TIMER__\\
@@ -227,22 +236,6 @@ public class PlayerMovement : MonoBehaviour
         {
             SourceCode.strongAttackTimer -= Time.deltaTime;
         }
-
-        if(basicTimeToHit >= 0) 
-        {
-            basicTimeToHit -= Time.deltaTime;
-        }
-
-        if (strongTimeToHit >= 0)
-        {
-            strongTimeToHit -= Time.deltaTime;
-        }
-
-        if (shieldTimeToHit >= 0)
-        {
-            shieldTimeToHit -= Time.deltaTime;
-        }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

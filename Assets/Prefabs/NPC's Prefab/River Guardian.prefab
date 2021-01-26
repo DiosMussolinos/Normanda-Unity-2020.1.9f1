@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4017104606145292197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.87, y: -4.64, z: 0}
-  m_LocalScale: {x: 1, y: 1.5285115, z: 1}
+  m_LocalScale: {x: 1.2354119, y: 1.1283073, z: 0.73817396}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1460304023
-  m_SortingLayer: 5
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d8160f3cae981b54297a777cbe5e048a, type: 3}
+  m_SortingLayerID: -1805120337
+  m_SortingLayer: 6
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: cf731edbb1153ba44967e802fc72a9c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 0}
+  pressToTalk: {fileID: 0}
   dialogText: {fileID: 0}
   dialog:
   - A lot of people don't take my job seriously because they think I literally guard

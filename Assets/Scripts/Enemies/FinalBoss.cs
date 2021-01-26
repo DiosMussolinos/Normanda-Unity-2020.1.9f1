@@ -17,9 +17,10 @@ public class FinalBoss : MonoBehaviour
     public Transform startPosition;
     public GameObject portal;
     //////////////\\\\\\\\\\\\\\
-    
-
     private bool interest = true;
+
+    //Animator
+    private Animator animator;
 
 
 
@@ -28,6 +29,8 @@ public class FinalBoss : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         startPosition = GameObject.FindWithTag("PosiçãoInicial").transform;
+        animator = GetComponent<Animator>();
+
         portal.gameObject.SetActive(false);
     }
 
@@ -37,14 +40,8 @@ public class FinalBoss : MonoBehaviour
         //Distance from Enemy and Player
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        //Position of The Attacks
-        Vector3 attackTop = new Vector3(transform.position.x, transform.position.y + 2.6f, transform.position.z);
-        Vector3 attackBottom = new Vector3(transform.position.x, transform.position.y - 2.6f, transform.position.z);
-        Vector3 attackLeft = new Vector3(transform.position.x - 2.6f, transform.position.y, transform.position.z);
-        Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
-
         //__BEHAVIOR__\\
-        if ((distance > 3) && (distance < 6) && (interest = true) && (interestedTime > 0))
+        if ((distance > 3) && (distance < 8) && (interest = true) && (interestedTime > 0))
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, SourceCode.finalBossSpeed * Time.deltaTime);
         }
@@ -71,16 +68,14 @@ public class FinalBoss : MonoBehaviour
         //Timer && distance = Kill that mf
         if ((SourceCode.finalBossTimeBtwAttacks <= 0) && (distance < 3f))
         {
-            
-            Instantiate(topDownAttacks, attackTop, Quaternion.identity);
-            Instantiate(topDownAttacks, attackBottom, Quaternion.identity);
-            Instantiate(sideAttacks, attackLeft, Quaternion.Euler(0,0,-90));
-            Instantiate(sideAttacks, attackRight, Quaternion.Euler(0, 0, -90));
 
+            animator.SetInteger("Attack", 1);
+            Invoke("Attacks", 0.3f);
             SourceCode.finalBossTimeBtwAttacks = SourceCode.finalBossStartTimeBtwAttacks;
         }
         else
         {
+            animator.SetInteger("Attack", 0);
             SourceCode.finalBossTimeBtwAttacks -= Time.deltaTime;
         }
 
@@ -108,6 +103,19 @@ public class FinalBoss : MonoBehaviour
         }
     }
 
+    private void Attacks()
+    {
+        //Position of The Attacks
+        Vector3 attackTop = new Vector3(transform.position.x, transform.position.y + 2.6f, transform.position.z);
+        Vector3 attackBottom = new Vector3(transform.position.x, transform.position.y - 2.6f, transform.position.z);
+        Vector3 attackLeft = new Vector3(transform.position.x - 2.6f, transform.position.y, transform.position.z);
+        Vector3 attackRight = new Vector3(transform.position.x + 2.6f, transform.position.y, transform.position.z);
+
+        Instantiate(topDownAttacks, attackTop, Quaternion.identity);
+        Instantiate(topDownAttacks, attackBottom, Quaternion.identity);
+        Instantiate(sideAttacks, attackLeft, Quaternion.Euler(0,0,-90));
+        Instantiate(sideAttacks, attackRight, Quaternion.Euler(0, 0, -90));
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -145,6 +153,8 @@ public class FinalBoss : MonoBehaviour
             interest = false;
         }
     }
+
+
 
 
     /*

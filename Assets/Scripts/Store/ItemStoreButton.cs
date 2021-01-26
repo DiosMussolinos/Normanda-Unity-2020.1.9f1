@@ -18,16 +18,16 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
     public Text itemDescription;
 
     ///Text PopUp & Timer \\\\\\\\\\\\\ NOT WORKING FOR SOME WTF REASON -- will take care of it later
-    private float confirmationCD = 5f;
-    private float confirmation = 0;
-    public Image PopUp;
-    public Text PopUpText;
+    //private float confirmationCD = 5f;
+    //private float confirmation = 0;
+    //public Image PopUp;
+    //public Text PopUpText;
 
     void Start()
     {
         itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);
 
-        PopUpText.GetComponent<Text>();
+        //PopUpText.GetComponent<Text>();
     }
 
     /*

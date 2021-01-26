@@ -23,7 +23,8 @@ public class DynamicNPC : MonoBehaviour
     //Scene related
     private Scene scene;
     private string sceneName;
-    
+    private SpriteRenderer spriteRender;
+
     //PickStuff
     private Rigidbody2D rb;
 
@@ -52,6 +53,8 @@ public class DynamicNPC : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         pressToTalk.enabled = false;
+
+        spriteRender = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -103,6 +106,17 @@ public class DynamicNPC : MonoBehaviour
             }
         }
 
+        if (pointsIndex > 0)
+        {
+            if (npcPoints[pointsIndex].x < npcPoints[pointsIndex - 1].x)
+            {
+                spriteRender.flipX = true;
+            }
+            else
+            {
+                spriteRender.flipX = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
