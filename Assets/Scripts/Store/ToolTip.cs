@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ToolTip : MonoBehaviour
 {
-    public Text lore;
-    public Text details;
+    public Text type;
+    public Text descripion;
 
     public void Start()
     {
@@ -23,11 +23,11 @@ public class ToolTip : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void UpdateToolTip(string _details, string _lore)
+    public void UpdateToolTip(string _type, string _descripion)
     {
-        
-        details.text = _details;
-        lore.text = _lore;
+
+        type.text = _type;
+        descripion.text = _descripion;
     }
 
     public void SetPos(Vector2 _pos) 

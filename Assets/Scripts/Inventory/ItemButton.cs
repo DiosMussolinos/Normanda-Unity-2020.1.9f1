@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
+public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     public int buttonID;
     public Item itemData;
@@ -14,6 +14,10 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     public Image itemImage;
     public Image itemOn1;
     public Image itemOn2;
+
+    //ToolTip
+    public ToolTip tooltips;
+    private Vector2 position;
 
     //Player
     private GameObject player;
@@ -27,6 +31,9 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
 
     void Start() 
     {
+        gameObject.SetActive(true);
+        tooltips.UpdateToolTip("Type: ", "Stats: ");
+
         itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         itemOn1.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         itemOn2.GetComponent<Image>().color = new Color(0, 0, 0, 0);
@@ -68,9 +75,24 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
             itemImage.GetComponent<Image>().color = new Color(1, 1, 1, 1);
             //Mudar de acordo com o item selecionado
             itemImage.sprite = thisItem.itemSprite;
+
+            //Shot ToolTip + Mudar Texto
+            tooltips.Show();
+            tooltips.UpdateToolTip("Type: " + thisItem.itemType, "Stats: " + thisItem.itemDes);
+
         }
     }
     
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (thisItem != null) 
+        {
+
+            tooltips.Show();
+            tooltips.UpdateToolTip("Type: ", "Stats: ");
+
+        }
+    }
     
     public void OnPointerClick(PointerEventData eventData)
     {

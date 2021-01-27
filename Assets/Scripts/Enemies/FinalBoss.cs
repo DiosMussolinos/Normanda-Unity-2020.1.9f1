@@ -19,8 +19,9 @@ public class FinalBoss : MonoBehaviour
     //////////////\\\\\\\\\\\\\\
     private bool interest = true;
 
-    //Animator
+    //Animator & Sprite Renderer
     private Animator animator;
+    private SpriteRenderer spriteRender;
 
 
 
@@ -30,6 +31,7 @@ public class FinalBoss : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         startPosition = GameObject.FindWithTag("PosiçãoInicial").transform;
         animator = GetComponent<Animator>();
+        spriteRender = GetComponent<SpriteRenderer>();
 
         portal.gameObject.SetActive(false);
     }
@@ -39,6 +41,9 @@ public class FinalBoss : MonoBehaviour
     {
         //Distance from Enemy and Player
         float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        //Distance From The player in the X to Flip    
+        float distanceXFromPlayer = transform.position.x - player.transform.position.x;
 
         //__BEHAVIOR__\\
         if ((distance > 3) && (distance < 8) && (interest = true) && (interestedTime > 0))
@@ -50,6 +55,16 @@ public class FinalBoss : MonoBehaviour
             interest = false;
         }
         
+        //Flip X
+        if(distanceXFromPlayer > 0)
+        {
+            spriteRender.flipX = false;
+        }
+        else
+        {
+            spriteRender.flipX = true;
+        }
+
         //Desativa o interesse do player
         //Não permite ele a recuperar interesse até o timer ser o TOTAL
         if ((interest == false) && (interestedTime <= 0))
