@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class FinalBoss : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class FinalBoss : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRender;
 
-
+    //Backend stuff
+    public string BaseAPI = "http://localhost:3909";
 
     // Awake is called before Start
     void Awake()
@@ -52,7 +54,11 @@ public class FinalBoss : MonoBehaviour
         }
         else
         {
-            interest = false;
+            if (distance > 8) 
+            {
+                interest = false;
+            }
+            
         }
         
         //Flip X
@@ -99,7 +105,12 @@ public class FinalBoss : MonoBehaviour
         {
             //Ser a putinha do player e dar suas recompensas
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.finalBossEXP;
+            string jsonstringexp = JsonUtility.ToJson(new PlayerNewExp(SourceCode.playerExp, SourceCode.userID));
+            StartCoroutine(UpdateExp(BaseAPI + "/updateExp", jsonstringexp));
+
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.finalBossGold;
+            string jsonstring = JsonUtility.ToJson(new PlayerNewGold(SourceCode.playerGold, SourceCode.userID));
+            StartCoroutine(UpdateGold(BaseAPI + "/updateGold", jsonstring));
 
             //Ativar Portal para a cidade
             portal.gameObject.SetActive(true);
@@ -169,7 +180,50 @@ public class FinalBoss : MonoBehaviour
         }
     }
 
+    IEnumerator UpdateGold(string url, string json)
+    {
+        UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+        byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
 
+        webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+
+        yield return webRequest.SendWebRequest();
+
+
+        if (webRequest.isNetworkError)
+        {
+            Debug.Log(webRequest.error);
+        }
+        else
+        {
+            SourceCode.playerGold = int.Parse(webRequest.downloadHandler.text);
+        }
+    }
+
+
+    IEnumerator UpdateExp(string url, string json)
+    {
+        UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+        byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
+
+        webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+
+        yield return webRequest.SendWebRequest();
+
+
+        if (webRequest.isNetworkError)
+        {
+            Debug.Log(webRequest.error);
+        }
+        else
+        {
+            SourceCode.playerGold = int.Parse(webRequest.downloadHandler.text);
+        }
+    }
 
 
     /*

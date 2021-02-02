@@ -910,6 +910,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.531334
@@ -954,10 +966,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (3)
@@ -1776,6 +1784,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.531334
@@ -1820,10 +1840,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (2)
@@ -2493,6 +2509,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.5
@@ -2537,10 +2565,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (5)
@@ -4394,6 +4418,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.5
@@ -4438,10 +4474,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (4)
@@ -5502,42 +5534,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 345057847}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &721250664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721250661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &721250665
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721250661}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &726569820
 GameObject:
   m_ObjectHideFlags: 0
@@ -12383,42 +12379,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 1667157765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &888394743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888394740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &888394744
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 888394740}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &895512658
 GameObject:
   m_ObjectHideFlags: 0
@@ -13009,42 +12969,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 2038261086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &972793761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972793758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &972793762
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972793758}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &972901849
 GameObject:
   m_ObjectHideFlags: 0
@@ -13791,7 +13715,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1054746972
 Transform:
   m_ObjectHideFlags: 0
@@ -18977,6 +18901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Escudo2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 873745075508352846, guid: 2d538492b252453498e04b337153f800, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7106440358920124609, guid: 2d538492b252453498e04b337153f800, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d538492b252453498e04b337153f800, type: 3}
@@ -19288,42 +19216,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 249186439}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1196941643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196941640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &1196941644
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196941640}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1001 &1203252552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57266,42 +57158,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 98193541}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1564250635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564250632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &1564250636
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564250632}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1001 &1565216496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58061,42 +57917,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 577840340}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1634452312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634452309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &1634452313
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634452309}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &1637446057
 GameObject:
   m_ObjectHideFlags: 0
@@ -58506,6 +58326,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.53
@@ -58550,10 +58382,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (6)
@@ -62671,42 +62499,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
   m_PrefabInstance: {fileID: 2615742087066353987}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1985194818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985194815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13718cf5bded45c48b7f5e3f9b426d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 667873609}
-  pressToTalk: {fileID: 1649916386}
-  dialogText: {fileID: 511471863}
-  dialog:
-  - Come on, look to the Stores
-  - Interested in something?
-  - What a bout some flowers to your girlfriend?
-  playerInRange: 0
---- !u!58 &1985194819
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985194815}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5
 --- !u!1 &1986376468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7593096449507531748, guid: f60f4183e46ee284fa4754af6b9d2b55, type: 3}
@@ -63208,6 +63000,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.5
@@ -63252,10 +63056,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller (1)
@@ -77286,6 +77086,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 667873609}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: pressToTalk
+      value: 
+      objectReference: {fileID: 1649916386}
+    - target: {fileID: 721250664, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 511471863}
     - target: {fileID: 779414730484278102, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.55
@@ -77330,10 +77142,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1449176208430138170, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f9bddd20d47959b409f5ad4a95b957c2, type: 3}
     - target: {fileID: 6557818996080825898, guid: c0b670dfb1bd2c349977c1b79177617b, type: 3}
       propertyPath: m_Name
       value: Seller
@@ -77904,22 +77712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 519420031, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
-      propertyPath: m_HDR
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492739091, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
-      propertyPath: Items.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1492739091, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
-      propertyPath: Items.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
-    - target: {fileID: 1492739091, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
-      propertyPath: Items.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
     - target: {fileID: 3268317184448462553, guid: 8cec725edd17f1f4587b661530c67e99, type: 3}
       propertyPath: m_Name
       value: Player

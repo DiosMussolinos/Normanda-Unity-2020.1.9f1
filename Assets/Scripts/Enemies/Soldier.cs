@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Soldier : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class Soldier : MonoBehaviour
 
     public float timeBtwAttacks = 2f;
     public float startTimeBtwAttacks = 5f;
+
+    //Backend stuff
+    public string BaseAPI = "http://localhost:3909";
 
     // Awake is called before Start
     void Awake()
@@ -105,7 +109,15 @@ public class Soldier : MonoBehaviour
         if (soldierLife <= 0)
         {
             SourceCode.playerGold = SourceCode.playerGold + SourceCode.soldierGold;
+            //Gold to backend
+            string jsonstring = JsonUtility.ToJson(new PlayerNewGold(SourceCode.playerGold, SourceCode.userID));
+            StartCoroutine(UpdateGold(BaseAPI + "/updateGold", jsonstring));
+
             SourceCode.playerExp = SourceCode.playerExp + SourceCode.soldierExp;
+            string jsonstringexp = JsonUtility.ToJson(new PlayerNewExp(SourceCode.playerExp, SourceCode.userID));
+            StartCoroutine(UpdateExp(BaseAPI + "/updateExp", jsonstringexp));
+
+
             Destroy(gameObject);
         }
 
@@ -125,6 +137,51 @@ public class Soldier : MonoBehaviour
         {
             //Recieve DMG strong
             soldierLife = soldierLife - SourceCode.strongAttackDMG;
+        }
+    }
+
+    IEnumerator UpdateGold(string url, string json)
+    {
+        UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+        byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
+
+        webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+
+        yield return webRequest.SendWebRequest();
+
+
+        if (webRequest.isNetworkError)
+        {
+            Debug.Log(webRequest.error);
+        }
+        else
+        {
+            SourceCode.playerGold = int.Parse(webRequest.downloadHandler.text);
+        }
+    }
+
+
+    IEnumerator UpdateExp(string url, string json)
+    {
+        UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+        byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
+
+        webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+
+        yield return webRequest.SendWebRequest();
+
+
+        if (webRequest.isNetworkError)
+        {
+            Debug.Log(webRequest.error);
+        }
+        else
+        {
+            SourceCode.playerGold = int.Parse(webRequest.downloadHandler.text);
         }
     }
 

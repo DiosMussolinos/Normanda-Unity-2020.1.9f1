@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject StrongAttackPrefab;
     public GameObject ShieldPrefab;
 
+    //Backend stuff
+    public string BaseAPI = "http://localhost:3909";
 
     //Awake is called before the Start
     void Awake()
@@ -25,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
 
         DontDestroyOnLoad(this.gameObject);
+
+        Application.targetFrameRate = 144;
 
     }
 
@@ -62,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * SourceCode.walkSpeed, vertical * SourceCode.walkSpeed);
 
+            //Debug.Log(rb.velocity);
             ////////////__FlipX__\\\\\\\\\\\\
             if ((horizontal > 0) && (spriteRender.flipX))
             {
@@ -244,12 +250,18 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Shot"))
         {
             SourceCode.lifePoints -= SourceCode.projectileDamage;
+            //UPDATE BACKEND HERE
+            string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+            StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
         }
 
         //__Collision With Soldier__\\
         if (collision.gameObject.CompareTag("Soldier"))
         {
             SourceCode.lifePoints -= SourceCode.soldierCollisionDamage;
+            //UPDATE BACKEND HERE
+            string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+            StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
         }
 
         //__Collision With Soldier Attack__\\
@@ -258,10 +270,16 @@ public class PlayerMovement : MonoBehaviour
             if (SourceCode.blockInstantiate == true)
             {
                 SourceCode.lifePoints = (int)(SourceCode.lifePoints - (SourceCode.soldierDamage - SourceCode.percentageDefense/10));
+                //UPDATE BACKEND HERE
+                string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+                StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
             }
             else
             {
                 SourceCode.lifePoints -= SourceCode.soldierDamage;
+                //UPDATE BACKEND HERE
+                string jsonstringexp = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+                StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstringexp));
             }
         }
 
@@ -269,6 +287,9 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("FinalBoss"))
         {
             SourceCode.lifePoints -= SourceCode.finalBossTouchDamage;
+            //UPDATE BACKEND HERE
+            string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+            StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
         }
 
         //__Collision With Final Boss Attack__\\
@@ -277,13 +298,43 @@ public class PlayerMovement : MonoBehaviour
             if (SourceCode.blockInstantiate == true)
             {
                 SourceCode.lifePoints = (int)(SourceCode.lifePoints - (SourceCode.finalBossAttackDamage - SourceCode.percentageDefense / 10));
+                //UPDATE BACKEND HERE
+                string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+                StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
             }
             else
             {
                 SourceCode.lifePoints -= SourceCode.finalBossAttackDamage;
+                //UPDATE BACKEND HERE
+                string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints ,SourceCode.userID));
+                StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
             }
         }
 
+        //ONLY one IEnumerator to post the new life points
+
+        IEnumerator UpdateLife(string url, string json)
+        {
+            UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+            byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
+
+            webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+            webRequest.downloadHandler = new DownloadHandlerBuffer();
+            webRequest.SetRequestHeader("Content-Type", "application/json");
+
+            yield return webRequest.SendWebRequest();
+
+
+            if (webRequest.isNetworkError)
+            {
+                Debug.Log(webRequest.error);
+            }
+            else
+            {
+                SourceCode.lifePoints = int.Parse(webRequest.downloadHandler.text);
+            }
+        }
+        
     }
     
     /*

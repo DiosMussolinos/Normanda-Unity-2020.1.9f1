@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 public class MenuFunctions : MonoBehaviour
 {
 
-    public void StartGame()
+    public void StartGameWithoutAccount()
     {
         //player.transform.position = new Vector2(startPos.transform.position.x, startPos.transform.position.y);
         SourceCode.lifePoints = SourceCode.maxLifePoints;
+        SourceCode.userID = 0;
+        SourceCode.logged = false;
+        SceneManager.LoadScene("N1");
+    }
+
+    public void StartGameWithAccount()
+    {
         SceneManager.LoadScene("N1");
     }
 
@@ -31,7 +38,12 @@ public class MenuFunctions : MonoBehaviour
 
     public void Login()
     {
-        Debug.Log("HAHAHAHA NOP");
+        SceneManager.LoadScene("Login");
+    }
+
+    public void CreateAccount()
+    {
+        SceneManager.LoadScene("CreateAccount");
     }
 
     public void Quit()

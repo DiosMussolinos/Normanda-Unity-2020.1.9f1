@@ -8,9 +8,9 @@ public class SourceCode
     // public static String FILE_NAME = "Output.txt"; // Modifiable
     // public static readonly String CODE_PREFIX = "US-"; // Unmodifiable
 
-    ////////////////////////__Login_Info__\\\\\\\\\\\\\\\\\\\\\\\\
+    //LOGIN
+    public static int userID = 0;
     public static bool logged = false;
-    public static int user_id;
 
     ////////////////////////__PLAYER__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float walkSpeed = 6f;
@@ -23,6 +23,7 @@ public class SourceCode
     
     //Values to Sum with the Damages and Shields
     public static int[] ItemValues = {0, 0};
+
     //Basic Attack Information\\
     public static int basicAttackDMG = 10;
     public static float basicAttackCD = 1f;
@@ -112,7 +113,7 @@ public class SourceCode
     public static int finalBossLife = 40;
     public static int finalBossTouchDamage = 4;
     public static int finalBossAttackDamage = 20;
-    public static int finalBossGold = 9;
+    public static int finalBossGold = 25;
     public static int finalBossEXP = 20;
 
 

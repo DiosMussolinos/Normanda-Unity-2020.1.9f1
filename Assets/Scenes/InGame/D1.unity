@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (4)
@@ -309,6 +313,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (2)
@@ -370,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (6)
@@ -505,7 +517,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &438886951
 PrefabInstance:
@@ -518,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (8)
@@ -579,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (1)
@@ -1762,6 +1782,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (7)
@@ -1823,6 +1847,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (3)
@@ -8466,7 +8494,7 @@ Transform:
   - {fileID: 1244063367}
   - {fileID: 635970410}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1555632529
 PrefabInstance:
@@ -100060,7 +100088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061318420
 GameObject:
@@ -100157,7 +100185,7 @@ Transform:
   m_LocalScale: {x: 4.70236, y: 1.5081663, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2061318424
 BoxCollider2D:
@@ -100210,6 +100238,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10b4a21c1fa8adc449a3a28bc6375fee, type: 2}
+    - target: {fileID: 2837651915711646494, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
+      propertyPath: startTimeBtwAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3311895556398274471, guid: 35db70182ef604947bb733866e1b7d13, type: 3}
       propertyPath: m_Name
       value: Soldier (5)

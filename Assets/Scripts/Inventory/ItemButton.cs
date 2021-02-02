@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -22,6 +23,9 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     //Player
     private GameObject player;
     private ActiveItems ActiveItems;
+
+    //Backend stuff
+    public string BaseAPI = "http://localhost:3909";
 
     private void Awake()
     {
@@ -87,10 +91,8 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (thisItem != null) 
         {
-
             tooltips.Show();
             tooltips.UpdateToolTip("Type: ", "Stats: ");
-
         }
     }
     
@@ -103,6 +105,9 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             GameManager.instance.RemoveItem(thisItem);
             //Aumentar a vida baseada no valor do item
             SourceCode.lifePoints += thisItem.life;
+            //UPDATE BACKEND HERE
+            string jsonstring = JsonUtility.ToJson(new PlayerNewHp(SourceCode.lifePoints, SourceCode.userID));
+            StartCoroutine(UpdateLife(BaseAPI + "/updateLife", jsonstring));
         }
 
         if ((thisItem != null) && (thisItem.itemType == "Sword"))
@@ -141,7 +146,30 @@ public class ItemButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
             //Mudar de acordo com o item selecionado
             itemOn2.sprite = thisItem.itemSprite;
-        }
-        
+        }   
     }
+
+
+    IEnumerator UpdateLife(string url, string json)
+    {
+        UnityWebRequest webRequest = new UnityWebRequest(url, "POST");
+        byte[] jsonbyte = new System.Text.UTF8Encoding().GetBytes(json);
+
+        webRequest.uploadHandler = new UploadHandlerRaw(jsonbyte);
+        webRequest.downloadHandler = new DownloadHandlerBuffer();
+        webRequest.SetRequestHeader("Content-Type", "application/json");
+
+        yield return webRequest.SendWebRequest();
+
+
+        if (webRequest.isNetworkError)
+        {
+            Debug.Log(webRequest.error);
+        }
+        else
+        {
+            SourceCode.lifePoints = int.Parse(webRequest.downloadHandler.text);
+        }
+    }
+
 }

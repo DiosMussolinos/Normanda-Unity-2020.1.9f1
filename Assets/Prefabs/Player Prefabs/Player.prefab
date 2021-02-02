@@ -72,7 +72,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 0
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 4371751587270675688}
   - component: {fileID: 3592159837619111964}
   - component: {fileID: 1492739091}
+  - component: {fileID: 8940314140323568888}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -678,3 +679,15 @@ MonoBehaviour:
   Items:
   - {fileID: 11400000, guid: 8602738e756c1b145a6762033a5cf948, type: 2}
   - {fileID: 11400000, guid: a073d626f5371694eb67086c86d73379, type: 2}
+--- !u!114 &8940314140323568888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268317184448462553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f7396918dcdf246a79491192747336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
