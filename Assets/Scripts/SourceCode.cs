@@ -12,6 +12,10 @@ public class SourceCode
     public static int userID = 0;
     public static bool logged = false;
 
+    //CHALLENGE
+    public static bool challengeActive = false;
+    public static int EnemiesKilleForChallenge = 0;
+
     ////////////////////////__PLAYER__\\\\\\\\\\\\\\\\\\\\\\\\
     public static float walkSpeed = 6f;
     public static int lifePoints = 100;

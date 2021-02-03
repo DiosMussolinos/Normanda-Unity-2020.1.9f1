@@ -16,17 +16,28 @@ public class register : MonoBehaviour
 
     public string BaseAPI = "http://localhost:3909";
 
+    public MenuFunctions MenuFunctions;
+
+    public void Start()
+    {
+
+        MenuFunctions.GetComponent<MenuFunctions>();
+    }
+
     public void OnLoginClick()
     {
         string user_name = userName.text;
         string user_pass = userPassword.text;
         string user_conf = confirmUserPassword.text;
 
+
         if (user_pass == user_conf)
         {
             errorImage.SetActive(false);
             string jsonstring = JsonUtility.ToJson(new NewPlayerInfo(user_name, user_pass));
             StartCoroutine(Register(BaseAPI + "/newPlayer", jsonstring));
+            //Start Game
+            MenuFunctions.StartGameWithAccount();
         }
         else
         {

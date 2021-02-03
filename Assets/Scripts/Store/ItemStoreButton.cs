@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
@@ -17,6 +18,7 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
     public Text itemName;
     public Text itemDescription;
 
+
     ///Text PopUp & Timer \\\\\\\\\\\\\ NOT WORKING FOR SOME WTF REASON -- will take care of it later
     //private float confirmationCD = 5f;
     //private float confirmation = 0;
@@ -26,25 +28,9 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
     void Start()
     {
         itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);
-
         //PopUpText.GetComponent<Text>();
     }
 
-    /*
-    void Update()
-    {
-        if (confirmation >= 0) 
-        {
-            PopUp.gameObject.SetActive(true);
-            confirmation -= Time.deltaTime;
-        }
-        
-        if(confirmation < 0)
-        {
-            PopUp.gameObject.SetActive(false);
-        }
-    }
-    */
     private Item GetThisItem()
     {
         for (int i = 0; i < GameManager.instance.items.Count; i++)
@@ -100,16 +86,9 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
             SourceCode.playerGold -= SelectedItem.price;
             GameManager.instance.AddItem(SelectedItem);
 
-            /*
-            //Open PopUP
-            confirmation = confirmationCD;
-            PopUpText.text = "You just bought " + SelectedItem.name;
-            */
-
             //Restart SelectedItem
             SelectedItem = null;
             itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         }
     }
-
 }

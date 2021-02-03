@@ -94,7 +94,7 @@
      <Compile Include="Assets\Scripts\Enemies\Health Bars\BossHealthBar.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoTo\GoToD2.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoTo\GoToN2.cs" />
-     <Compile Include="Assets\getPlayerInfo.cs" />
+     <Compile Include="Assets\Scripts\Player\getPlayerInfo.cs" />
      <Compile Include="Assets\Scripts\Enemies\ArcherShots.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\NPC Names\NameSetActive.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\ArcherHealthBarPos.cs" />

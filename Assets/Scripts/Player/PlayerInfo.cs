@@ -136,3 +136,59 @@ public class BuyItem
     }
 }
 ///////////BUY_ITEM\\\\\\\\\\\\
+
+///////////Post_INVENTORY\\\\\\\\\\\\
+[System.Serializable]
+public class GetItemsID
+{
+    public string item_id;
+
+
+    public GetItemsID(string iTid)
+    {
+        item_id = iTid;
+    }
+}
+
+
+[System.Serializable]
+public class GetItemsAmount
+{
+    public int item_amount;
+
+    public GetItemsAmount(int a)
+    {
+        item_amount = a;
+    }
+}
+
+[System.Serializable]
+public class ItemsInfo
+{
+    public int id;
+    public string item_id;
+    public int item_amount;
+
+
+    public ItemsInfo(int i, string iTid, int a)
+    {
+        id = i;
+        item_id = iTid;
+        item_amount = a;
+    }
+}
+
+[System.Serializable]
+public class ItemsNumber
+{
+    public ItemsNumber[] itemsAmountGet;
+}
+
+[System.Serializable]
+public class itemID
+{
+    public string[] GetItemsID;
+}
+
+
+///////////GET_INVENTORY\\\\\\\\\\\\

@@ -33,7 +33,7 @@ public class login : MonoBehaviour
         //loginButton.interactable = false;
         
         string jsonstring = JsonUtility.ToJson(new Login(user_name, user_pass));
-        StartCoroutine(PostRequestLogin(BaseAPI + "/login", jsonstring));
+        StartCoroutine(PostRequestLogin(BaseAPI + "/loginUnity", jsonstring));
     }
 
     IEnumerator PostRequestLogin(string url, string json)
@@ -55,12 +55,19 @@ public class login : MonoBehaviour
         }
         else
         {
-            Debug.Log(webRequest.downloadHandler.text);
-            int id = int.Parse(webRequest.downloadHandler.text);
-            SourceCode.userID = id;
-            SourceCode.logged = true;
+            if (webRequest.downloadHandler.text == "") 
+            {
+                errorImage.SetActive(true);
+            }
+            else
+            {
+                Debug.Log(webRequest.downloadHandler.text);
+                int id = int.Parse(webRequest.downloadHandler.text);
+                SourceCode.userID = id;
+                SourceCode.logged = true;
 
-            MenuFunctions.StartGameWithAccount();
+                MenuFunctions.StartGameWithAccount();
+            }
         }
     }
 }

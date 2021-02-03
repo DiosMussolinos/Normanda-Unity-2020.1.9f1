@@ -113,6 +113,15 @@ public class Archer : MonoBehaviour
             string jsonstring = JsonUtility.ToJson(new PlayerNewGold(SourceCode.playerGold, SourceCode.userID));
             StartCoroutine(UpdateGold(BaseAPI + "/updateGold", jsonstring));
 
+            if (SourceCode.challengeActive == true) 
+            {
+                SourceCode.EnemiesKilleForChallenge += 1;
+            }
+            else
+            {
+                SourceCode.EnemiesKilleForChallenge = 0;
+            }
+
             //Suicide
             Destroy(gameObject);
         }

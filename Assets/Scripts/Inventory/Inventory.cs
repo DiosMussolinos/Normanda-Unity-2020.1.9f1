@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,19 +10,16 @@ public class Inventory : MonoBehaviour
     public static bool inventoryOpen = false;
     public GameObject inventoryUI;
 
-    public List<Item> items; //LIST OF ITEMS WE HAVE
-    public List<int> itemAmount; //AMOUNT OF ITEMS PER ITEM
+    public List<Item> items = new List<Item>(); //LIST OF ITEMS WE HAVE
+    public List<int> itemAmount = new List<int>(); //AMOUNT OF ITEMS PER ITEM
 
     public GameObject[] slots;
 
-    //public Dictionary<Item, int> ItemDirectory = new Dictionary<Item, int>(); //Align The two lists
-
     public Item addItem_01;
+
 
     void Start() 
     {
-        items = new List<Item>();
-        itemAmount = new List<int>();
         DisplayItems();
     }
 
@@ -112,5 +110,5 @@ public class Inventory : MonoBehaviour
         }
         DisplayItems();
     }
-
+    
 }

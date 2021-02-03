@@ -115,6 +115,15 @@ public class FinalBoss : MonoBehaviour
             //Ativar Portal para a cidade
             portal.gameObject.SetActive(true);
 
+            if (SourceCode.challengeActive == true)
+            {
+                SourceCode.EnemiesKilleForChallenge += 1;
+            }
+            else
+            {
+                SourceCode.EnemiesKilleForChallenge = 0;
+            }
+
             //Morte ao capitalismo
             Destroy(gameObject);
         }

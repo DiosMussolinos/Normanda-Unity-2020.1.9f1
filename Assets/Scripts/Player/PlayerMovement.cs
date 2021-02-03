@@ -312,7 +312,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //ONLY one IEnumerator to post the new life points
-
         IEnumerator UpdateLife(string url, string json)
         {
             UnityWebRequest webRequest = new UnityWebRequest(url, "POST");

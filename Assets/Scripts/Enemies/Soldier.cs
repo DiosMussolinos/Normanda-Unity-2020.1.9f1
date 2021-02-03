@@ -117,6 +117,14 @@ public class Soldier : MonoBehaviour
             string jsonstringexp = JsonUtility.ToJson(new PlayerNewExp(SourceCode.playerExp, SourceCode.userID));
             StartCoroutine(UpdateExp(BaseAPI + "/updateExp", jsonstringexp));
 
+            if (SourceCode.challengeActive == true)
+            {
+                SourceCode.EnemiesKilleForChallenge += 1;
+            }
+            else
+            {
+                SourceCode.EnemiesKilleForChallenge = 0;
+            }
 
             Destroy(gameObject);
         }
