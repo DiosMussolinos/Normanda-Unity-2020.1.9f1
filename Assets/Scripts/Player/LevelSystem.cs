@@ -8,7 +8,7 @@ public class LevelSystem : MonoBehaviour
     //Backend stuff
     public string BaseAPI = "http://localhost:3909";
 
-
+    
     void Update() 
     {
         LevelUp();   

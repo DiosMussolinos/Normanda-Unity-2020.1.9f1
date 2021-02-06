@@ -19,7 +19,7 @@ public class DDOLCanvas : MonoBehaviour
     public GameObject Npc6;
     public GameObject Npc7;
     public GameObject Npc8;
-    public GameObject Npc9;
+    //public GameObject Npc9;
     public GameObject Npc10;
     public GameObject Npc11;
     public GameObject Npc12;
@@ -48,7 +48,7 @@ public class DDOLCanvas : MonoBehaviour
             Npc6.gameObject.SetActive(true);
             Npc7.gameObject.SetActive(true);
             Npc8.gameObject.SetActive(true);
-            Npc9.gameObject.SetActive(true);
+            //Npc9.gameObject.SetActive(true);
             Npc10.gameObject.SetActive(true);
             Npc11.gameObject.SetActive(true);
             Npc12.gameObject.SetActive(true);

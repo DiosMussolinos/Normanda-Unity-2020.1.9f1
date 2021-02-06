@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 3592159837619111964}
   - component: {fileID: 1492739091}
   - component: {fileID: 8940314140323568888}
+  - component: {fileID: 234247129}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -452,6 +453,7 @@ MonoBehaviour:
   BasicAttackPrefab: {fileID: 1199930616516501619, guid: b8c2b54cdc9da864e91586a96eddd975, type: 3}
   StrongAttackPrefab: {fileID: 1199930616516501619, guid: 7a26ed2bf047dd544aa3b3fb4fdefa22, type: 3}
   ShieldPrefab: {fileID: 1199930616516501619, guid: 12739ebc3af5fa441825bfc29e9ef83a, type: 3}
+  BaseAPI: http://localhost:3909
 --- !u!50 &7753721851723393017
 Rigidbody2D:
   serializedVersion: 4
@@ -628,6 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e2c4bb219b7e54db199f7b030d80d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BaseAPI: http://localhost:3909
 --- !u!114 &3592159837619111964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,3 +694,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f7396918dcdf246a79491192747336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BaseAPI: http://localhost:3909
+--- !u!81 &234247129
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268317184448462553}
+  m_Enabled: 1

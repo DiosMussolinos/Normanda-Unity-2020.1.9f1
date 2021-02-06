@@ -23,7 +23,7 @@ public class SourceCode
     public static int playerLevel = 1;
     public static int playerExp = 0;
     public static int playerExpToNextLevel = 0;
-    public static int playerGold = 200;
+    public static int playerGold = 100;
     
     //Values to Sum with the Damages and Shields
     public static int[] ItemValues = {0, 0};
