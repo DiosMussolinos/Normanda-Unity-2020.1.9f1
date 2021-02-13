@@ -59,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SourceCode.playerGold += 100;
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SourceCode.playerExp += 60;
+        }
         ////////////////////////__CHEAT CODES\\\\\\\\\\\\\\\\\\\\\\\\
 
 

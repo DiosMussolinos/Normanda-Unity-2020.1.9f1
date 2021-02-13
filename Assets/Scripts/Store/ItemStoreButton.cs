@@ -72,7 +72,7 @@ public class ItemStoreButton : MonoBehaviour, IPointerEnterHandler, IPointerClic
             itemDescription.GetComponent<Text>().text = SelectedItem.itemDes;
         }
 
-        if(SourceCode.playerGold < SelectedItem.price) 
+        if (SourceCode.playerGold < SelectedItem.price)
         {
             itemImage.GetComponent<Image>().color = new Color(0, 0, 0, 0);
         }
