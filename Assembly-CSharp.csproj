@@ -66,12 +66,12 @@
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\HealthBar.cs" />
      <Compile Include="Assets\Scripts\Enemies\Soldier.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoTo\GoToN3.cs" />
-     <Compile Include="Assets\Server.cs" />
+     <Compile Include="Assets\Scripts\BackEnd\Server.cs" />
      <Compile Include="Assets\Scripts\Store\ToolTip.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText1.cs" />
      <Compile Include="Assets\Scripts\UI\LevelUIText.cs" />
      <Compile Include="Assets\Scripts\ChangeScenes\GoTo\GoToN1.cs" />
-     <Compile Include="Assets\OpenStore.cs" />
+     <Compile Include="Assets\Scripts\Store\OpenStore.cs" />
      <Compile Include="Assets\Scripts\Player\NOT WORKING OR NOT IMPLEMENTED\PlayerCollision.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\StaticNPC.cs" />
      <Compile Include="Assets\Scripts\NPC&apos;s\NPC Names\BlacksmithName.cs" />
@@ -81,7 +81,7 @@
      <Compile Include="Assets\Scripts\DDOL\DDOLInventory.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\BossHeathBarPos.cs" />
      <Compile Include="Assets\Scripts\Player\ActiveItems.cs" />
-     <Compile Include="Assets\login.cs" />
+     <Compile Include="Assets\Scripts\BackEnd\login.cs" />
      <Compile Include="Assets\Scripts\Store\StoreManager.cs" />
      <Compile Include="Assets\Scripts\Store\ItemStoreButton.cs" />
      <Compile Include="Assets\Scripts\Inventory\GameManager.cs" />
@@ -120,10 +120,10 @@
      <Compile Include="Assets\Scripts\MenuScript\DynamicCamera.cs" />
      <Compile Include="Assets\Scripts\SourceFunctions.cs" />
      <Compile Include="Assets\Scripts\Enemies\Health Bars\SetActive.cs" />
-     <Compile Include="Assets\register.cs" />
+     <Compile Include="Assets\Scripts\BackEnd\register.cs" />
      <Compile Include="Assets\Scripts\Enemies\SoldierAttack.cs" />
      <Compile Include="Assets\Scripts\Enemies\FinalBoss.cs" />
-     <Compile Include="Assets\DDOLCanvas.cs" />
+     <Compile Include="Assets\Scripts\UI\DDOLCanvas.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
