@@ -78,6 +78,7 @@ public class DynamicNPC : MonoBehaviour
         {
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, npcPoints[pointsIndex], moveSpeed * Time.deltaTime);
 
+
             if (transform.position == npcPoints[pointsIndex])
             {
                 //Next point of the array of Locations
